@@ -1,8 +1,7 @@
 import React from 'react';
 import { FileText, Network, Podcast, Calendar, Zap, BookOpen, Newspaper } from 'lucide-react';
 import { Card } from '@/components/ui/card';
-import researchPhone from '@/assets/research-phone.png';
-import researchDetailPhone from '@/assets/research-detail-phone.png';
+import researchPhone from '@/assets/research-papers-new.png';
 import relatedPapersPhone from '@/assets/related-papers-phone.png';
 import podcastsPhone from '@/assets/podcasts-phone.png';
 import eventPhone from '@/assets/event-phone.png';
@@ -69,14 +68,6 @@ const FeatureSection = () => {
       subtitle: "Simplified in 60 words",
       description: "Stay ahead of the curve with bite-sized summaries of the latest research papers. We turn complex papers into digestible knowledge, so you can learn more in less time.",
       image: researchPhone,
-    },
-    {
-      icon: <FileText className="w-8 h-8 text-primary" />,
-      title: "Deep Dive into",
-      subtitle: "Research Details",
-      description: "Explore comprehensive research papers with detailed analysis, methodology, and findings. Get the full context and understand the implications of groundbreaking studies.",
-      image: researchDetailPhone,
-      reverse: true,
     },
     {
       icon: <Network className="w-8 h-8 text-primary" />,
