@@ -1,6 +1,7 @@
 import React from 'react';
 import { Twitter, Linkedin, Github, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logoSvg from '@/assets/IN60Z_Logo.svg';
 
 const Footer = () => {
   const footerLinks = {
@@ -41,8 +42,7 @@ const Footer = () => {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center space-x-2 mb-6">
-              <div className="w-8 h-8 rounded-full bg-gradient-primary glow-primary"></div>
-              <span className="text-2xl font-bold text-gradient">In60z</span>
+              <img src={logoSvg} alt="IN60Z Logo" className="h-8 w-auto" />
             </div>
             
             <p className="text-muted-foreground mb-6 max-w-md">

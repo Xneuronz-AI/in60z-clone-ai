@@ -1,0 +1,84 @@
+import React from 'react';
+import { Button } from '@/components/ui/button';
+import { Card, CardContent } from '@/components/ui/card';
+import atalLogo from '@/assets/atal-incubation.png';
+import wadhwaniLogo from '@/assets/wadhwani-foundation.png';
+
+const IncubationSection = () => {
+  return (
+    <section className="py-16 md:py-32 bg-background">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="text-center mb-12 md:mb-16">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            Our <span className="text-gradient">Incubators</span>
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            Backed by the expertise of Atal Incubation JKLU and the Wadhwani Foundation, we have been able to accelerate our mission. Their strategic guidance and resources have been instrumental in building a world-class platform for you.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+          {/* Atal Incubation JKLU */}
+          <Card className="glass border-border/50 hover:border-primary/30 transition-all duration-300 group">
+            <CardContent className="p-6 md:p-8 text-center">
+              <div className="mb-6">
+                <img 
+                  src={atalLogo} 
+                  alt="AIC-JKLU Logo" 
+                  className="w-20 h-20 md:w-24 md:h-24 mx-auto object-contain"
+                />
+              </div>
+              
+              <h3 className="text-xl md:text-2xl font-bold mb-2">
+                Atal Incubation Center, JKLU
+              </h3>
+              
+              <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+                <Button 
+                  variant="default" 
+                  className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                >
+                  Recommendation
+                </Button>
+                <Button 
+                  variant="outline" 
+                  className="border-primary/50 hover:bg-primary/10"
+                >
+                  Link
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* Wadhwani Foundation */}
+          <Card className="glass border-border/50 hover:border-primary/30 transition-all duration-300 group">
+            <CardContent className="p-6 md:p-8 text-center">
+              <div className="mb-6">
+                <img 
+                  src={wadhwaniLogo} 
+                  alt="Wadhwani Foundation Logo" 
+                  className="w-20 h-20 md:w-24 md:h-24 mx-auto object-contain"
+                />
+              </div>
+              
+              <h3 className="text-xl md:text-2xl font-bold mb-2">
+                Wadhwani Foundation
+              </h3>
+              
+              <div className="flex justify-center mt-6">
+                <Button 
+                  variant="outline" 
+                  className="border-primary/50 hover:bg-primary/10"
+                >
+                  Link
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default IncubationSection;
