@@ -3,6 +3,8 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import FeatureSection from '@/components/FeatureSection';
 import StatsSection from '@/components/StatsSection';
+import PodcastSection from '@/components/PodcastSection';
+import VideoSection from '@/components/VideoSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
@@ -13,6 +15,8 @@ const Index = () => {
       <HeroSection />
       <FeatureSection />
       <StatsSection />
+      <PodcastSection />
+      <VideoSection />
       <CTASection />
       <Footer />
     </div>

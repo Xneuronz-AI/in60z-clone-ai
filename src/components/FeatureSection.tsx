@@ -57,15 +57,6 @@ const Feature: React.FC<FeatureProps> = ({ icon, title, subtitle, description, i
           </div>
         )}
         
-        {/* Add audio player for podcast section */}
-        {title.includes('Research Podcast') && (
-          <div className="mt-6 w-72">
-            <AudioPlayer 
-              audioSrc="/transformer.mp3" 
-              title="Research Podcast - Transformer Architecture"
-            />
-          </div>
-        )}
       </div>
     </div>
   );
@@ -87,13 +78,6 @@ const FeatureSection = () => {
       description: "Our Connected Papers feature maps out the relationships between studies, helping you find foundational and related work in an instant. Visualize the research landscape.",
       image: relatedPapersPhone,
       reverse: true,
-    },
-    {
-      icon: <Podcast className="w-8 h-8 text-primary" />,
-      title: "Your Research Podcast,",
-      subtitle: "Simplified.",
-      description: "Dive deep into the research with our 15-minute podcasts. We explore the methodology, findings, and implications of papers in an engaging audio format.",
-      image: podcastsPhone,
     },
     {
       icon: <Calendar className="w-8 h-8 text-primary" />,
