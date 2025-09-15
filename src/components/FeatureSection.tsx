@@ -1,7 +1,13 @@
 import React from 'react';
-import { FileText, Network, Podcast, Calendar, Zap, BookOpen } from 'lucide-react';
+import { FileText, Network, Podcast, Calendar, Zap, BookOpen, Newspaper } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import researchPhone from '@/assets/research-phone.png';
+import researchDetailPhone from '@/assets/research-detail-phone.png';
+import relatedPapersPhone from '@/assets/related-papers-phone.png';
+import podcastsPhone from '@/assets/podcasts-phone.png';
+import eventPhone from '@/assets/event-phone.png';
+import newsPhone from '@/assets/news-phone.png';
+import discoverPhone from '@/assets/discover-phone.png';
 
 interface FeatureProps {
   icon: React.ReactNode;
@@ -65,24 +71,49 @@ const FeatureSection = () => {
       image: researchPhone,
     },
     {
+      icon: <FileText className="w-8 h-8 text-primary" />,
+      title: "Deep Dive into",
+      subtitle: "Research Details",
+      description: "Explore comprehensive research papers with detailed analysis, methodology, and findings. Get the full context and understand the implications of groundbreaking studies.",
+      image: researchDetailPhone,
+      reverse: true,
+    },
+    {
       icon: <Network className="w-8 h-8 text-primary" />,
       title: "Connect the Dots",
-      subtitle: "by going backwards",
-      description: "Our Connected Papers feature maps out the relationships between studies, helping you find foundational and related work in an instant.",
-      reverse: true,
+      subtitle: "with Related Papers",
+      description: "Our Connected Papers feature maps out the relationships between studies, helping you find foundational and related work in an instant. Visualize the research landscape.",
+      image: relatedPapersPhone,
     },
     {
       icon: <Podcast className="w-8 h-8 text-primary" />,
       title: "Your Research Podcast,",
       subtitle: "Simplified.",
-      description: "Dive deep into the research. Our 15-minute podcasts explore the methodology, findings, and implications of a paper.",
+      description: "Dive deep into the research with our 15-minute podcasts. We explore the methodology, findings, and implications of papers in an engaging audio format.",
+      image: podcastsPhone,
+      reverse: true,
     },
     {
       icon: <Calendar className="w-8 h-8 text-primary" />,
       title: "Webinars, Events",
       subtitle: "& Hackathons",
-      description: "Stay updated with the latest conferences, webinars, and hackathons in your field. Never miss an important event again.",
+      description: "Stay updated with the latest conferences, webinars, and hackathons in your field. Never miss an important event again with our curated event listings.",
+      image: eventPhone,
+    },
+    {
+      icon: <Newspaper className="w-8 h-8 text-primary" />,
+      title: "Latest News",
+      subtitle: "in Tech & AI",
+      description: "Get the most important news in technology, AI, and research. We curate and summarize the stories that matter most to researchers and innovators.",
+      image: newsPhone,
       reverse: true,
+    },
+    {
+      icon: <BookOpen className="w-8 h-8 text-primary" />,
+      title: "Discover",
+      subtitle: "New Frontiers",
+      description: "Explore curated content across multiple categories. From green energy to blockchain, discover the latest research and innovations across all fields of study.",
+      image: discoverPhone,
     },
   ];
 

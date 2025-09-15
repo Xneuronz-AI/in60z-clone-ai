@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import heroPhone from '@/assets/hero-phone.png';
+import heroPhone from '@/assets/podcasts-phone.png';
 import appStore from '@/assets/app-store.png';
 import googlePlay from '@/assets/google-play.png';
 
