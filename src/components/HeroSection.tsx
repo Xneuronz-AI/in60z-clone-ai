@@ -42,7 +42,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Phone Mockup */}
-          <div className="flex justify-center lg:justify-end animate-slide-in-right">
+          <div className="flex justify-center animate-slide-in-right">
             <div className="relative">
               <div className="phone-mockup w-80 h-[650px] p-2">
                 <img 

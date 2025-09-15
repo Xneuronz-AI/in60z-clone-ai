@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import logoSvg from '@/assets/IN60Z_Logo.svg';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -29,8 +30,7 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-primary glow-primary animate-glow-pulse"></div>
-            <span className="text-2xl font-bold text-gradient">In60z</span>
+            <img src={logoSvg} alt="In60z Logo" className="h-6 w-auto" />
           </div>
 
           {/* Desktop Navigation */}

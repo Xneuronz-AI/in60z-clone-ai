@@ -1,6 +1,7 @@
 import React from 'react';
 import { FileText, Network, Podcast, Calendar, Zap, BookOpen, Newspaper } from 'lucide-react';
 import { Card } from '@/components/ui/card';
+import AudioPlayer from '@/components/AudioPlayer';
 import researchPhone from '@/assets/research-papers-new.png';
 import relatedPapersPhone from '@/assets/related-papers-phone.png';
 import podcastsPhone from '@/assets/podcasts-phone.png';
@@ -39,7 +40,7 @@ const Feature: React.FC<FeatureProps> = ({ icon, title, subtitle, description, i
       </div>
 
       {/* Image/Mockup */}
-      <div className={`flex justify-center animate-slide-in-right ${reverse ? 'lg:col-start-1' : ''}`}>
+      <div className={`flex flex-col items-center animate-slide-in-right ${reverse ? 'lg:col-start-1' : ''}`}>
         {image ? (
           <div className="phone-mockup w-72 h-[580px] p-2">
             <img 
@@ -53,6 +54,16 @@ const Feature: React.FC<FeatureProps> = ({ icon, title, subtitle, description, i
             <div className="text-6xl text-primary/30">
               {icon}
             </div>
+          </div>
+        )}
+        
+        {/* Add audio player for podcast section */}
+        {title.includes('Research Podcast') && (
+          <div className="mt-6 w-72">
+            <AudioPlayer 
+              audioSrc="/transformer.mp3" 
+              title="Research Podcast - Transformer Architecture"
+            />
           </div>
         )}
       </div>
@@ -75,6 +86,7 @@ const FeatureSection = () => {
       subtitle: "with Related Papers",
       description: "Our Connected Papers feature maps out the relationships between studies, helping you find foundational and related work in an instant. Visualize the research landscape.",
       image: relatedPapersPhone,
+      reverse: true,
     },
     {
       icon: <Podcast className="w-8 h-8 text-primary" />,
@@ -82,7 +94,6 @@ const FeatureSection = () => {
       subtitle: "Simplified.",
       description: "Dive deep into the research with our 15-minute podcasts. We explore the methodology, findings, and implications of papers in an engaging audio format.",
       image: podcastsPhone,
-      reverse: true,
     },
     {
       icon: <Calendar className="w-8 h-8 text-primary" />,
@@ -90,6 +101,7 @@ const FeatureSection = () => {
       subtitle: "& Hackathons",
       description: "Stay updated with the latest conferences, webinars, and hackathons in your field. Never miss an important event again with our curated event listings.",
       image: eventPhone,
+      reverse: true,
     },
     {
       icon: <Newspaper className="w-8 h-8 text-primary" />,
@@ -97,7 +109,6 @@ const FeatureSection = () => {
       subtitle: "in Tech & AI",
       description: "Get the most important news in technology, AI, and research. We curate and summarize the stories that matter most to researchers and innovators.",
       image: newsPhone,
-      reverse: true,
     },
     {
       icon: <BookOpen className="w-8 h-8 text-primary" />,
@@ -105,6 +116,7 @@ const FeatureSection = () => {
       subtitle: "New Frontiers",
       description: "Explore curated content across multiple categories. From green energy to blockchain, discover the latest research and innovations across all fields of study.",
       image: discoverPhone,
+      reverse: true,
     },
   ];
 
