@@ -1,10 +1,37 @@
-import React from 'react';
-import { Play, Download, MoreHorizontal, User } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Play, Download, MoreHorizontal, User, Pause } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import AudioPlayer from '@/components/AudioPlayer';
 
 const PodcastSection = () => {
+  const [currentPlaying, setCurrentPlaying] = useState<number | null>(null);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const handlePlayPause = (podcastId: number) => {
+    if (currentPlaying === podcastId) {
+      // Pause current podcast
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+      setCurrentPlaying(null);
+    } else {
+      // Play new podcast
+      if (audioRef.current) {
+        audioRef.current.pause();
+      }
+      setCurrentPlaying(podcastId);
+      
+      // Create new audio element for the transformer.mp3
+      const audio = new Audio('/transformer.mp3');
+      audioRef.current = audio;
+      audio.play();
+      
+      audio.onended = () => {
+        setCurrentPlaying(null);
+      };
+    }
+  };
+
   const podcasts = [
     {
       id: 1,
@@ -85,8 +112,16 @@ const PodcastSection = () => {
                 {/* Controls */}
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
-                    <Button size="icon" className="w-10 h-10 rounded-full bg-primary hover:bg-primary/90">
-                      <Play className="w-4 h-4 ml-0.5" />
+                    <Button 
+                      size="icon" 
+                      className="w-10 h-10 rounded-full bg-primary hover:bg-primary/90"
+                      onClick={() => handlePlayPause(podcast.id)}
+                    >
+                      {currentPlaying === podcast.id ? (
+                        <Pause className="w-4 h-4" />
+                      ) : (
+                        <Play className="w-4 h-4 ml-0.5" />
+                      )}
                     </Button>
                     <span className="text-sm font-medium">{podcast.duration}</span>
                   </div>
@@ -105,14 +140,6 @@ const PodcastSection = () => {
           ))}
         </div>
 
-        {/* Featured Podcast Player */}
-        <div className="max-w-2xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-6">Now Playing</h3>
-          <AudioPlayer 
-            audioSrc="/transformer.mp3" 
-            title="Research Podcast - Transformer Architecture"
-          />
-        </div>
       </div>
     </section>
   );

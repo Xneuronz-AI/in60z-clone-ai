@@ -80,6 +80,13 @@ const FeatureSection = () => {
       reverse: true,
     },
     {
+      icon: <Podcast className="w-8 h-8 text-primary" />,
+      title: "Podcasts &",
+      subtitle: "Audio Content",
+      description: "Transform complex research into engaging audio content. Listen to expert discussions and summaries while you commute, exercise, or multitask.",
+      image: podcastsPhone,
+    },
+    {
       icon: <Calendar className="w-8 h-8 text-primary" />,
       title: "Webinars, Events",
       subtitle: "& Hackathons",

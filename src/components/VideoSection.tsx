@@ -26,7 +26,7 @@ const VideoSection = () => {
           </div>
 
           {/* Video Mockup */}
-          <div className="flex flex-col items-center animate-slide-in-right lg:col-start-1">
+          <div className="flex flex-col items-center animate-slide-in-right">
             <div className="phone-mockup w-72 h-[580px] p-2 relative">
               <video 
                 className="w-full h-full object-cover rounded-[2.5rem]"
