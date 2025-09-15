@@ -58,18 +58,16 @@ const VideoSection = () => {
                 Your browser does not support the video tag.
               </video>
               
-              {/* Play overlay - only show when not playing */}
-              {!isPlaying && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-[2.5rem]">
-                  <Button 
-                    size="icon" 
-                    className="w-16 h-16 rounded-full bg-primary/90 hover:bg-primary backdrop-blur-sm"
-                    onClick={handlePlayPause}
-                  >
-                    <Play className="w-6 h-6 ml-1" />
-                  </Button>
-                </div>
-              )}
+              {/* Play/Pause overlay */}
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20 rounded-[2.5rem] opacity-0 hover:opacity-100 transition-opacity duration-300">
+                <Button 
+                  size="icon" 
+                  className="w-12 h-12 rounded-full bg-primary/90 hover:bg-primary backdrop-blur-sm"
+                  onClick={handlePlayPause}
+                >
+                  {isPlaying ? <Pause className="w-5 h-5" /> : <Play className="w-5 h-5 ml-0.5" />}
+                </Button>
+              </div>
             </div>
           </div>
         </div>

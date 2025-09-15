@@ -2,9 +2,10 @@ import React from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import FeatureSection from '@/components/FeatureSection';
+import VideoSection from '@/components/VideoSection';
 import StatsSection from '@/components/StatsSection';
 import PodcastSection from '@/components/PodcastSection';
-import VideoSection from '@/components/VideoSection';
+import AdvertisingSection from '@/components/AdvertisingSection';
 import IncubationSection from '@/components/IncubationSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
@@ -15,9 +16,10 @@ const Index = () => {
       <Navigation />
       <HeroSection />
       <FeatureSection />
+      <VideoSection />
       <StatsSection />
       <PodcastSection />
-      <VideoSection />
+      <AdvertisingSection />
       <IncubationSection />
       <CTASection />
       <Footer />

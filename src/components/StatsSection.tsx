@@ -6,27 +6,27 @@ const StatsSection = () => {
   const stats = [
     {
       icon: <Users className="w-8 h-8 text-primary" />,
-      number: "100K+",
-      label: "Active Users",
-      description: "Growing community of researchers and learners"
+      number: "4+",
+      label: "Domains",
+      description: "Comprehensive coverage across research fields"
     },
     {
       icon: <BookOpen className="w-8 h-8 text-primary" />,
-      number: "10K+",
-      label: "Research Papers",
-      description: "Summarized and made accessible"
+      number: "72+",
+      label: "Topics",
+      description: "Diverse subject areas to explore"
     },
     {
       icon: <Clock className="w-8 h-8 text-primary" />,
-      number: "60",
-      label: "Words Max",
-      description: "Every summary fits in 60 words"
+      number: "Millions",
+      label: "Access to Papers",
+      description: "Vast collection of research publications"
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-primary" />,
-      number: "95%",
-      label: "Time Saved",
-      description: "Compared to reading full papers"
+      number: "Thousands",
+      label: "Access to Events",
+      description: "Stay updated with research conferences"
     }
   ];
 
@@ -38,11 +38,11 @@ const StatsSection = () => {
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-20">
           <h2 className="text-4xl lg:text-6xl font-bold mb-6">
-            Trusted by{' '}
-            <span className="text-gradient">Researchers Worldwide</span>
+            Comprehensive Research{' '}
+            <span className="text-gradient">Access Platform</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Join thousands of researchers, students, and professionals who are staying informed with In60z
+            Your gateway to organized research content across multiple domains and topics
           </p>
         </div>
 
