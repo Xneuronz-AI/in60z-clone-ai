@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link, useLocation } from 'react-router-dom';
 import logoSvg from '@/assets/IN60Z_Logo.svg';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,10 +18,10 @@ const Navigation = () => {
   }, []);
 
   const navLinks = [
-    { name: 'About Us', href: '#about' },
-    { name: 'Our Team', href: '#team' },
-    { name: 'Capabilities', href: '#features' },
-    { name: 'Contact us', href: '#contact' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Capabilities', href: '/capabilities' },
+    { name: 'Contact Us', href: '/contact' },
   ];
 
   return (
@@ -30,20 +32,25 @@ const Navigation = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-2">
-            <img src={logoSvg} alt="In60z Logo" className="h-10 w-auto" />
+            <Link to="/">
+              <img src={logoSvg} alt="In60z Logo" className="h-10 w-auto" />
+            </Link>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="text-foreground hover:text-primary transition-smooth relative group"
+                to={link.href}
+                className={`text-foreground hover:text-primary transition-smooth relative group ${
+                  location.pathname === link.href ? 'text-primary' : ''
+                }`}
               >
                 {link.name}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-              </a>
+                <span className={`absolute -bottom-1 left-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full ${
+                  location.pathname === link.href ? 'w-full' : 'w-0'
+                }`}></span>
+              </Link>
             ))}
           </div>
 
@@ -58,20 +65,21 @@ const Navigation = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
         <div className={`md:hidden overflow-hidden transition-all duration-300 ${
           isMobileMenuOpen ? 'max-h-64 opacity-100' : 'max-h-0 opacity-0'
         }`}>
           <div className="pt-4 pb-2 border-t border-border mt-4">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
-                className="block py-2 text-foreground hover:text-primary transition-smooth"
+                to={link.href}
+                className={`block py-2 text-foreground hover:text-primary transition-smooth ${
+                  location.pathname === link.href ? 'text-primary' : ''
+                }`}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

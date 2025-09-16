@@ -12,6 +12,11 @@ import brandVolvo from '@/assets/brand-volvo.jpg';
 import brandMaruti from '@/assets/brand-maruti.jpg';
 import brandTitan from '@/assets/brand-titan.jpg';
 import brandRealme from '@/assets/brand-realme.jpg';
+import brandMotorola from '@/assets/brand-motorola.jpg';
+import brandUSPolo from '@/assets/brand-uspolo.jpg';
+import brandMovado from '@/assets/brand-movado.jpg';
+import brandAudiNew from '@/assets/brand-audi-new.jpg';
+import brandHyundai from '@/assets/brand-hyundai.jpg';
 
 const AdvertisingSection = () => {
   const brands = [
@@ -20,16 +25,15 @@ const AdvertisingSection = () => {
     { name: 'Ray-Ban', image: brandRayBan },
     { name: 'Raymond', image: brandRaymond },
     { name: 'Boss', image: brandBoss },
-    { name: 'Audi', image: brandAudi },
+    { name: 'Audi', image: brandAudiNew },
     { name: 'Volvo', image: brandVolvo },
     { name: 'Maruti Suzuki', image: brandMaruti },
     { name: 'Titan', image: brandTitan },
     { name: 'Realme', image: brandRealme },
-    { name: 'Samsung', image: brandSamsung },
-    { name: 'HP', image: brandHP },
-    { name: 'Ray-Ban', image: brandRayBan },
-    { name: 'Raymond', image: brandRaymond },
-    { name: 'Boss', image: brandBoss }
+    { name: 'Motorola', image: brandMotorola },
+    { name: 'U.S. Polo Assn.', image: brandUSPolo },
+    { name: 'Movado', image: brandMovado },
+    { name: 'Hyundai', image: brandHyundai }
   ];
 
   return (
@@ -57,7 +61,7 @@ const AdvertisingSection = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {brands.map((brand, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <div className="relative h-40 md:h-48 rounded-2xl overflow-hidden group cursor-pointer">
+                  <div className="relative h-56 md:h-64 lg:h-72 rounded-2xl overflow-hidden group cursor-pointer">
                     <img 
                       src={brand.image} 
                       alt={`${brand.name} advertisement`}

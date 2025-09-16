@@ -1,19 +1,20 @@
 import React from 'react';
 import { Twitter, Linkedin, Github, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import logoSvg from '@/assets/IN60Z_Logo.svg';
 
 const Footer = () => {
   const footerLinks = {
     Product: [
-      { name: 'Features', href: '#features' },
+      { name: 'Features', href: '/capabilities' },
       { name: 'Pricing', href: '#pricing' },
       { name: 'API', href: '#api' }
     ],
     Company: [
-      { name: 'About Us', href: '#about' },
-      { name: 'Careers', href: '#careers' },
-      { name: 'Blog', href: '#blog' }
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Team', href: '/team' },
+      { name: 'Contact', href: '/contact' }
     ],
     Resources: [
       { name: 'Documentation', href: '#docs' },
@@ -21,9 +22,9 @@ const Footer = () => {
       { name: 'Community', href: '#community' }
     ],
     Legal: [
-      { name: 'Privacy Policy', href: '#privacy' },
-      { name: 'Terms of Service', href: '#terms' },
-      { name: 'Cookie Policy', href: '#cookies' }
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Cookie Policy', href: '/cookies' }
     ]
   };
 
@@ -83,19 +84,27 @@ const Footer = () => {
             </div>
           </div>
 
-          {/* Footer Links */}
-          {Object.entries(footerLinks).map(([category, links]) => (
+            {Object.entries(footerLinks).map(([category, links]) => (
             <div key={category}>
               <h3 className="font-semibold mb-4">{category}</h3>
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
-                      className="text-muted-foreground hover:text-primary transition-smooth"
-                    >
-                      {link.name}
-                    </a>
+                    {link.href.startsWith('#') ? (
+                      <a
+                        href={link.href}
+                        className="text-muted-foreground hover:text-primary transition-smooth"
+                      >
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link
+                        to={link.href}
+                        className="text-muted-foreground hover:text-primary transition-smooth"
+                      >
+                        {link.name}
+                      </Link>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -110,15 +119,15 @@ const Footer = () => {
           </p>
           
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <a href="#privacy" className="text-muted-foreground hover:text-primary text-sm transition-smooth">
+            <Link to="/privacy" className="text-muted-foreground hover:text-primary text-sm transition-smooth">
               Privacy
-            </a>
-            <a href="#terms" className="text-muted-foreground hover:text-primary text-sm transition-smooth">
+            </Link>
+            <Link to="/terms" className="text-muted-foreground hover:text-primary text-sm transition-smooth">
               Terms
-            </a>
-            <a href="#cookies" className="text-muted-foreground hover:text-primary text-sm transition-smooth">
+            </Link>
+            <Link to="/cookies" className="text-muted-foreground hover:text-primary text-sm transition-smooth">
               Cookies
-            </a>
+            </Link>
           </div>
         </div>
       </div>
