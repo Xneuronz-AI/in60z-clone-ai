@@ -1,7 +1,6 @@
 import React from 'react';
 import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
-import EnhancedResearchSection from '@/components/EnhancedResearchSection';
 import FeatureSection from '@/components/FeatureSection';
 import VideoSection from '@/components/VideoSection';
 import StatsSection from '@/components/StatsSection';
@@ -16,7 +15,6 @@ const Index = () => {
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       <HeroSection />
-      <EnhancedResearchSection />
       <FeatureSection />
       <VideoSection />
       <StatsSection />
