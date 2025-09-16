@@ -8,6 +8,20 @@ import niyazImage from '@/assets/team/niyaz.jpg';
 import prabhjotImage from '@/assets/team/prabhjot.jpg';
 import siddhanthImage from '@/assets/team/siddhanth.jpg';
 import nitinImage from '@/assets/team/nitin.jpg';
+import rifaImage from '@/assets/team/rifa.jpg';
+import bhoomikaImage from '@/assets/team/bhoomika.jpg';
+import kanishkhaImage from '@/assets/team/kanishkha.jpg';
+import sayeedImage from '@/assets/team/sayeed.jpg';
+import sarveshImage from '@/assets/team/sarvesh.jpg';
+import nikhileshImage from '@/assets/team/nikhilesh.jpg';
+import sushmaImage from '@/assets/team/sushma.jpg';
+import meeraImage from '@/assets/team/meera.jpg';
+import bhavyaImage from '@/assets/team/bhavya.jpg';
+import himanshuImage from '@/assets/team/himanshu.jpg';
+import parasImage from '@/assets/team/paras.jpg';
+import elafImage from '@/assets/team/elaf.jpg';
+import premImage from '@/assets/team/prem.jpg';
+import anujayImage from '@/assets/team/anujay.jpg';
 
 const Team = () => {
   const founders = [
@@ -54,37 +68,99 @@ const Team = () => {
       name: "Rifa Shazmeen",
       role: "MLE Engineer",
       bio: "Machine Learning Engineer specializing in NLP and model optimization.",
-      department: "AI/ML"
+      department: "AI/ML",
+      image: rifaImage
     },
     {
       name: "Bhoomika GP",
       role: "MLE Engineer", 
       bio: "Expert in machine learning infrastructure and model deployment.",
-      department: "AI/ML"
+      department: "AI/ML",
+      image: bhoomikaImage
     },
     {
       name: "Kanishkha J",
       role: "MLE Engineer",
       bio: "Focused on developing scalable ML solutions for research processing.",
-      department: "AI/ML"
+      department: "AI/ML",
+      image: kanishkhaImage
     },
     {
       name: "Sayeed Shaik",
       role: "AI Engineer",
       bio: "AI specialist working on advanced summarization algorithms.",
-      department: "AI/ML"
+      department: "AI/ML",
+      image: sayeedImage
     },
     {
       name: "Sarvesh S",
       role: "AI Researcher",
       bio: "Research scientist ensuring accuracy and quality of content processing.",
-      department: "Research"
+      department: "Research",
+      image: sarveshImage
     },
     {
       name: "Nikhilesh Rana",
       role: "Frontend Engineer",
       bio: "Creating intuitive user experiences for the In60z platform.",
-      department: "Engineering"
+      department: "Engineering",
+      image: nikhileshImage
+    },
+    {
+      name: "Sushma",
+      role: "Frontend UI/UX Designer",
+      bio: "Creating beautiful and intuitive user interfaces for seamless user experience.",
+      department: "Design",
+      image: sushmaImage
+    },
+    {
+      name: "Meera",
+      role: "UI/UX Designer",
+      bio: "Designing user-centered experiences that make research accessible and engaging.",
+      department: "Design",
+      image: meeraImage
+    },
+    {
+      name: "Bhavya",
+      role: "UI/UX Designer",
+      bio: "Crafting elegant design solutions that bridge the gap between users and complex research.",
+      department: "Design",
+      image: bhavyaImage
+    },
+    {
+      name: "Himanshu",
+      role: "iOS & Android Developer",
+      bio: "Building native mobile applications that bring research summaries to your fingertips.",
+      department: "Mobile",
+      image: himanshuImage
+    },
+    {
+      name: "Paras",
+      role: "Backend Developer",
+      bio: "Architecting robust backend systems that power our AI-driven research platform.",
+      department: "Engineering",
+      image: parasImage
+    }
+  ];
+
+  const advisors = [
+    {
+      name: "Elaf",
+      role: "Frontend Developer & Lead Advisor",
+      bio: "Seasoned frontend developer providing strategic guidance on user experience and technical architecture.",
+      image: elafImage
+    },
+    {
+      name: "Prem Panicker",
+      role: "Senior Account Director at DWA",
+      bio: "Former Yahoo executive bringing extensive experience in digital media and strategic partnerships.",
+      image: premImage
+    },
+    {
+      name: "Anujay Mathur",
+      role: "Growth Head at Zepto",
+      bio: "Growth expert helping scale platforms and optimize user acquisition strategies.",
+      image: anujayImage
     }
   ];
 
@@ -170,10 +246,12 @@ const Team = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {teamMembers.map((member, index) => (
                 <Card key={index} className="p-6 text-center bg-card/50 border-border/50 hover:bg-card transition-all duration-300">
-                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                    <div className="text-2xl font-bold text-primary">
-                      {member.name.charAt(0)}
-                    </div>
+                  <div className="w-20 h-20 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-1">
+                    <img 
+                      src={member.image} 
+                      alt={member.name}
+                      className="w-full h-full rounded-full object-cover"
+                    />
                   </div>
                   <h3 className="text-xl font-bold mb-2">{member.name}</h3>
                   <p className="text-primary font-semibold mb-2">{member.role}</p>
@@ -181,6 +259,35 @@ const Team = () => {
                     {member.department}
                   </div>
                   <p className="text-muted-foreground text-sm leading-relaxed">{member.bio}</p>
+                </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Advisors */}
+        <section className="py-24">
+          <div className="container mx-auto px-6">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold mb-6">Our Advisors</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                Strategic advisors and industry experts guiding our vision and growth trajectory.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+              {advisors.map((advisor, index) => (
+                <Card key={index} className="p-6 text-center bg-gradient-card border-primary/20 glow-primary hover:glow-accent transition-all duration-500">
+                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary/20 to-accent/20 p-1">
+                    <img 
+                      src={advisor.image} 
+                      alt={advisor.name}
+                      className="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-xl font-bold mb-2">{advisor.name}</h3>
+                  <p className="text-primary font-semibold mb-4">{advisor.role}</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">{advisor.bio}</p>
                 </Card>
               ))}
             </div>
