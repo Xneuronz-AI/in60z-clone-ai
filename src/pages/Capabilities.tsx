@@ -47,7 +47,7 @@ const Capabilities = () => {
     { name: "Machine Learning", description: "Advanced NLP models for text understanding and generation" },
     { name: "Cloud Infrastructure", description: "Scalable, secure, and globally distributed architecture" },
     { name: "Data Analytics", description: "Real-time processing and analysis of research trends" },
-    { name: "API Integration", description: "Seamless connectivity with academic databases and journals" }
+    { name: "Content Processing", description: "Seamless processing of academic databases and journals" }
   ];
 
   return (
@@ -135,25 +135,25 @@ const Capabilities = () => {
           </div>
         </section>
 
-        {/* API & Integration */}
+        {/* Platform Integration */}
         <section className="py-20 bg-card/30">
           <div className="container mx-auto px-6 text-center">
-            <h2 className="text-4xl font-bold mb-8">API & Integration Capabilities</h2>
+            <h2 className="text-4xl font-bold mb-8">Platform Integration</h2>
             <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
-              Seamlessly integrate In60z's powerful research capabilities into your existing workflows, applications, and research platforms.
+              Experience In60z across multiple platforms and devices for seamless research access anywhere, anytime.
             </p>
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-card rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-4">RESTful API</h3>
-                <p className="text-muted-foreground">Full access to our research database and summarization engine through clean, documented APIs.</p>
+                <h3 className="text-xl font-bold mb-4">Mobile First</h3>
+                <p className="text-muted-foreground">Optimized mobile experience with swipe-based navigation for the on-the-go researcher.</p>
               </div>
               <div className="bg-card rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-4">Webhook Support</h3>
-                <p className="text-muted-foreground">Real-time notifications for new research, summaries, and events in your areas of interest.</p>
+                <h3 className="text-xl font-bold mb-4">Web Platform</h3>
+                <p className="text-muted-foreground">Full-featured web interface with advanced search and discovery capabilities.</p>
               </div>
               <div className="bg-card rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-4">Custom Integration</h3>
-                <p className="text-muted-foreground">Tailored solutions for enterprise clients with specific research and workflow requirements.</p>
+                <h3 className="text-xl font-bold mb-4">Cross-Device Sync</h3>
+                <p className="text-muted-foreground">Seamlessly sync your reading progress, bookmarks, and preferences across all devices.</p>
               </div>
             </div>
           </div>
