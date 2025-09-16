@@ -61,7 +61,7 @@ const AdvertisingSection = () => {
             <CarouselContent className="-ml-2 md:-ml-4">
               {brands.map((brand, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
-                  <div className="relative h-56 md:h-64 lg:h-72 rounded-2xl overflow-hidden group cursor-pointer">
+                  <div className="relative h-96 md:h-[32rem] lg:h-[36rem] rounded-2xl overflow-hidden group cursor-pointer">
                     <img 
                       src={brand.image} 
                       alt={`${brand.name} advertisement`}

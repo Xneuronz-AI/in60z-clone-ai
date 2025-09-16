@@ -34,13 +34,9 @@ const EnhancedResearchSection = () => {
       
       <div className="container mx-auto px-6 relative">
         <div className="text-center mb-20">
-          <h2 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-8">
-            The World of Research.{' '}
-            <span className="text-gradient">Simplified.</span>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
+            Comprehensive Research Access Platform
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Unlock the full potential of global research with our comprehensive platform designed for the modern researcher.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
