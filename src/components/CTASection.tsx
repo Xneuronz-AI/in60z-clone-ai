@@ -39,7 +39,7 @@ const CTASection = () => {
             <div className="flex items-center">
               <span className="text-muted-foreground mr-3 md:mr-4 text-sm md:text-base">or</span>
               <Button variant="outline" size="lg" className="group bg-transparent border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Try Web App
+                Join Waitlist
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </div>
