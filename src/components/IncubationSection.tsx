@@ -43,8 +43,11 @@ const IncubationSection = () => {
                 <Button 
                   variant="outline" 
                   className="border-primary/50 hover:bg-primary/10"
+                  asChild
                 >
-                  Link
+                  <a href="https://jklu.edu.in/centres/atal-incubation-centre" target="_blank" rel="noopener noreferrer">
+                    Visit Website
+                  </a>
                 </Button>
               </div>
             </CardContent>
@@ -69,8 +72,11 @@ const IncubationSection = () => {
                 <Button 
                   variant="outline" 
                   className="border-primary/50 hover:bg-primary/10"
+                  asChild
                 >
-                  Link
+                  <a href="https://wadhwanifoundation.org/" target="_blank" rel="noopener noreferrer">
+                    Visit Website
+                  </a>
                 </Button>
               </div>
             </CardContent>

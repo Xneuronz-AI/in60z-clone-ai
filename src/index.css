@@ -19,10 +19,10 @@ All colors MUST be HSL.
     --popover: 220 20% 9%;
     --popover-foreground: 210 40% 98%;
 
-    /* Brand colors */
-    --primary: 200 100% 50%;
-    --primary-foreground: 220 23% 7%;
-    --primary-glow: 195 100% 60%;
+    /* Brand colors - Vivid Blue #0075ff */
+    --primary: 213 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 213 100% 60%;
 
     /* Secondary and muted colors */
     --secondary: 220 15% 15%;
@@ -41,7 +41,7 @@ All colors MUST be HSL.
     /* Borders and inputs */
     --border: 220 15% 20%;
     --input: 220 15% 15%;
-    --ring: 200 100% 50%;
+    --ring: 213 100% 50%;
 
     --radius: 0.75rem;
 

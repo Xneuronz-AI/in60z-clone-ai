@@ -49,6 +49,22 @@ const Footer = () => {
               Delivering the essence of research in 60-word summaries. Stay informed, stay ahead.
             </p>
 
+            {/* Contact Information */}
+            <div className="mb-6 space-y-2 text-sm text-muted-foreground">
+              <div>
+                <strong className="text-foreground">Office Address:</strong><br />
+                WJ88+69V BMTC Complex, Outer Ring Rd,<br />
+                Old Madiwala, Kuvempu Nagar, BTM 2nd Stage,<br />
+                BTM Layout, Bengaluru, Karnataka 560076
+              </div>
+              <div className="pt-2">
+                <strong className="text-foreground">Email:</strong><br />
+                <a href="mailto:contact@in60z.com" className="hover:text-primary transition-smooth">contact@in60z.com</a><br />
+                <a href="mailto:niyaz@in60z.com" className="hover:text-primary transition-smooth">niyaz@in60z.com</a><br />
+                <a href="mailto:siddhnath@in60z.com" className="hover:text-primary transition-smooth">siddhnath@in60z.com</a>
+              </div>
+            </div>
+
             {/* Social Links */}
             <div className="flex space-x-4">
               {socialLinks.map((social, index) => (

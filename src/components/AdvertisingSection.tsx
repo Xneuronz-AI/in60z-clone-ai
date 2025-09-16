@@ -1,24 +1,35 @@
 import React from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
+// Import brand images
+import brandSamsung from '@/assets/brand-samsung.jpg';
+import brandHP from '@/assets/brand-hp.jpg';
+import brandRayBan from '@/assets/brand-rayban.jpg';
+import brandRaymond from '@/assets/brand-raymond.jpg';
+import brandBoss from '@/assets/brand-boss.jpg';
+import brandAudi from '@/assets/brand-audi.jpg';
+import brandVolvo from '@/assets/brand-volvo.jpg';
+import brandMaruti from '@/assets/brand-maruti.jpg';
+import brandTitan from '@/assets/brand-titan.jpg';
+import brandRealme from '@/assets/brand-realme.jpg';
+
 const AdvertisingSection = () => {
-  // Mock brand data - these would be replaced with actual brand images
   const brands = [
-    { name: 'Samsung', color: 'bg-blue-500' },
-    { name: 'Apollo Tyres', color: 'bg-purple-500' },
-    { name: 'Audi', color: 'bg-red-500' },
-    { name: 'Hugo Boss', color: 'bg-gray-800' },
-    { name: 'Apple', color: 'bg-gray-900' },
-    { name: 'Microsoft', color: 'bg-blue-600' },
-    { name: 'Google', color: 'bg-green-500' },
-    { name: 'Tesla', color: 'bg-red-600' },
-    { name: 'Nike', color: 'bg-orange-500' },
-    { name: 'Adidas', color: 'bg-black' },
-    { name: 'BMW', color: 'bg-blue-700' },
-    { name: 'Mercedes', color: 'bg-gray-700' },
-    { name: 'Toyota', color: 'bg-red-700' },
-    { name: 'Coca Cola', color: 'bg-red-500' },
-    { name: 'Pepsi', color: 'bg-blue-800' }
+    { name: 'Samsung', image: brandSamsung },
+    { name: 'HP', image: brandHP },
+    { name: 'Ray-Ban', image: brandRayBan },
+    { name: 'Raymond', image: brandRaymond },
+    { name: 'Boss', image: brandBoss },
+    { name: 'Audi', image: brandAudi },
+    { name: 'Volvo', image: brandVolvo },
+    { name: 'Maruti Suzuki', image: brandMaruti },
+    { name: 'Titan', image: brandTitan },
+    { name: 'Realme', image: brandRealme },
+    { name: 'Samsung', image: brandSamsung },
+    { name: 'HP', image: brandHP },
+    { name: 'Ray-Ban', image: brandRayBan },
+    { name: 'Raymond', image: brandRaymond },
+    { name: 'Boss', image: brandBoss }
   ];
 
   return (
@@ -47,9 +58,12 @@ const AdvertisingSection = () => {
               {brands.map((brand, index) => (
                 <CarouselItem key={index} className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4">
                   <div className="relative h-40 md:h-48 rounded-2xl overflow-hidden group cursor-pointer">
-                    <div className={`absolute inset-0 ${brand.color} opacity-80`}>
-                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-black/60" />
-                    </div>
+                    <img 
+                      src={brand.image} 
+                      alt={`${brand.name} advertisement`}
+                      className="absolute inset-0 w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-black/20 to-black/60" />
                     
                     <div className="absolute top-4 left-4">
                       <span className="bg-black/20 text-white text-xs px-2 py-1 rounded-full backdrop-blur-sm">
