@@ -22,6 +22,7 @@ import parasImage from '@/assets/team/paras.jpg';
 import elafImage from '@/assets/team/elaf.jpg';
 import premImage from '@/assets/team/prem.jpg';
 import anujaiImage from '@/assets/team/anujai.jpg';
+import dhanjeetImage from '@/assets/team/dhanjeet.jpg';
 
 const Team = () => {
   const founders = [
@@ -153,7 +154,7 @@ const Team = () => {
   const advisors = [
     {
       name: "Prem Panicker",
-      role: "Senior Account Director at DWA",
+      role: "Ex Managing Director Yahoo!",
       bio: "Former Yahoo executive bringing extensive experience in digital media and strategic partnerships.",
       image: premImage
     },
@@ -162,6 +163,12 @@ const Team = () => {
       role: "Zepto Growth Head",
       bio: "Growth expert helping scale platforms and optimize user acquisition strategies at Zepto.",
       image: anujaiImage
+    },
+    {
+      name: "Dhanjeet Singh",
+      role: "Senior Account Director at DWA",
+      bio: "Strategic advisor bringing extensive experience in account management and digital transformation initiatives.",
+      image: dhanjeetImage
     }
   ];
 

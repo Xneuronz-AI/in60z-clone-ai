@@ -4,6 +4,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ArrowRight, Target, Users, Lightbulb, Eye, Zap, BookOpen, Clock, Globe, CheckCircle, TrendingUp, Shield, Smartphone, Network, Brain } from 'lucide-react';
+import WaitlistForm from '@/components/WaitlistForm';
 
 const About = () => {
   const problems = [
@@ -65,17 +66,17 @@ const About = () => {
 
   const journey = [
     {
-      year: "2023",
+      year: "Jan 2025",
       title: "Foundation",
       description: "In60z was founded with a vision to democratize research access through AI-powered summarization."
     },
     {
-      year: "2024", 
+      year: "Mar 2025", 
       title: "Innovation",
       description: "Developed our signature 60-word summary algorithm and launched the mobile-first platform."
     },
     {
-      year: "2025",
+      year: "Aug 2025",
       title: "Expansion",
       description: "Scaling globally with advanced AI features, podcast integration, and event discovery."
     }
@@ -103,8 +104,14 @@ const About = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground">
-                Join Our Mission
-                <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                <WaitlistForm 
+                  trigger={
+                    <>
+                      Join Our Mission
+                      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                    </>
+                  }
+                />
               </Button>
               <Button size="lg" variant="outline" className="border-primary/20">
                 Watch Demo
@@ -258,10 +265,14 @@ const About = () => {
             Join thousands of researchers, students, and professionals who are already experiencing 
             the future of knowledge consumption with In60z.
           </p>
-          <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-            Start Your Journey
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+          <WaitlistForm 
+            trigger={
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
+                Start Your Journey
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+            }
+          />
         </div>
       </section>
 

@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Download } from 'lucide-react';
 import appStore from '@/assets/app-store.png';
 import googlePlay from '@/assets/google-play.png';
+import WaitlistForm from '@/components/WaitlistForm';
 
 const CTASection = () => {
   return (
@@ -38,10 +39,14 @@ const CTASection = () => {
             
             <div className="flex items-center">
               <span className="text-muted-foreground mr-3 md:mr-4 text-sm md:text-base">or</span>
-              <Button variant="outline" size="lg" className="group bg-transparent border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                Join Waitlist
-                <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Button>
+              <WaitlistForm 
+                trigger={
+                  <Button variant="outline" size="lg" className="group bg-transparent border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                    Join Waitlist
+                    <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                }
+              />
             </div>
           </div>
 

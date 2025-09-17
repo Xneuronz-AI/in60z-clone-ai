@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import heroPhone from '@/assets/podcasts-phone.png';
 import appStore from '@/assets/app-store.png';
 import googlePlay from '@/assets/google-play.png';
+import WaitlistForm from '@/components/WaitlistForm';
 
 const HeroSection = () => {
   return (
@@ -38,6 +39,7 @@ const HeroSection = () => {
               <Button className="app-store-btn p-0 h-auto bg-transparent hover:bg-transparent">
                 <img src={googlePlay} alt="Get it on Google Play" className="h-12 md:h-14 w-auto" />
               </Button>
+              <WaitlistForm className="h-12 md:h-14 px-6 text-base font-medium" />
             </div>
           </div>
 

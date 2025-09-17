@@ -6,10 +6,6 @@ import logoSvg from '@/assets/IN60Z_Logo.svg';
 
 const Footer = () => {
   const footerLinks = {
-    Product: [
-      { name: 'Features', href: '/capabilities' },
-      { name: 'Pricing', href: '#pricing' }
-    ],
     Company: [
       { name: 'About Us', href: '/about' },
       { name: 'Our Team', href: '/team' },
