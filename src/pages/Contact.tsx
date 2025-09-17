@@ -32,7 +32,6 @@ const Contact = () => {
       title: "Business Hours",
       details: [
         "Monday - Friday: 9:00 AM - 6:00 PM IST",
-        "Saturday: 10:00 AM - 4:00 PM IST",
         "Sunday: Closed"
       ]
     }

@@ -9,6 +9,7 @@ import prabhjotImage from '@/assets/team/prabhjot.jpg';
 import siddhanthImage from '@/assets/team/siddhanth.jpg';
 import nitinImage from '@/assets/team/nitin.jpg';
 import rifaImage from '@/assets/team/rifa.jpg';
+import ResumeForm from '@/components/ResumeForm';
 import bhoomikaImage from '@/assets/team/bhoomika.jpg';
 import kanishkhaImage from '@/assets/team/kanishkha.jpg';
 import sayeedImage from '@/assets/team/sayeed.jpg';
@@ -32,8 +33,8 @@ const Team = () => {
       bio: "Bringing a decade of extensive experience in Marketing & Business from Yahoo in building and scaling consumer-centric platforms. Visionary leader with a passion for democratizing research access.",
       email: "niyaz@in60z.com",
       image: niyazImage,
-      linkedin: "#",
-      twitter: "#"
+      linkedin: "https://www.linkedin.com/in/n1y4z",
+      twitter: "https://x.com/N1Y4zz"
     },
     {
       name: "Prabhjot Singh", 
@@ -41,8 +42,8 @@ const Team = () => {
       bio: "Expert who demonstrated significant conviction by leaving a high-paying role (97LPA) to build In60z. Leading the AI architecture that powers our summarization engine.",
       email: "prabhjot@in60z.com",
       image: prabhjotImage,
-      linkedin: "#",
-      twitter: "#"
+      linkedin: "https://in.linkedin.com/in/prabhjot-singh-chugh",
+      twitter: "https://x.com/in60z_ai"
     },
     {
       name: "Siddhanth Bhat",
@@ -50,8 +51,8 @@ const Team = () => {
       bio: "AI Researcher and published expert who ensures the quality and credibility of our research summaries. Technical architect behind In60z's AI-powered platform.",
       email: "siddhanth@in60z.com",
       image: siddhanthImage,
-      linkedin: "#",
-      twitter: "#"
+      linkedin: "https://www.linkedin.com/in/siddhanthbhat/",
+      twitter: "https://x.com/in60z_ai"
     },
     {
       name: "Nitin Revankar",
@@ -59,8 +60,8 @@ const Team = () => {
       bio: "Digital Media Expert with decade of experience leveraging his Yahoo background to lead monetization and brand partnerships for scaling platforms.",
       email: "nitin@in60z.com", 
       image: nitinImage,
-      linkedin: "#",
-      twitter: "#"
+      linkedin: "https://www.linkedin.com/in/nitinrevankar/",
+      twitter: "https://x.com/in60z_ai"
     }
   ];
 
@@ -311,13 +312,8 @@ const Team = () => {
                 We're always looking for passionate individuals who share our vision of making research accessible to everyone. 
                 Join us in building the future of knowledge democratization.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <a href="mailto:contact@in60z.com">View Open Positions</a>
-                </Button>
-                <Button size="lg" variant="outline" className="border-primary/20">
-                  <a href="mailto:careers@in60z.com">Send Your Resume</a>
-                </Button>
+              <div className="flex justify-center">
+                <ResumeForm />
               </div>
             </div>
           </div>
