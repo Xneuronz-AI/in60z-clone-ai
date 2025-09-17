@@ -39,7 +39,13 @@ const HeroSection = () => {
               <Button className="app-store-btn p-0 h-auto bg-transparent hover:bg-transparent">
                 <img src={googlePlay} alt="Get it on Google Play" className="h-12 md:h-14 w-auto" />
               </Button>
-              <WaitlistForm className="h-12 md:h-14 px-6 text-base font-medium" />
+              <WaitlistForm 
+                trigger={
+                  <Button className="h-10 px-4 text-sm font-medium border border-[#0075ff] text-[#0075ff] bg-transparent hover:bg-[#0075ff]/10 transition-smooth">
+                    Join Our Waitlist
+                  </Button>
+                }
+              />
             </div>
           </div>
 

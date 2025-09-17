@@ -103,18 +103,18 @@ const About = () => {
               Our AI-powered platform delivers the essence of complex studies in exactly 60 words.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground">
-                <WaitlistForm 
-                  trigger={
-                    <>
-                      Join Our Mission
-                      <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                    </>
-                  }
-                />
-              </Button>
-              <Button size="lg" variant="outline" className="border-primary/20">
-                Watch Demo
+              <WaitlistForm 
+                trigger={
+                  <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground">
+                    Join Our Mission
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                }
+              />
+              <Button size="lg" variant="outline" className="border-primary/20" asChild>
+                <a href="#video-section">
+                  Watch Demo
+                </a>
               </Button>
             </div>
           </div>

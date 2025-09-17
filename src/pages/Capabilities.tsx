@@ -142,18 +142,10 @@ const Capabilities = () => {
             <p className="text-xl text-muted-foreground mb-12 max-w-3xl mx-auto">
               Experience In60z across multiple platforms and devices for seamless research access anywhere, anytime.
             </p>
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-1 gap-8 max-w-md mx-auto">
               <div className="bg-card rounded-xl p-6">
                 <h3 className="text-xl font-bold mb-4">Mobile First</h3>
                 <p className="text-muted-foreground">Optimized mobile experience with swipe-based navigation for the on-the-go researcher.</p>
-              </div>
-              <div className="bg-card rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-4">Web Platform</h3>
-                <p className="text-muted-foreground">Full-featured web interface with advanced search and discovery capabilities.</p>
-              </div>
-              <div className="bg-card rounded-xl p-6">
-                <h3 className="text-xl font-bold mb-4">Cross-Device Sync</h3>
-                <p className="text-muted-foreground">Seamlessly sync your reading progress, bookmarks, and preferences across all devices.</p>
               </div>
             </div>
           </div>

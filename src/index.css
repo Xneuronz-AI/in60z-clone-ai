@@ -23,6 +23,7 @@ All colors MUST be HSL.
     --primary: 213 100% 50%;
     --primary-foreground: 0 0% 100%;
     --primary-glow: 213 100% 60%;
+    --vivid-blue: 213 100% 50%;
 
     /* Secondary and muted colors */
     --secondary: 220 15% 15%;

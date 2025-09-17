@@ -24,10 +24,10 @@ const Footer = () => {
   };
 
   const socialLinks = [
-    { icon: <Twitter size={20} />, href: '#', label: 'Twitter' },
-    { icon: <Linkedin size={20} />, href: '#', label: 'LinkedIn' },
-    { icon: <Github size={20} />, href: '#', label: 'GitHub' },
-    { icon: <Mail size={20} />, href: '#', label: 'Email' }
+    { icon: <Twitter size={20} />, href: 'https://x.com/in60z_ai', label: 'Twitter' },
+    { icon: <Linkedin size={20} />, href: 'https://www.linkedin.com/company/formetry-labs/', label: 'LinkedIn' },
+    { icon: <Github size={20} />, href: 'https://github.com/Xneuronz-AI/', label: 'GitHub' },
+    { icon: <Mail size={20} />, href: 'mailto:niyaz@in60z.com', label: 'Email' }
   ];
 
   return (
@@ -110,7 +110,7 @@ const Footer = () => {
         {/* Bottom Section */}
         <div className="border-t border-border mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 In60z. All rights reserved.
+            © 2025 Formetry Labs Pvt Ltd. All rights reserved.
           </p>
           
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
