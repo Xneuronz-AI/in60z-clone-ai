@@ -21,7 +21,7 @@ import himanshuImage from '@/assets/team/himanshu.jpg';
 import parasImage from '@/assets/team/paras.jpg';
 import elafImage from '@/assets/team/elaf.jpg';
 import premImage from '@/assets/team/prem.jpg';
-import anujayImage from '@/assets/team/anujay.jpg';
+import anujaiImage from '@/assets/team/anujai.jpg';
 
 const Team = () => {
   const founders = [
@@ -140,16 +140,17 @@ const Team = () => {
       bio: "Architecting robust backend systems that power our AI-driven research platform.",
       department: "Engineering",
       image: parasImage
+    },
+    {
+      name: "Elaf",
+      role: "Frontend Developer",
+      bio: "Building intuitive and responsive user interfaces for seamless user experience.",
+      department: "Engineering",
+      image: elafImage
     }
   ];
 
   const advisors = [
-    {
-      name: "Elaf",
-      role: "Frontend Developer & Lead Advisor",
-      bio: "Seasoned frontend developer providing strategic guidance on user experience and technical architecture.",
-      image: elafImage
-    },
     {
       name: "Prem Panicker",
       role: "Senior Account Director at DWA",
@@ -158,9 +159,9 @@ const Team = () => {
     },
     {
       name: "Anujay Mathur",
-      role: "Growth Head at Zepto",
-      bio: "Growth expert helping scale platforms and optimize user acquisition strategies.",
-      image: anujayImage
+      role: "Zepto Growth Head",
+      bio: "Growth expert helping scale platforms and optimize user acquisition strategies at Zepto.",
+      image: anujaiImage
     }
   ];
 
