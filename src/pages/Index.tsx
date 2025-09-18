@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation';
 import HeroSection from '@/components/HeroSection';
 import FeatureSection from '@/components/FeatureSection';
 import VideoSection from '@/components/VideoSection';
-import ContentFrameworkSection from '@/components/ContentFrameworkSection';
+import StatsSection from '@/components/StatsSection';
 import PodcastSection from '@/components/PodcastSection';
 import AdvertisingSection from '@/components/AdvertisingSection';
 import IncubationSection from '@/components/IncubationSection';
@@ -17,7 +17,7 @@ const Index = () => {
       <HeroSection />
       <FeatureSection />
       <VideoSection />
-      <ContentFrameworkSection />
+      <StatsSection />
       <PodcastSection />
       <AdvertisingSection />
       <IncubationSection />
