@@ -21,8 +21,15 @@ const PodcastSection = () => {
       }
       setCurrentPlaying(podcastId);
       
-      // Create new audio element for the transformer.mp3
-      const audio = new Audio('/transformer.mp3');
+      // Map podcast ID to audio file
+      const audioFiles = {
+        1: '/transformer.mp3',
+        2: '/crispr.mp3',
+        3: '/alexnet.mp3',
+        4: '/graphene.mp3'
+      };
+      
+      const audio = new Audio(audioFiles[podcastId as keyof typeof audioFiles]);
       audioRef.current = audio;
       audio.play();
       
@@ -35,34 +42,34 @@ const PodcastSection = () => {
   const podcasts = [
     {
       id: 1,
-      title: "Why the Human Brain Perceives Small Numbers Better",
-      description: "The discovery that the brain has different systems for representing small and large numbers provokes new questions about memory, attention and mathematics.",
-      source: "Quanta Science Podcast",
+      title: "The Architecture Behind the AI Revolution: Unpacking the Transformer Paper",
+      description: "Ever wonder how ChatGPT and other AI models actually work? It all traces back to one foundational paper. Join us as we break down \"Attention Is All You Need,\" the 2017 research that introduced the Transformer architecture. We'll explain how its \"self-attention\" mechanism replaced older models, enabling the large language models that are changing our world today. No PhD required!",
+      source: "IN60Z Research Podcast",
       duration: "45M",
       gradient: "from-purple-600 to-indigo-600"
     },
     {
       id: 2,
-      title: "Will the Supreme Court Grant Immunity?",
-      description: "Tommy, guest host Alyssa Mastromonaco, and Scott Scrutiny's Leah Litman break down the Trump team's immunity argument at the Supreme Court.",
-      source: "Pod Save America",
-      duration: "47M",
+      title: "Scissors for Genes: The Paper That Democratized DNA Editing with CRISPR",
+      description: "The ability to precisely edit genes moved from science fiction to reality thanks to a key 2012 paper. We dive into the study that explained how the CRISPR-Cas9 system could be programmed as a genetic \"scissors.\" Discover how this breakthrough launched a new era in medicine, agriculture, and biology, and sparked an ongoing ethical conversation about the power to rewrite life's code.",
+      source: "IN60Z Research Podcast",
+      duration: "42M",
       gradient: "from-cyan-500 to-blue-600"
     },
     {
       id: 3,
-      title: "Memory and Forgetting",
-      description: "Remembering is a tricky, unstable business. This hour: a look behind the curtain of how memories are made... and forgotten.",
-      source: "Radiolab",
-      duration: "45M",
+      title: "The Spark That Ignited AI: Revisiting the AlexNet Breakthrough",
+      description: "Before 2012, AI was struggling to see. After, it began to eclipse human ability. This is the story of AlexNet, the deep learning model that stunned the tech world by crushing an image recognition competition in 2012. We'll discuss the paper that proved the power of GPU-based neural networks, triggering the multi-billion dollar deep learning boom and setting the stage for the AI age.",
+      source: "IN60Z Research Podcast",
+      duration: "38M",
       gradient: "from-orange-500 to-red-600"
     },
     {
       id: 4,
-      title: "Campus Tensions Rise, Immunity, Weinstein's Conviction Tossed",
-      description: "As protests and arrests continue on campuses across the U.S., Supreme Court to hear oral arguments in Israel divestment case.",
-      source: "Up First",
-      duration: "45M",
+      title: "The Wonder Material: Isolating the First 2D Layer of Carbon",
+      description: "What can you do with a material one atom thick that's stronger than steel and conducts electricity better than copper? This week, we're revisiting the landmark 2004 paper that first isolated and tested graphene. Discover how researchers used simple Scotch tape to reveal the astonishing properties of this \"wonder material,\" kicking off a revolution in nanotechnology, electronics, and material science that is still unfolding today.",
+      source: "IN60Z Research Podcast",
+      duration: "43M",
       gradient: "from-green-500 to-emerald-600"
     }
   ];
