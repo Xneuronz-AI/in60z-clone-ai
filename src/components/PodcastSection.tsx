@@ -42,34 +42,30 @@ const PodcastSection = () => {
   const podcasts = [
     {
       id: 1,
-      title: "The Architecture Behind the AI Revolution: Unpacking the Transformer Paper",
+      title: "Transformer Paper - Tech",
       description: "Ever wonder how ChatGPT and other AI models actually work? It all traces back to one foundational paper. Join us as we break down \"Attention Is All You Need,\" the 2017 research that introduced the Transformer architecture. We'll explain how its \"self-attention\" mechanism replaced older models, enabling the large language models that are changing our world today. No PhD required!",
       source: "IN60Z Research Podcast",
-      duration: "45M",
       gradient: "from-purple-600 to-indigo-600"
     },
     {
       id: 2,
-      title: "Scissors for Genes: The Paper That Democratized DNA Editing with CRISPR",
+      title: "DNA Editing with CRISPR - Science",
       description: "The ability to precisely edit genes moved from science fiction to reality thanks to a key 2012 paper. We dive into the study that explained how the CRISPR-Cas9 system could be programmed as a genetic \"scissors.\" Discover how this breakthrough launched a new era in medicine, agriculture, and biology, and sparked an ongoing ethical conversation about the power to rewrite life's code.",
       source: "IN60Z Research Podcast",
-      duration: "42M",
       gradient: "from-cyan-500 to-blue-600"
     },
     {
       id: 3,
-      title: "The Spark That Ignited AI: Revisiting the AlexNet Breakthrough",
+      title: "AlexNet Breakthrough - Tech",
       description: "Before 2012, AI was struggling to see. After, it began to eclipse human ability. This is the story of AlexNet, the deep learning model that stunned the tech world by crushing an image recognition competition in 2012. We'll discuss the paper that proved the power of GPU-based neural networks, triggering the multi-billion dollar deep learning boom and setting the stage for the AI age.",
       source: "IN60Z Research Podcast",
-      duration: "38M",
       gradient: "from-orange-500 to-red-600"
     },
     {
       id: 4,
-      title: "The Wonder Material: Isolating the First 2D Layer of Carbon",
+      title: "Isolating the First 2D Layer of Carbon - Science",
       description: "What can you do with a material one atom thick that's stronger than steel and conducts electricity better than copper? This week, we're revisiting the landmark 2004 paper that first isolated and tested graphene. Discover how researchers used simple Scotch tape to reveal the astonishing properties of this \"wonder material,\" kicking off a revolution in nanotechnology, electronics, and material science that is still unfolding today.",
       source: "IN60Z Research Podcast",
-      duration: "43M",
       gradient: "from-green-500 to-emerald-600"
     }
   ];
@@ -102,7 +98,6 @@ const PodcastSection = () => {
                 </div>
                 <div className="text-center text-white px-2">
                   <h3 className="font-bold text-sm md:text-lg mb-1 md:mb-2">Science & Tech</h3>
-                  <p className="text-xs md:text-sm opacity-90 line-clamp-1">Science and Technology based on paper and podcasts</p>
                 </div>
               </div>
               
@@ -112,9 +107,6 @@ const PodcastSection = () => {
                   {podcast.title}
                 </h4>
                 
-                <p className="text-muted-foreground text-xs md:text-sm mb-3 md:mb-4 line-clamp-2 md:line-clamp-3">
-                  {podcast.description}
-                </p>
                 
                 {/* Controls */}
                 <div className="flex items-center justify-between">
@@ -130,7 +122,7 @@ const PodcastSection = () => {
                         <Play className="w-3 h-3 md:w-4 md:h-4 ml-0.5" />
                       )}
                     </Button>
-                    <span className="text-xs md:text-sm font-medium">{podcast.duration}</span>
+                    
                   </div>
                   
                   <div className="flex items-center gap-1 md:gap-2">
