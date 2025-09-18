@@ -41,7 +41,7 @@ const HeroSection = () => {
               </Button>
               <WaitlistForm 
                 trigger={
-                  <Button className="h-12 md:h-14 px-6 text-sm font-medium border border-[#0075ff] text-[#0075ff] bg-transparent hover:bg-[#0075ff]/10 transition-smooth">
+                  <Button className="h-12 md:h-14 px-6 text-sm font-medium border border-primary text-primary bg-transparent hover:bg-primary/10 transition-smooth">
                     Join Our Waitlist
                   </Button>
                 }

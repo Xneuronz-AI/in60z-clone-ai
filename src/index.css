@@ -96,6 +96,7 @@ All colors MUST be HSL.
     @apply bg-background text-foreground font-sans;
     background: var(--gradient-background);
     min-height: 100vh;
+    overflow-x: hidden;
   }
 
   html {

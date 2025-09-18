@@ -101,8 +101,8 @@ const PodcastSection = () => {
                   </Button>
                 </div>
                 <div className="text-center text-white px-2">
-                  <h3 className="font-bold text-sm md:text-lg mb-1 md:mb-2">{podcast.source.split(' ')[0]}</h3>
-                  <p className="text-xs md:text-sm opacity-90 line-clamp-1">{podcast.source}</p>
+                  <h3 className="font-bold text-sm md:text-lg mb-1 md:mb-2">Science & Tech</h3>
+                  <p className="text-xs md:text-sm opacity-90 line-clamp-1">Science and Technology based on paper and podcasts</p>
                 </div>
               </div>
               
