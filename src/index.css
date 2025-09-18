@@ -97,16 +97,10 @@ All colors MUST be HSL.
     background: var(--gradient-background);
     min-height: 100vh;
     overflow-x: hidden;
-    scroll-behavior: smooth;
   }
 
   html {
     scroll-behavior: smooth;
-    height: 100%;
-  }
-  
-  * {
-    box-sizing: border-box;
   }
 }
 
