@@ -10,7 +10,7 @@ const Blog = () => {
       id: 'tired-of-information-overload',
       title: 'Tired of the Information Overload? You\'re Not Alone.',
       description: 'In today\'s fast-paced world, staying informed feels like a full-time job. Discover how In60z transforms information consumption.',
-      publishedAt: '2025-01-15',
+      publishedAt: '2025-09-15',
       readTime: '5 min read'
     }
   ];

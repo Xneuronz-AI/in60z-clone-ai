@@ -2,7 +2,7 @@ import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import nvidiaLogo from '@/assets/nvidia-logo.svg';
 import elevenLabsLogo from '@/assets/eleven-labs-logo.png';
-import googleCloudLogo from '@/assets/google-cloud-logo.png';
+import googleCloudLogo from '@/assets/google-cloud-logo.svg';
 import microsoftLogo from '@/assets/microsoft-logo.svg';
 import awsLogo from '@/assets/aws-logo.svg';
 
@@ -16,9 +16,9 @@ const RecognizedSection = () => {
     },
     {
       logo: elevenLabsLogo,
-      name: 'ELLEVAN LABS',
+      name: 'ELEVENLABS',
       description: 'Grant Recipient',
-      logoAlt: '11ElevenLabs',
+      logoAlt: 'ElevenLabs',
       className: 'text-white'
     },
     {
