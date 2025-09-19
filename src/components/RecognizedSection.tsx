@@ -1,8 +1,8 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
-import nvidiaLogo from '@/assets/nvidia-logo.png';
+import nvidiaLogo from '@/assets/nvidia-logo.svg';
 import elevenLabsLogo from '@/assets/eleven-labs-logo.png';
-import googleCloudLogo from '@/assets/google-cloud-logo.svg';
+import googleCloudLogo from '@/assets/google-cloud-logo.png';
 import microsoftLogo from '@/assets/microsoft-logo.svg';
 import awsLogo from '@/assets/aws-logo.svg';
 
@@ -46,7 +46,7 @@ const RecognizedSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="text-primary">Recognized</span> & <span className="text-muted-foreground">Supported</span>
+            <span className="text-primary">Recognized</span> & <span className="text-foreground">Supported</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Trusted by Industry Leaders
@@ -57,11 +57,11 @@ const RecognizedSection = () => {
           {partners.map((partner, index) => (
             <Card key={index} className="glass border-border/20 hover:border-primary/30 transition-all duration-300 group">
               <CardContent className="p-8 text-center">
-                <div className="mb-6 flex justify-center items-center h-16">
+                <div className="mb-6 flex justify-center items-center h-20">
                   <img 
                     src={partner.logo} 
                     alt={partner.logoAlt}
-                    className="max-h-12 max-w-full object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-300"
+                    className="max-h-16 max-w-full object-contain filter brightness-90 group-hover:brightness-100 transition-all duration-300"
                   />
                 </div>
                 <h3 className={`text-lg font-bold mb-2 ${partner.className || 'text-foreground'}`}>

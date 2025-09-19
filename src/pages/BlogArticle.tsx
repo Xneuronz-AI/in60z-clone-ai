@@ -52,7 +52,7 @@ const BlogArticle = () => {
               <div className="flex items-center gap-6 text-muted-foreground mb-8">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  <span>January 15, 2025</span>
+                  <span>September 15, 2025</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
