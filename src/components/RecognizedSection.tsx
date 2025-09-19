@@ -10,32 +10,32 @@ const RecognizedSection = () => {
   const partners = [
     {
       logo: nvidiaLogo,
-      name: 'NVIDIA INCEPTION',
+      name: 'Nvidia Inception',
       description: 'AI Accelerator Program',
       logoAlt: 'NVIDIA'
     },
     {
       logo: elevenLabsLogo,
-      name: 'ELEVENLABS',
+      name: 'Eleven Labs',
       description: 'Grant Recipient',
       logoAlt: 'ElevenLabs',
       className: 'text-white'
     },
     {
       logo: googleCloudLogo,
-      name: 'GOOGLE CLOUD',
+      name: 'Google Cloud',
       description: 'AI and Cloud Credits Infrastructure',
       logoAlt: 'Google Cloud'
     },
     {
       logo: microsoftLogo,
-      name: 'MICROSOFT FOR STARTUPS',
+      name: 'Microsoft for Startups',
       description: 'AI and Cloud Credits Infrastructure',
       logoAlt: 'Microsoft'
     },
     {
       logo: awsLogo,
-      name: 'AMAZON AWS',
+      name: 'Amazon AWS',
       description: 'AI and Cloud Credits Infrastructure',
       logoAlt: 'AWS'
     }
@@ -48,8 +48,9 @@ const RecognizedSection = () => {
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-primary">Recognized</span> & <span className="text-foreground">Supported</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Trusted by Industry Leaders
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+            Backed by industry leaders like NVIDIA, Microsoft, and Google, and supported by an Eleven Labs grant.
+            This coalition provides the advanced technology, scalable cloud infrastructure, and compute power for AI model training.
           </p>
         </div>
         
