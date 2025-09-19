@@ -7,6 +7,7 @@ import StatsSection from '@/components/StatsSection';
 import PodcastSection from '@/components/PodcastSection';
 import AdvertisingSection from '@/components/AdvertisingSection';
 import IncubationSection from '@/components/IncubationSection';
+import RecognizedSection from '@/components/RecognizedSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 
@@ -21,6 +22,7 @@ const Index = () => {
       <PodcastSection />
       <AdvertisingSection />
       <IncubationSection />
+      <RecognizedSection />
       <CTASection />
       <Footer />
     </div>
