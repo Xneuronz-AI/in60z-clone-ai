@@ -12,6 +12,13 @@ const Blog = () => {
       description: 'In today\'s fast-paced world, staying informed feels like a full-time job. Discover how In60z transforms information consumption.',
       publishedAt: '2025-09-15',
       readTime: '5 min read'
+    },
+    {
+      id: 'future-of-event-discovery',
+      title: 'The Future of Event Discovery Isn\'t About Finding More; It\'s About Finding the Right Ones.',
+      description: 'Transform your approach to professional development with curated, not cluttered event discovery.',
+      publishedAt: '2025-09-15',
+      readTime: '4 min read'
     }
   ];
 

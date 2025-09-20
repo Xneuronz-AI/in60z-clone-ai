@@ -37,8 +37,11 @@ const IncubationSection = () => {
                 <Button 
                   variant="default" 
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
+                  asChild
                 >
-                  Recommendation
+                  <a href="https://drive.google.com/file/d/1RIoEycWsgpOE0J5qBGG7qgjFIUYHrNaC/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                    Recommendation
+                  </a>
                 </Button>
                 <Button 
                   variant="outline" 
