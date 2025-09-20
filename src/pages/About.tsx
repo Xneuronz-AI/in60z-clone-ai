@@ -55,7 +55,7 @@ const About = () => {
       title: "Mobile-First Innovation", 
       description: "Swipe-based interface designed for the TikTok generation, making research consumption as addictive as social media with offline capabilities.",
       features: ["Intuitive swipe navigation", "Offline reading", "Cross-device sync", "Social sharing"],
-      metrics: { engagement: "+300%", retention: "85%", mobile: "100%" }
+      metrics: { interface: "Swipe", sync: "Real-time", offline: "Available" }
     },
     {
       icon: <Zap className="w-12 h-12 text-primary" />,
@@ -80,25 +80,25 @@ const About = () => {
       year: "Jan 2025",
       title: "Visionary Foundation",
       description: "Founded with the ambitious mission to democratize global research access through cutting-edge AI technology.",
-      achievement: "Secured initial funding and assembled world-class AI team"
+      achievement: "Assembling world-class AI team and building core technology"
     },
     {
       year: "Mar 2025", 
       title: "Breakthrough Innovation",
       description: "Developed our signature 60-word algorithm and launched the industry's first mobile-first research platform.",
-      achievement: "Beta launched with 1,000+ researchers"
+      achievement: "Core AI algorithms developed and tested"
     },
     {
       year: "Aug 2025",
-      title: "Rapid Scaling",
-      description: "Expanding globally with advanced features: podcast integration, event discovery, and multi-language support.",
-      achievement: "Reached 50K+ users across 150+ countries"
+      title: "Product Development",
+      description: "Building advanced features: podcast integration, event discovery, and multi-language support.",
+      achievement: "Platform development in progress"
     },
     {
       year: "2026",
-      title: "Future Vision",
-      description: "Next-generation AI models, AR/VR integration, and enterprise solutions for research institutions worldwide.",
-      achievement: "Targeting 1M+ users and IPO preparation"
+      title: "Launch Vision",
+      description: "Preparing for global launch with next-generation AI models, AR/VR integration, and enterprise solutions.",
+      achievement: "Getting ready to transform research accessibility worldwide"
     }
   ];
 
@@ -307,6 +307,35 @@ const About = () => {
         </div>
       </section>
 
+      {/* Vision and Mission */}
+      <section className="py-24 bg-gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0 bg-geometric opacity-10"></div>
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-16 items-center">
+              <div>
+                <Badge className="mb-6 bg-primary/20 text-primary border-primary/30">Our Mission</Badge>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                  Democratizing Research for <span className="text-gradient">8 Billion People</span>
+                </h2>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  We believe knowledge should be accessible to everyone, not just academic elites. Our mission is to break down the barriers that prevent breakthrough insights from reaching those who need them most, transforming how humanity discovers, consumes, and connects with research.
+                </p>
+              </div>
+              <div>
+                <Badge className="mb-6 bg-accent/20 text-accent border-accent/30">Our Vision</Badge>
+                <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                  A World Where <span className="text-gradient">Knowledge Flows Freely</span>
+                </h2>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  We envision a future where any person, anywhere in the world, can instantly access and understand the latest research in their field. Where language barriers, complex jargon, and information overload no longer prevent breakthrough discoveries from changing lives and advancing human progress.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Values */}
       <section className="py-24 bg-muted/20">
         <div className="container mx-auto px-6">
@@ -338,8 +367,8 @@ const About = () => {
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-4xl md:text-6xl font-bold mb-8">Ready to Transform Research?</h2>
           <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-            Join 50,000+ researchers, students, and professionals who are already experiencing 
-            the future of knowledge consumption. Be part of the research revolution.
+            Be among the first to experience the future of knowledge consumption. 
+            Join our waitlist and be part of the research revolution.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <WaitlistForm 
