@@ -17,7 +17,7 @@ const Blog = () => {
       id: 'future-of-event-discovery',
       title: 'The Future of Event Discovery Isn\'t About Finding More; It\'s About Finding the Right Ones.',
       description: 'Transform your approach to professional development with curated, not cluttered event discovery.',
-      publishedAt: '2025-09-15',
+      publishedAt: '2025-09-20',
       readTime: '4 min read'
     }
   ];

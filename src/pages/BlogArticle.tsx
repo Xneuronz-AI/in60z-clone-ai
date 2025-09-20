@@ -56,7 +56,7 @@ const BlogArticle = () => {
               <div className="flex items-center gap-6 text-muted-foreground mb-8">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  <span>September 15, 2025</span>
+                  <span>{id === 'tired-of-information-overload' ? 'September 15, 2025' : 'September 20, 2025'}</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
@@ -88,9 +88,9 @@ const BlogArticle = () => {
                   <p className="mb-4">You've probably said things like:</p>
 
                   <ul className="mb-6">
-                    <li>"I wish I could stay on top of the news without spending hours scrolling."</li>
-                    <li>"Someday I hope to understand the latest scientific breakthroughs without needing a Ph.D."</li>
-                    <li>"Now you can get the gist of a story in the time it takes to brew a cup of coffee."</li>
+                    <li>I wish I could stay on top of the news without spending hours scrolling.</li>
+                    <li>Someday I hope to understand the latest scientific breakthroughs without needing a Ph.D.</li>
+                    <li>Now you can get the gist of a story in the time it takes to brew a cup of coffee.</li>
                   </ul>
 
                   <p className="mb-6">
@@ -106,9 +106,9 @@ const BlogArticle = () => {
                   </p>
 
                   <ul className="mb-6">
-                    <li>"I wish I could find all the information I need in one place."</li>
-                    <li>"Someday I hope to truly understand a complex research paper without a week of reading."</li>
-                    <li>"Now you can get the core insights from a research paper, listen to a deep-dive podcast about it, and find the next relevant event—all in the same app."</li>
+                    <li>I wish I could find all the information I need in one place.</li>
+                    <li>Someday I hope to truly understand a complex research paper without a week of reading.</li>
+                    <li>Now you can get the core insights from a research paper, listen to a deep-dive podcast about it, and find the next relevant event—all in the same app.</li>
                   </ul>
 
                   <p className="mb-8">
@@ -187,9 +187,9 @@ const BlogArticle = () => {
                   <p className="mb-4">You've probably said to yourself:</p>
 
                   <ul className="mb-6">
-                    <li>"I wish I could find all the key industry events in one place, with all the details I need."</li>
-                    <li>"Someday I hope to get a clear, concise summary of an event before I commit my time to it."</li>
-                    <li>"Now you can discover the most relevant webinars, hackathons, and conferences with just a few swipes."</li>
+                    <li>I wish I could find all the key industry events in one place, with all the details I need.</li>
+                    <li>Someday I hope to get a clear, concise summary of an event before I commit my time to it.</li>
+                    <li>Now you can discover the most relevant webinars, hackathons, and conferences with just a few swipes.</li>
                   </ul>
 
                   <h2 className="text-3xl font-bold mb-6">The In60z Solution: Curated, Not Cluttered</h2>

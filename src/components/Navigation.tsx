@@ -25,6 +25,14 @@ const Navigation = () => {
     { name: 'Contact Us', href: '/contact' },
   ];
 
+  const handleNavClick = (href: string) => {
+    setIsMobileMenuOpen(false);
+    // Smooth scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
+  };
+
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-smooth ${
       isScrolled ? 'glass' : 'bg-transparent'
@@ -43,6 +51,7 @@ const Navigation = () => {
               <Link
                 key={link.name}
                 to={link.href}
+                onClick={() => handleNavClick(link.href)}
                 className={`text-foreground hover:text-primary transition-smooth relative group ${
                   location.pathname === link.href ? 'text-primary' : ''
                 }`}
@@ -77,7 +86,7 @@ const Navigation = () => {
                 className={`block py-2 text-foreground hover:text-primary transition-smooth ${
                   location.pathname === link.href ? 'text-primary' : ''
                 }`}
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => handleNavClick(link.href)}
               >
                 {link.name}
               </Link>
