@@ -228,50 +228,7 @@ const Capabilities = () => {
           </div>
         </section>
 
-        {/* Performance Metrics */}
-        <section className="py-24">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-6">Performance at Scale</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Real-world metrics that demonstrate our platform's impact and reliability.
-              </p>
-            </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {performanceMetrics.map((metric, index) => (
-                <Card key={index} className="p-6 text-center bg-gradient-card border-primary/20 glow-subtle">
-                  <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 text-primary">
-                    {metric.icon}
-                  </div>
-                  <div className="text-3xl md:text-4xl font-bold text-primary mb-2">{metric.value}</div>
-                  <div className="text-sm text-muted-foreground">{metric.label}</div>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Integrations & Partnerships */}
-        <section className="py-24 bg-muted/20">
-          <div className="container mx-auto px-6">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold mb-6">Integrations & Partnerships</h2>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Seamlessly connected with the research ecosystem through strategic partnerships and integrations.
-              </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {integrations.map((integration, index) => (
-                <Card key={index} className="p-6 bg-card border-border/50 hover:border-primary/30 transition-colors">
-                  <h3 className="font-bold mb-2">{integration.name}</h3>
-                  <p className="text-sm text-muted-foreground">{integration.description}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
 
         {/* Future Roadmap */}
         <section className="py-24">

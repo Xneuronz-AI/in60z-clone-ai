@@ -189,30 +189,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Impact Metrics */}
-      <section className="py-20 bg-muted/10">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Our Global Impact</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Measurable results that demonstrate our commitment to transforming research accessibility worldwide.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
-            {impactMetrics.map((metric, index) => (
-              <Card key={index} className="p-6 text-center bg-gradient-card border-primary/20 glow-subtle hover:glow-primary transition-all duration-300">
-                <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4 text-primary">
-                  {metric.icon}
-                </div>
-                <div className="text-3xl font-bold text-primary mb-2">{metric.value}</div>
-                <div className="font-semibold mb-1">{metric.label}</div>
-                <div className="text-xs text-muted-foreground">{metric.description}</div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* The Problem We Solve */}
       <section className="py-24">
@@ -355,54 +331,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Overview */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">World-Class Team</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              70+ exceptional individuals from top tech companies and research institutions, united by our mission.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {team.map((dept, index) => (
-              <Card key={index} className="p-6 bg-card border-border/50">
-                <h3 className="text-xl font-bold mb-2">{dept.role}</h3>
-                <div className="text-2xl font-bold text-primary mb-3">{dept.members}</div>
-                <p className="text-sm text-muted-foreground">{dept.description}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Vision & Mission */}
-      <section className="py-24 bg-gradient-card">
-        <div className="container mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-12">
-            <Card className="p-10 bg-gradient-to-br from-primary/10 to-primary/5 border-primary/20 glow-primary">
-              <Eye className="w-16 h-16 text-primary mb-6" />
-              <h3 className="text-3xl font-bold mb-4">Our Bold Vision</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                To create a world where every person has instant access to humanity's collective knowledge, 
-                democratizing research and accelerating global progress through intelligent AI curation 
-                that makes complex insights universally accessible.
-              </p>
-            </Card>
-
-            <Card className="p-10 bg-gradient-to-br from-accent/10 to-accent/5 border-accent/20 glow-accent">
-              <Target className="w-16 h-16 text-primary mb-6" />
-              <h3 className="text-3xl font-bold mb-4">Our Mission</h3>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                To transform complex research into digestible, actionable insights through revolutionary AI, 
-                mobile-first design, and intelligent connectivity - making knowledge discovery as intuitive 
-                as social media for researchers, professionals, and curious minds worldwide.
-              </p>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* Call to Action */}
       <section className="py-24">
