@@ -55,7 +55,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ trigger, className = "" }) 
       <DialogTrigger asChild>
         {trigger || defaultTrigger}
       </DialogTrigger>
-      <DialogContent className="sm:max-w-md">
+      <DialogContent className="sm:max-w-md z-[100]">
         <DialogHeader>
           <DialogTitle className="text-2xl font-bold text-center">Join Our Waitlist</DialogTitle>
         </DialogHeader>

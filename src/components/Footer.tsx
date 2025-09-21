@@ -1,10 +1,12 @@
 import React from 'react';
 import { Twitter, Linkedin, Github, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import logoSvg from '@/assets/IN60Z_Logo.svg';
 
 const Footer = () => {
+  const navigate = useNavigate();
+  
   const footerLinks = {
     Company: [
       { name: 'About Us', href: '/about' },
@@ -12,15 +14,22 @@ const Footer = () => {
       { name: 'Contact', href: '/contact' }
     ],
     Resources: [
-      { name: 'Documentation', href: '#docs' },
-      { name: 'Help Center', href: '#help' },
-      { name: 'Community', href: '#community' }
+      { name: 'Blog', href: '/blog' },
+      { name: 'Capabilities', href: '/capabilities' },
+      { name: 'About Us', href: '/about' }
     ],
     Legal: [
       { name: 'Privacy Policy', href: '/privacy' },
       { name: 'Terms of Service', href: '/terms' },
       { name: 'Cookie Policy', href: '/cookies' }
     ]
+  };
+
+  const handleNavClick = (href: string) => {
+    navigate(href);
+    setTimeout(() => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, 100);
   };
 
   const socialLinks = [
@@ -85,21 +94,12 @@ const Footer = () => {
               <ul className="space-y-3">
                 {links.map((link) => (
                   <li key={link.name}>
-                    {link.href.startsWith('#') ? (
-                      <a
-                        href={link.href}
-                        className="text-muted-foreground hover:text-primary transition-smooth"
-                      >
-                        {link.name}
-                      </a>
-                    ) : (
-                      <Link
-                        to={link.href}
-                        className="text-muted-foreground hover:text-primary transition-smooth"
-                      >
-                        {link.name}
-                      </Link>
-                    )}
+                    <button
+                      onClick={() => handleNavClick(link.href)}
+                      className="text-muted-foreground hover:text-primary transition-smooth text-left"
+                    >
+                      {link.name}
+                    </button>
                   </li>
                 ))}
               </ul>
@@ -114,15 +114,24 @@ const Footer = () => {
           </p>
           
           <div className="flex items-center space-x-6 mt-4 md:mt-0">
-            <Link to="/privacy" className="text-muted-foreground hover:text-primary text-sm transition-smooth">
+            <button 
+              onClick={() => handleNavClick('/privacy')}
+              className="text-muted-foreground hover:text-primary text-sm transition-smooth"
+            >
               Privacy
-            </Link>
-            <Link to="/terms" className="text-muted-foreground hover:text-primary text-sm transition-smooth">
+            </button>
+            <button 
+              onClick={() => handleNavClick('/terms')}
+              className="text-muted-foreground hover:text-primary text-sm transition-smooth"
+            >
               Terms
-            </Link>
-            <Link to="/cookies" className="text-muted-foreground hover:text-primary text-sm transition-smooth">
+            </button>
+            <button 
+              onClick={() => handleNavClick('/cookies')}
+              className="text-muted-foreground hover:text-primary text-sm transition-smooth"
+            >
               Cookies
-            </Link>
+            </button>
           </div>
         </div>
       </div>
