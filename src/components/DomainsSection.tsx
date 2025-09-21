@@ -148,9 +148,12 @@ const DomainsSection = () => {
       <div className="container mx-auto px-6 relative">
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl lg:text-7xl font-bold mb-6">
-            OUR <span className="text-gradient">DOMAINS</span>
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+            Discover All <span className="text-gradient">72 Topics</span>
           </h2>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            We cover 72 topics across 4 key domains: Innovation, Science, Medical, and Technology.
+          </p>
         </div>
 
         {/* Domain Cards */}
