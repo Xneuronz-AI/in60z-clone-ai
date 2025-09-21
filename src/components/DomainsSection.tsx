@@ -140,7 +140,7 @@ const DomainsSection = () => {
   ];
 
   const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: true })
+    Autoplay({ delay: 2000, stopOnInteraction: false })
   );
 
   return (
@@ -151,7 +151,7 @@ const DomainsSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Discover All <span className="text-gradient">72 Topics</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-lg text-muted-foreground max-w-full mx-auto text-center px-4 md:whitespace-nowrap">
             We cover 72 topics across 4 key domains: Innovation, Science, Medical, and Technology.
           </p>
         </div>
@@ -183,20 +183,18 @@ const DomainsSection = () => {
 
         {/* Topics Slider */}
         <div className="relative">
-          <p className="text-center text-muted-foreground mb-8 text-lg">
+          <p className="text-center text-muted-foreground mb-8 text-lg max-w-4xl mx-auto">
             Explore diverse topics across all domains
           </p>
           
-          <Carousel
-            plugins={[plugin.current]}
-            className="w-full max-w-6xl mx-auto"
-            onMouseEnter={plugin.current.stop}
-            onMouseLeave={plugin.current.reset}
-            opts={{
-              align: "start",
-              loop: true,
-            }}
-          >
+            <Carousel
+              plugins={[plugin.current]}
+              className="w-full max-w-6xl mx-auto"
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
             <CarouselContent className="-ml-4">
               {topics.map((topic, index) => (
                 <CarouselItem key={index} className="pl-4 basis-auto">
