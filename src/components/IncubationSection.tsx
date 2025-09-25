@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import atalLogo from '@/assets/atal-incubation.png';
+import ipvLogo from '@/assets/ipv-logo.webp';
 import wadhwaniLogo from '@/assets/wadhwani-foundation.png';
 
 const IncubationSection = () => {
@@ -17,7 +18,7 @@ const IncubationSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {/* Atal Incubation JKLU */}
           <Card className="glass border-border/50 hover:border-primary/30 transition-all duration-300 group">
             <CardContent className="p-6 md:p-8 text-center">
@@ -25,7 +26,7 @@ const IncubationSection = () => {
                 <img 
                   src={atalLogo} 
                   alt="AIC-JKLU Logo" 
-                  className="w-20 h-20 md:w-24 md:h-24 mx-auto object-contain"
+                  className="w-24 h-24 md:w-28 md:h-28 mx-auto object-contain mix-blend-multiply dark:mix-blend-normal"
                 />
               </div>
               
@@ -33,7 +34,7 @@ const IncubationSection = () => {
                 Atal Incubation Center, JKLU
               </h3>
               
-              <div className="flex flex-col sm:flex-row gap-3 justify-center mt-6">
+              <div className="flex flex-col gap-3 justify-center mt-6">
                 <Button 
                   variant="default" 
                   className="bg-primary hover:bg-primary/90 text-primary-foreground"
@@ -56,6 +57,35 @@ const IncubationSection = () => {
             </CardContent>
           </Card>
 
+          {/* Inflection Point Ventures */}
+          <Card className="glass border-border/50 hover:border-primary/30 transition-all duration-300 group">
+            <CardContent className="p-6 md:p-8 text-center">
+              <div className="mb-6">
+                <img 
+                  src={ipvLogo} 
+                  alt="Inflection Point Ventures Logo" 
+                  className="w-24 h-24 md:w-28 md:h-28 mx-auto object-contain mix-blend-multiply dark:mix-blend-normal"
+                />
+              </div>
+              
+              <h3 className="text-xl md:text-2xl font-bold mb-2">
+                Inflection Point Ventures
+              </h3>
+              
+              <div className="flex justify-center mt-6">
+                <Button 
+                  variant="outline" 
+                  className="border-primary/50 hover:bg-primary/10"
+                  asChild
+                >
+                  <a href="https://www.inflectionpointventures.com/" target="_blank" rel="noopener noreferrer">
+                    Visit Website
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Wadhwani Foundation */}
           <Card className="glass border-border/50 hover:border-primary/30 transition-all duration-300 group">
             <CardContent className="p-6 md:p-8 text-center">
@@ -63,7 +93,7 @@ const IncubationSection = () => {
                 <img 
                   src={wadhwaniLogo} 
                   alt="Wadhwani Foundation Logo" 
-                  className="w-20 h-20 md:w-24 md:h-24 mx-auto object-contain"
+                  className="w-24 h-24 md:w-28 md:h-28 mx-auto object-contain mix-blend-multiply dark:mix-blend-normal"
                 />
               </div>
               
