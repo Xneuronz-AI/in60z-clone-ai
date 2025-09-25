@@ -26,11 +26,11 @@ const IncubationSection = () => {
                 <img 
                   src={atalLogo} 
                   alt="AIC-JKLU Logo" 
-                  className="w-24 h-24 md:w-28 md:h-28 mx-auto object-contain mix-blend-multiply dark:mix-blend-normal"
+                  className="w-32 h-32 md:w-36 md:h-36 mx-auto object-contain"
                 />
               </div>
               
-              <h3 className="text-xl md:text-2xl font-bold mb-2">
+              <h3 className="text-lg md:text-xl font-bold mb-2">
                 Atal Incubation Center, JKLU
               </h3>
               
@@ -64,11 +64,11 @@ const IncubationSection = () => {
                 <img 
                   src={ipvLogo} 
                   alt="Inflection Point Ventures Logo" 
-                  className="w-24 h-24 md:w-28 md:h-28 mx-auto object-contain mix-blend-multiply dark:mix-blend-normal"
+                  className="w-32 h-32 md:w-36 md:h-36 mx-auto object-contain"
                 />
               </div>
               
-              <h3 className="text-xl md:text-2xl font-bold mb-2">
+              <h3 className="text-lg md:text-xl font-bold mb-2">
                 Inflection Point Ventures
               </h3>
               
@@ -93,11 +93,11 @@ const IncubationSection = () => {
                 <img 
                   src={wadhwaniLogo} 
                   alt="Wadhwani Foundation Logo" 
-                  className="w-24 h-24 md:w-28 md:h-28 mx-auto object-contain mix-blend-multiply dark:mix-blend-normal"
+                  className="w-32 h-32 md:w-36 md:h-36 mx-auto object-contain"
                 />
               </div>
               
-              <h3 className="text-xl md:text-2xl font-bold mb-2">
+              <h3 className="text-lg md:text-xl font-bold mb-2">
                 Wadhwani Foundation
               </h3>
               

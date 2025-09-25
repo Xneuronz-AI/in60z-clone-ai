@@ -34,8 +34,8 @@ const VideoSection = () => {
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              See In60z in{' '}
-              <span className="text-gradient block">Action</span>
+              See how In60z{' '}
+              <span className="text-gradient block">works</span>
             </h2>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
