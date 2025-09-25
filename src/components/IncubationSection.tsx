@@ -1,9 +1,9 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import atalLogo from '@/assets/atal-incubation.png';
+import atalLogo from '@/assets/atal-incubation-new.png';
 import ipvLogo from '@/assets/ipv-logo.webp';
-import wadhwaniLogo from '@/assets/wadhwani-foundation.png';
+import wadhwaniLogo from '@/assets/wadhwani-foundation-new.webp';
 
 const IncubationSection = () => {
   return (
