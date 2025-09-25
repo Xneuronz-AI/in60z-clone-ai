@@ -78,7 +78,7 @@ const IncubationSection = () => {
                   className="border-primary/50 hover:bg-primary/10"
                   asChild
                 >
-                  <a href="https://www.inflectionpointventures.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://ipventures.in/" target="_blank" rel="noopener noreferrer">
                     Visit Website
                   </a>
                 </Button>

@@ -26,6 +26,10 @@ const Footer = () => {
   };
 
   const handleNavClick = (href: string) => {
+    // Disable AI Explainer navigation
+    if (href === '/ai-explainer') {
+      return;
+    }
     navigate(href);
     setTimeout(() => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
