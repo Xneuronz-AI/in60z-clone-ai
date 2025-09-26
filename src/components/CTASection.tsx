@@ -22,8 +22,7 @@ const CTASection = () => {
           </h2>
           
           <p className="text-lg md:text-xl lg:text-2xl text-muted-foreground mb-8 md:mb-12">
-            Join thousands of researchers and professionals who are staying ahead with In60z. 
-            Get the knowledge you need, when you need it, in just 60 words.
+            Whether you're a Researcher, Student, Entrepreneur, or Medical Professional, join the waitlist to cut through the noise and stay informed in 60 words.
           </p>
 
           {/* Call to Action Buttons */}

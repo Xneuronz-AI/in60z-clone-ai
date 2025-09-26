@@ -6,11 +6,12 @@ import { ArrowLeft, Calendar, Clock } from 'lucide-react';
 import informationOverloadImage from '@/assets/information-overload.jpg';
 import connectingDotsImage from '@/assets/connecting-dots.jpg';
 import amazonAiConclaveImage from '@/assets/amazon-ai-conclave-2023.jpg';
+import corporateBusinessmanImage from '@/assets/corporate-businessman-presentation.jpg';
 
 const BlogArticle = () => {
   const { id } = useParams();
 
-  if (id !== 'tired-of-information-overload' && id !== 'future-of-event-discovery') {
+  if (id !== 'tired-of-information-overload' && id !== 'future-of-event-discovery' && id !== 'events-industry-opportunity') {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <Navigation />
@@ -47,30 +48,55 @@ const BlogArticle = () => {
             {/* Article Header */}
             <header className="mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                {id === 'tired-of-information-overload' 
-                  ? "Tired of the Information Overload? You're Not Alone."
-                  : "The Future of Event Discovery Isn't About Finding More; It's About Finding the Right Ones."
+                {id === 'events-industry-opportunity' 
+                  ? "The $1.1 Trillion Unseen Opportunity: How In60z Will Dominate the Global Events Industry"
+                  : id === 'tired-of-information-overload' 
+                    ? "Tired of the Information Overload? You're Not Alone."
+                    : "The Future of Event Discovery Isn't About Finding More; It's About Finding the Right Ones."
                 }
               </h1>
               
               <div className="flex items-center gap-6 text-muted-foreground mb-8">
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
-                  <span>{id === 'tired-of-information-overload' ? 'September 15, 2025' : 'September 20, 2025'}</span>
+                  <span>
+                    {id === 'events-industry-opportunity' 
+                      ? 'September 26, 2025'
+                      : id === 'tired-of-information-overload' 
+                        ? 'September 15, 2025' 
+                        : 'September 20, 2025'
+                    }
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
-                  <span>{id === 'tired-of-information-overload' ? '5 min read' : '4 min read'}</span>
+                  <span>
+                    {id === 'events-industry-opportunity' 
+                      ? '8 min read'
+                      : id === 'tired-of-information-overload' 
+                        ? '5 min read' 
+                        : '4 min read'
+                    }
+                  </span>
                 </div>
               </div>
 
               {/* Featured Image */}
               <div className="mb-8 rounded-lg overflow-hidden">
                 <img 
-                  src={id === 'tired-of-information-overload' ? informationOverloadImage : amazonAiConclaveImage}
-                  alt={id === 'tired-of-information-overload' 
-                    ? "Person overwhelmed by information overload with multiple screens and displays"
-                    : "Amazon AI Conclave event with large audience"
+                  src={
+                    id === 'events-industry-opportunity' 
+                      ? corporateBusinessmanImage
+                      : id === 'tired-of-information-overload' 
+                        ? informationOverloadImage 
+                        : amazonAiConclaveImage
+                  }
+                  alt={
+                    id === 'events-industry-opportunity' 
+                      ? "Corporate businessman presenting to large audience at business conference"
+                      : id === 'tired-of-information-overload' 
+                        ? "Person overwhelmed by information overload with multiple screens and displays"
+                        : "Amazon AI Conclave event with large audience"
                   }
                   className="w-full h-64 md:h-96 object-cover"
                 />
@@ -79,7 +105,145 @@ const BlogArticle = () => {
 
             {/* Article Content */}
             <article className="prose prose-lg max-w-none dark:prose-invert">
-              {id === 'tired-of-information-overload' ? (
+              {id === 'events-industry-opportunity' ? (
+                <>
+                  <p className="text-lg leading-relaxed mb-6">
+                    The global events industry, a behemoth valued at an astounding <strong>$1.1 trillion in 2023</strong> (Source: <em>Allied Market Research</em>), is a vast, fragmented, and largely untapped frontier for innovation. From high-stakes corporate conferences and sprawling international exhibitions to dynamic hackathons and the ubiquitous webinar, these gatherings are the lifeblood of professional development, knowledge exchange, and industry networking. Yet, beneath this gargantuan figure lies a critical, underserved problem: <strong>event discovery and engagement remain profoundly inefficient.</strong>
+                  </p>
+
+                  <p className="mb-6">
+                    Enter In60z. We are not merely entering this market; we are poised to fundamentally redefine it. By leveraging our unique AI-powered <strong>Swipe Intelligence</strong> platform, In60z is set to become the global key player, transforming the chaotic landscape of event discovery into a seamless, personalized, and monetizable experience for both users and organizers.
+                  </p>
+
+                  <h2 className="text-3xl font-bold mb-6">The Unseen Problem: Drowning in a Sea of Events</h2>
+
+                  <p className="mb-4">Imagine, for a moment, the sheer volume:</p>
+
+                  <ul className="mb-6">
+                    <li><strong>Webinars:</strong> Over <strong>10 million webinars</strong> were hosted globally in 2024 (Source: <em>On24, GoToWebinar</em>). This figure represents just one slice of the pie.</li>
+                    <li><strong>Conferences, Hackathons, Trade Shows, Corporate Events, Exhibitions:</strong> While precise, real-time global numbers are notoriously hard to aggregate due to the industry's fragmentation, conservative estimates suggest <strong>tens of millions of professional events</strong> are held annually. This includes everything from small, niche academic seminars to massive industry expos and thousands of internal corporate training events.</li>
+                  </ul>
+
+                  <p className="mb-6">
+                    For the individual professional—a researcher, a student, an entrepreneur, a developer, a medical expert, or a corporate leader—this abundance is a curse, not a blessing.
+                  </p>
+
+                  <ul className="mb-6">
+                    <li><strong>Manual Search is a Black Hole:</strong> Keeping up requires endless manual searches across myriad websites, social media feeds, and email newsletters, often resulting in missed opportunities and significant time waste.</li>
+                    <li><strong>Irrelevant Noise:</strong> Even when events are found, they are often irrelevant or lack the concise, actionable information needed for a quick decision. The signal-to-noise ratio is abysmal.</li>
+                    <li><strong>Fragmented Access:</strong> There is no single, centralized, intelligent hub for professional event discovery. Information is siloed, leading to a disjointed and frustrating user experience.</li>
+                  </ul>
+
+                  <p className="mb-8">
+                    This represents a colossal missed opportunity for both attendees and the entities that host these critical gatherings.
+                  </p>
+
+                  <h2 className="text-3xl font-bold mb-6">The In60z Solution: Your Personalized Event Marketplace</h2>
+
+                  <p className="mb-6">
+                    In60z is engineered to cut through this noise and deliver precision. Our platform provides the <strong>best experience to discover and book events</strong>, turning the traditional event search model on its head.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mb-4">1. AI-Powered, Personalized Discovery:</h3>
+                  <p className="mb-6">
+                    Imagine this: Based on your explicitly stated interests (e.g., "AI in Healthcare," "Quantum Computing," "Sustainable Energy Solutions"), In60z's sophisticated AI engine scours the globe, aggregating data from countless event sources. It then filters, prioritizes, and delivers <strong>all relevant events directly to you in a 60-word format</strong>, complete with all essential information. No more endless scrolling; just intelligent, curated options.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mb-4">2. Swipe Intelligence: The Future of Event Engagement:</h3>
+                  <p className="mb-4">Our signature <strong>Swipe Intelligence</strong> feature isn't just for news; it's revolutionary for event discovery:</p>
+                  <ul className="mb-6">
+                    <li><strong>Swipe Up to Explore:</strong> Effortlessly browse a curated feed of events tailored to your interests.</li>
+                    <li><strong>Swipe Down to Recap:</strong> Quickly review event details, dates, and key speakers.</li>
+                    <li><strong>Swipe Left for Source/Register:</strong> Seamlessly jump to the original event page for more details or direct registration, eliminating friction.</li>
+                    <li><strong>Swipe Right to Discover More:</strong> Dive deeper into related events, topics, or hosts.</li>
+                  </ul>
+
+                  <p className="mb-6">
+                    This intuitive, mobile-first interface transforms event discovery into an engaging, almost gamified experience, making it a joy, not a chore.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mb-4">3. A Seamless Event Marketplace:</h3>
+                  <p className="mb-4">Beyond discovery, In60z is evolving into a comprehensive marketplace. Our goal is to offer <strong>seamless access and the best experience to book an event</strong>. This means:</p>
+                  <ul className="mb-6">
+                    <li><strong>Direct Registration:</strong> Integrate direct registration functionalities (where possible) or streamline the pathway to event websites.</li>
+                    <li><strong>Calendar Integration:</strong> One-tap integration with personal calendars.</li>
+                    <li><strong>Personalized Reminders:</strong> Smart notifications for upcoming events of interest.</li>
+                  </ul>
+
+                  <p className="mb-8">
+                    We are building the definitive <strong>marketplace for all professional events</strong>, centralizing a fragmented industry into a single, user-friendly hub.
+                  </p>
+
+                  <h2 className="text-3xl font-bold mb-6">The Global Expansion Opportunity: A Win-Win Ecosystem</h2>
+
+                  <p className="mb-6">
+                    The sheer scale of the events industry presents an unprecedented opportunity for In60z to achieve global expansion rapidly.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mb-4">Who Hosts These Events? A Diverse & Massive Ecosystem:</h3>
+                  <ul className="mb-6">
+                    <li><strong>Companies & Corporations:</strong> Product launches, investor days, internal training, hackathons, client events.</li>
+                    <li><strong>Organizations & Associations:</strong> Industry conferences, networking events, policy discussions.</li>
+                    <li><strong>Institutions & Colleges/Universities:</strong> Academic conferences, research symposiums, career fairs, public lectures.</li>
+                    <li><strong>Government Bodies & NGOs:</strong> Policy forums, public consultations, awareness campaigns, international summits.</li>
+                    <li><strong>Individual Experts & Thought Leaders:</strong> Workshops, masterclasses, specialized webinars.</li>
+                    <li><strong>Event Management Companies:</strong> The core players organizing events for all the above.</li>
+                  </ul>
+
+                  <p className="mb-6">
+                    Each of these entities represents a potential client for In60z, eager to reach a relevant audience and maximize event attendance and impact.
+                  </p>
+
+                  <h3 className="text-2xl font-semibold mb-4">The Win-Win for Users:</h3>
+                  <ul className="mb-6">
+                    <li><strong>Efficiency:</strong> Access critical information in seconds, saving hours of manual searching.</li>
+                    <li><strong>Relevance:</strong> Discover events perfectly aligned with their professional goals and interests.</li>
+                    <li><strong>Opportunity:</strong> Unlock networking, learning, and career advancement opportunities previously hidden by information overload.</li>
+                    <li><strong>Convenience:</strong> A single, intuitive platform for all event discovery and management.</li>
+                  </ul>
+
+                  <h3 className="text-2xl font-semibold mb-4">The Win-Win for Brands & Event Organizers (Sponsors):</h3>
+                  <ul className="mb-6">
+                    <li><strong>Hyper-Targeted Audience:</strong> Reach a pre-qualified, engaged audience segmented by specific professional interests (e.g., a Biotech conference reaching only users interested in "Medical Research" and "AI in Life Sciences").</li>
+                    <li><strong>Increased Visibility & Registrations:</strong> Break through the digital noise and dramatically increase event visibility and sign-ups.</li>
+                    <li><strong>Cost-Effective Marketing:</strong> Leverage In60z's platform for more efficient marketing spend, reducing the need for broad, untargeted campaigns.</li>
+                    <li><strong>Data & Analytics:</strong> Gain insights into audience interest and engagement for sponsored content.</li>
+                    <li><strong>Brand Association:</strong> Align with a cutting-edge platform dedicated to delivering high-value, efficient information.</li>
+                  </ul>
+
+                  <p className="mb-8">
+                    Our <strong>Dual Revenue Model</strong> (in-app advertising and sponsored content) is perfectly suited to this ecosystem. Event organizers can sponsor 60-word event summaries, notification stories, or even dedicated "event highlight" sections, ensuring their events get prime visibility to the most relevant attendees. Our commitment to 100% viewability and brand safety ensures a high-quality environment for all sponsors.
+                  </p>
+
+                  <h2 className="text-3xl font-bold mb-6">The Path to Global Dominance: Beyond Discovery</h2>
+
+                  <p className="mb-4">In60z's vision extends beyond simply listing events. We aim to become the central nervous system for event intelligence:</p>
+
+                  <ol className="mb-6">
+                    <li><strong>Pre-Event Engagement:</strong> Drive anticipation and registrations through tailored content.</li>
+                    <li><strong>In-Event Enhancement:</strong> Potentially integrate features like personalized session recommendations or live Q&A snippets (future roadmap).</li>
+                    <li><strong>Post-Event Value:</strong> Provide summaries of key takeaways, access to recorded sessions (if available), and speaker highlights, extending the event's lifecycle.</li>
+                  </ol>
+
+                  <p className="mb-8">
+                    This end-to-end approach solidifies In60z's position not just as an event listing service, but as an <strong>integral part of the event experience itself.</strong>
+                  </p>
+
+                  <h2 className="text-3xl font-bold mb-6">Conclusion: Investing in the Future of Professional Connection</h2>
+
+                  <p className="mb-6">
+                    The global events industry, ripe for disruption, represents an enormous, multi-trillion-dollar market. In60z, with its innovative <strong>Swipe Intelligence</strong>, AI-powered personalization, and commitment to a seamless user experience, is uniquely positioned to become the undisputed global leader in professional event discovery and engagement.
+                  </p>
+
+                  <p className="mb-6">
+                    We are creating a vital bridge between the millions of events hosted worldwide and the professionals who desperately need to find them. This is not just about convenience; it's about unlocking productivity, fostering innovation, and driving growth across every sector of the knowledge economy.
+                  </p>
+
+                  <p className="mb-8 text-lg font-medium">
+                    <strong>In60z is more than an app; it is the essential marketplace for the professional connections and knowledge of tomorrow.</strong> Investing in In60z is investing in the future of how the world connects, learns, and advances.
+                  </p>
+                </>
+              ) : id === 'tired-of-information-overload' ? (
                 <>
                   <p className="text-lg leading-relaxed mb-6">
                     In today's fast-paced world, staying informed feels like a full-time job. You grab your phone for a quick update, and an hour later, you're lost in a sea of long articles, clickbait headlines, and endless notifications. The digital world promises to connect us to everything, but often leaves us feeling overwhelmed and out of sync.

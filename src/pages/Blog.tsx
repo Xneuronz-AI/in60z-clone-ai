@@ -7,6 +7,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const Blog = () => {
   const articles = [
     {
+      id: 'events-industry-opportunity',
+      title: 'The $1.1 Trillion Unseen Opportunity: How In60z Will Dominate the Global Events Industry',
+      description: 'Discover how In60z is positioned to fundamentally redefine the $1.1 trillion global events industry through AI-powered event discovery and personalized marketplace solutions.',
+      publishedAt: '2025-09-26',
+      readTime: '8 min read'
+    },
+    {
       id: 'tired-of-information-overload',
       title: 'Tired of the Information Overload? You\'re Not Alone.',
       description: 'In today\'s fast-paced world, staying informed feels like a full-time job. Discover how In60z transforms information consumption.',
