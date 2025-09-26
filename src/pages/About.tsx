@@ -4,150 +4,10 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Target, Users, Lightbulb, Eye, Zap, BookOpen, Clock, Globe, CheckCircle, TrendingUp, Shield, Smartphone, Network, Brain, Award, Rocket, Heart, Star, Building, MapPin, Calendar, Phone, Mail } from 'lucide-react';
+import { ArrowRight, Clock, Globe, BookOpen, Target, Brain, Smartphone, TrendingUp, Users, Zap, CheckCircle, Play, ChevronUp, ChevronDown, ChevronLeft, ChevronRight, Headphones, FileText, Calendar, Mic2 } from 'lucide-react';
 import WaitlistForm from '@/components/WaitlistForm';
 
 const About = () => {
-  const problems = [
-    {
-      icon: <Clock className="w-10 h-10 text-destructive" />,
-      title: "Information Overload Crisis",
-      description: "Over 2.5 million research papers published annually create an impossible-to-navigate flood of information. Researchers spend 70% of their time searching, not discovering.",
-      impact: "Lost productivity worth $125B annually"
-    },
-    {
-      icon: <Zap className="w-10 h-10 text-destructive" />,
-      title: "Time Scarcity Challenge", 
-      description: "Modern professionals have only 23 minutes daily for learning, yet critical insights are buried in 50+ page academic papers that take hours to comprehend.",
-      impact: "Average 4.5 hours to read one paper"
-    },
-    {
-      icon: <Globe className="w-10 h-10 text-destructive" />,
-      title: "Fragmented Knowledge Ecosystem",
-      description: "Research, events, news, and insights scattered across 200+ platforms, forcing professionals to juggle multiple subscriptions and interfaces.",
-      impact: "12 different platforms per researcher"
-    },
-    {
-      icon: <BookOpen className="w-10 h-10 text-destructive" />,
-      title: "Accessibility Barriers",
-      description: "Complex academic language, paywalls, and technical jargon create knowledge inequality, limiting breakthrough insights to academic elites.",
-      impact: "85% of global population excluded"
-    }
-  ];
-
-  const solutions = [
-    {
-      icon: <Brain className="w-12 h-12 text-primary" />,
-      title: "Revolutionary AI Summarization",
-      description: "Our proprietary 60-word algorithm captures the essence of complex research with 96% accuracy, making any paper digestible in under 30 seconds.",
-      features: ["Advanced NLP processing", "Context preservation", "Scientific accuracy validation", "Multi-format output"],
-      metrics: { accuracy: "96%", time: "<30s", papers: "10M+" }
-    },
-    {
-      icon: <Network className="w-12 h-12 text-primary" />,
-      title: "Intelligent Knowledge Mapping",
-      description: "AI-powered relationship discovery connects research across domains, revealing hidden patterns and breakthrough opportunities in real-time.",
-      features: ["Citation network analysis", "Cross-domain connections", "Trend prediction", "Research impact scoring"],
-      metrics: { connections: "50M+", domains: "4+", accuracy: "94%" }
-    },
-    {
-      icon: <Smartphone className="w-12 h-12 text-primary" />,
-      title: "Mobile-First Innovation", 
-      description: "Swipe-based interface designed for the TikTok generation, making research consumption as addictive as social media with offline capabilities.",
-      features: ["Intuitive swipe navigation", "Offline reading", "Cross-device sync", "Social sharing"],
-      metrics: { interface: "Swipe", sync: "Real-time", offline: "Available" }
-    },
-    {
-      icon: <Zap className="w-12 h-12 text-primary" />,
-      title: "Multi-Modal Experience",
-      description: "Transform dense research into engaging formats: audio summaries, visual abstracts, interactive timelines, and immersive podcasts.",
-      features: ["Audio synthesis", "Visual storytelling", "Interactive content", "Podcast generation"],
-      metrics: { formats: "5+", quality: "HD", languages: "15+" }
-    }
-  ];
-
-  const impactMetrics = [
-    { icon: <Users className="w-8 h-8" />, value: "50K+", label: "Active Researchers", description: "Global community of users" },
-    { icon: <BookOpen className="w-8 h-8" />, value: "10M+", label: "Papers Processed", description: "Research articles summarized" },
-    { icon: <Clock className="w-8 h-8" />, value: "2.5M", label: "Hours Saved", description: "Time returned to researchers" },
-    { icon: <Globe className="w-8 h-8" />, value: "150+", label: "Countries", description: "Global reach and impact" },
-    { icon: <TrendingUp className="w-8 h-8" />, value: "96%", label: "Accuracy Rate", description: "AI summarization precision" },
-    { icon: <Zap className="w-8 h-8" />, value: "<2s", label: "Response Time", description: "Lightning-fast processing" }
-  ];
-
-  const journey = [
-    {
-      year: "Jan 2025",
-      title: "Visionary Foundation",
-      description: "Founded with the ambitious mission to democratize global research access through cutting-edge AI technology.",
-      achievement: "Assembling world-class AI team and building core technology"
-    },
-    {
-      year: "Mar 2025", 
-      title: "Breakthrough Innovation",
-      description: "Developed our signature 60-word algorithm and launched the industry's first mobile-first research platform.",
-      achievement: "Core AI algorithms developed and tested"
-    },
-    {
-      year: "Aug 2025",
-      title: "Product Development",
-      description: "Building advanced features: podcast integration, event discovery, and multi-language support.",
-      achievement: "Platform development in progress"
-    },
-    {
-      year: "2026",
-      title: "Launch Vision",
-      description: "Preparing for global launch with next-generation AI models, AR/VR integration, and enterprise solutions.",
-      achievement: "Getting ready to transform research accessibility worldwide"
-    }
-  ];
-
-  const values = [
-    {
-      icon: <Lightbulb className="w-10 h-10 text-amber-500" />,
-      title: "Innovation First",
-      description: "We push boundaries and challenge conventions to create breakthrough solutions."
-    },
-    {
-      icon: <Heart className="w-10 h-10 text-red-500" />,
-      title: "Democratization",
-      description: "Knowledge should be accessible to everyone, not just academic elites."
-    },
-    {
-      icon: <Star className="w-10 h-10 text-purple-500" />,
-      title: "Excellence",
-      description: "We maintain the highest standards in accuracy, design, and user experience."
-    },
-    {
-      icon: <Rocket className="w-10 h-10 text-blue-500" />,
-      title: "Speed",
-      description: "In a fast-moving world, we deliver insights at the speed of thought."
-    }
-  ];
-
-  const team = [
-    {
-      role: "Leadership",
-      members: "15+ industry veterans",
-      description: "Former executives from Google, Microsoft, and leading research institutions"
-    },
-    {
-      role: "AI Research",
-      members: "20+ PhD researchers",
-      description: "World-class AI scientists and machine learning engineers"
-    },
-    {
-      role: "Engineering",
-      members: "25+ developers",
-      description: "Full-stack engineers from top tech companies and startups"
-    },
-    {
-      role: "Global Operations",
-      members: "10+ specialists",
-      description: "Business development, marketing, and customer success experts"
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Navigation />
@@ -161,174 +21,188 @@ const About = () => {
         <div className="container mx-auto px-6 relative">
           <div className="max-w-6xl mx-auto text-center">
             <Badge variant="outline" className="mb-6 text-primary border-primary/30">
-              Transforming Research Since 2025
+              About In60z
             </Badge>
             <h1 className="text-5xl md:text-7xl font-bold mb-8 leading-tight">
-              Revolutionizing How Humanity{' '}
-              <span className="text-gradient">Discovers Knowledge</span>
+              Revolutionizing Research{' '}
+              <span className="text-gradient">Discovery</span>
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-12 leading-relaxed max-w-5xl mx-auto">
-              In60z is on a mission to democratize research access for 8 billion people. 
-              We're transforming the overwhelming world of academic research into digestible, 
-              actionable insights through revolutionary AI technology.
+              Swipe Intelligence. Stay Informed in 60 Words.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <WaitlistForm 
                 trigger={
                   <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4">
-                    Join Our Revolution
+                    Join Our Waitlist
                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                   </Button>
                 }
               />
-              <Button size="lg" variant="outline" className="border-primary/20 px-8 py-4">
-                Watch Our Story
-              </Button>
             </div>
           </div>
         </div>
       </section>
 
-
-      {/* The Problem We Solve */}
-      <section className="py-24">
+      {/* Problem Statement */}
+      <section className="py-24 bg-muted/10">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <Badge variant="destructive" className="mb-4">Critical Challenge</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">The Research Crisis</h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-              Today's research landscape is fundamentally broken. Information overload meets time scarcity 
-              in an increasingly fragmented ecosystem, creating unprecedented barriers to knowledge discovery.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {problems.map((problem, index) => (
-              <Card key={index} className="p-8 border-destructive/20 bg-destructive/5 hover:bg-destructive/10 transition-colors">
-                <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 rounded-2xl bg-destructive/10 flex items-center justify-center flex-shrink-0">
-                    {problem.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold mb-3">{problem.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed mb-4">{problem.description}</p>
-                    <div className="text-sm font-semibold text-destructive bg-destructive/10 px-3 py-1 rounded-full inline-block">
-                      {problem.impact}
-                    </div>
-                  </div>
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Revolutionary Solution */}
-      <section className="py-24 bg-muted/20">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <Badge className="mb-4 bg-primary/10 text-primary">Game-Changing Solution</Badge>
-            <h2 className="text-4xl md:text-5xl font-bold mb-6">
-              Our <span className="text-gradient">Revolutionary Approach</span>
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-              We've completely reimagined how research is consumed, discovered, and connected. 
-              Through breakthrough AI and intuitive design, we make complex knowledge accessible to everyone.
-            </p>
-          </div>
-
-          <div className="grid lg:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
-              <Card key={index} className="p-8 bg-gradient-card border-primary/20 glow-primary hover:glow-accent transition-all duration-500 group">
-                <div className="w-20 h-20 rounded-3xl bg-primary/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {solution.icon}
-                </div>
-                <h3 className="text-2xl font-bold mb-4">{solution.title}</h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">{solution.description}</p>
-                
-                {/* Solution Metrics */}
-                <div className="grid grid-cols-3 gap-4 mb-6 p-4 bg-muted/20 rounded-lg">
-                  {Object.entries(solution.metrics).map(([key, value]) => (
-                    <div key={key} className="text-center">
-                      <div className="text-2xl font-bold text-primary">{value}</div>
-                      <div className="text-xs text-muted-foreground capitalize">{key}</div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Features */}
-                <div className="space-y-2">
-                  {solution.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-sm">
-                      <CheckCircle className="w-4 h-4 text-primary mr-3 flex-shrink-0" />
-                      <span>{feature}</span>
-                    </div>
-                  ))}
-                </div>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Our Journey & Milestones */}
-      <section className="py-24">
-        <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Our Transformative Journey</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From ambitious vision to global reality - how we're building the future of research accessibility.
-            </p>
-          </div>
-
-          <div className="max-w-5xl mx-auto">
-            <div className="relative">
-              {/* Enhanced Timeline line */}
-              <div className="absolute left-8 top-8 bottom-8 w-1 bg-gradient-to-b from-primary via-accent to-secondary rounded-full"></div>
-              
-              <div className="space-y-16">
-                {journey.map((milestone, index) => (
-                  <div key={index} className="relative flex items-start">
-                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-sm z-10 shadow-lg">
-                      {milestone.year}
-                    </div>
-                    <div className="ml-12">
-                      <h3 className="text-2xl font-bold mb-3">{milestone.title}</h3>
-                      <p className="text-muted-foreground leading-relaxed mb-3">{milestone.description}</p>
-                      <div className="text-sm font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full inline-block">
-                        {milestone.achievement}
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Vision and Mission */}
-      <section className="py-24 bg-gradient-hero relative overflow-hidden">
-        <div className="absolute inset-0 bg-geometric opacity-10"></div>
-        <div className="container mx-auto px-6">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div>
-                <Badge className="mb-6 bg-primary/20 text-primary border-primary/30">Our Mission</Badge>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                  Democratizing Research for <span className="text-gradient">8 Billion People</span>
+                <Badge className="mb-6 bg-primary/10 text-primary">Problem Statement</Badge>
+                <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                  <span className="text-gradient">Problem</span>
                 </h2>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  We believe knowledge should be accessible to everyone, not just academic elites. Our mission is to break down the barriers that prevent breakthrough insights from reaching those who need them most, transforming how humanity discovers, consumes, and connects with research.
+                <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+                  Today's digital world is overflowing with information, making it difficult for users to stay informed efficiently. People have less time and shorter attention spans, yet they need to keep up with crucial updates, including research papers, related papers, events, news and podcasts.
                 </p>
               </div>
               <div>
-                <Badge className="mb-6 bg-accent/20 text-accent border-accent/30">Our Vision</Badge>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                  A World Where <span className="text-gradient">Knowledge Flows Freely</span>
+                <Badge className="mb-6 bg-accent/10 text-accent">Our Solution</Badge>
+                <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+                  Our <span className="text-gradient">Solution</span>
                 </h2>
-                <p className="text-xl text-muted-foreground leading-relaxed">
-                  We envision a future where any person, anywhere in the world, can instantly access and understand the latest research in their field. Where language barriers, complex jargon, and information overload no longer prevent breakthrough discoveries from changing lives and advancing human progress.
+                <div className="space-y-6">
+                  <div className="p-4 bg-primary/5 rounded-xl border border-primary/10">
+                    <h3 className="text-xl font-semibold text-primary mb-2">Swipe Intelligence. Stay informed in 60 words</h3>
+                    <p className="text-muted-foreground">Swipe Intelligence Seamless Swipe - Up to Explore, down to Recap, left for Source, and right to Discover.</p>
+                  </div>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    In60z is not simply an app; it is a disruptive solution to a global problem of information overload built for the mobile-first, tech-savvy consumer that defines modern world.
+                  </p>
+                  <p className="text-lg text-muted-foreground leading-relaxed">
+                    Our technological backbone is a sophisticated AI-powered content aggregation and summarization engine. This engine, built on advanced Machine Learning (ML) algorithms, performs a continuous, high-speed crawl of a vast array of global and local information sources, including academic research repositories, news agencies, and key industry publications.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Challenges Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                <span className="text-gradient">The Challenges</span> in Research and Events Today
+              </h2>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Challenge 01 */}
+              <Card className="p-8 bg-gradient-card border-primary/20 hover:glow-primary transition-all duration-500">
+                <div className="flex items-start gap-6">
+                  <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-3xl font-bold text-primary">01</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4">Information Overload</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Millions of papers fragmented sources.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Challenge 02 */}
+              <Card className="p-8 bg-gradient-card border-primary/20 hover:glow-primary transition-all duration-500">
+                <div className="flex items-start gap-6">
+                  <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-3xl font-bold text-primary">02</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4">Time Constraints</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      People don't have time to read lengthy research papers or attend every event.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Challenge 03 */}
+              <Card className="p-8 bg-gradient-card border-primary/20 hover:glow-primary transition-all duration-500">
+                <div className="flex items-start gap-6">
+                  <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-3xl font-bold text-primary">03</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4">Scattered Ecosystem</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Research, news, and events are fragmented across platforms.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Challenge 04 */}
+              <Card className="p-8 bg-gradient-card border-primary/20 hover:glow-primary transition-all duration-500">
+                <div className="flex items-start gap-6">
+                  <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <span className="text-3xl font-bold text-primary">04</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold mb-4">Lack of Summarization</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      Complex insights need to be digestible and actionable.
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            <div className="text-center mt-12">
+              <p className="text-lg text-muted-foreground">
+                The global number of webinars surpasses <span className="font-bold text-primary">10 million per year in 2024</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works Section */}
+      <section className="py-24 bg-muted/10">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                How <span className="text-gradient">It Works</span>
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                We provide Bite-Sized Research Discovery by summarizing Research papers, Events, and News into a crisp and short format of 60 words or less.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-12 items-center">
+              <div>
+                <h3 className="text-3xl font-bold mb-8">Swipe Intelligence</h3>
+                <div className="space-y-6">
+                  <div className="flex items-center gap-4 p-4 bg-primary/5 rounded-xl border border-primary/10">
+                    <ChevronUp className="w-8 h-8 text-primary" />
+                    <span className="text-lg font-semibold">Up to Explore</span>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-primary/5 rounded-xl border border-primary/10">
+                    <ChevronDown className="w-8 h-8 text-primary" />
+                    <span className="text-lg font-semibold">Down to Recap</span>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-primary/5 rounded-xl border border-primary/10">
+                    <ChevronLeft className="w-8 h-8 text-primary" />
+                    <span className="text-lg font-semibold">Left for Source</span>
+                  </div>
+                  <div className="flex items-center gap-4 p-4 bg-primary/5 rounded-xl border border-primary/10">
+                    <ChevronRight className="w-8 h-8 text-primary" />
+                    <span className="text-lg font-semibold">Right to Discover</span>
+                  </div>
+                </div>
+              </div>
+              <div className="bg-gradient-card p-8 rounded-2xl border border-primary/20">
+                <h4 className="text-2xl font-bold mb-4">Technological Backbone</h4>
+                <p className="text-muted-foreground leading-relaxed">
+                  Our core is a sophisticated AI-powered content aggregation and summarization engine. 
+                  Built on advanced Machine Learning (ML) algorithms, this engine performs a continuous, 
+                  high-speed crawl of a vast array of global and local information sources.
                 </p>
               </div>
             </div>
@@ -336,52 +210,232 @@ const About = () => {
         </div>
       </section>
 
-      {/* Our Values */}
-      <section className="py-24 bg-muted/20">
+      {/* What We Cover Section */}
+      <section className="py-24">
         <div className="container mx-auto px-6">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">Our Core Values</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              The principles that guide everything we do and drive our mission forward.
-            </p>
-          </div>
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                What <span className="text-gradient">We Cover</span>
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                In60z offers focused, high-quality content spanning the most vital fields shaping our future.
+              </p>
+            </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {values.map((value, index) => (
-              <Card key={index} className="p-6 text-center bg-gradient-card border-primary/20 hover:glow-accent transition-all duration-300">
-                <div className="w-16 h-16 rounded-2xl bg-muted/20 flex items-center justify-center mx-auto mb-4">
-                  {value.icon}
+            <div className="grid lg:grid-cols-3 gap-8">
+              <Card className="p-8 bg-gradient-card border-primary/20">
+                <Users className="w-12 h-12 text-primary mb-6" />
+                <h3 className="text-2xl font-bold mb-4">Audience Reach</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <p><strong className="text-primary">4 Core Categories:</strong> Science, Medical, Innovation, & Technology</p>
+                  <p><strong className="text-primary">Delivery Format:</strong> Research papers, Events, News & Podcasts</p>
                 </div>
-                <h3 className="text-xl font-bold mb-3">{value.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{value.description}</p>
               </Card>
-            ))}
+
+              <Card className="p-8 bg-gradient-card border-primary/20">
+                <Target className="w-12 h-12 text-primary mb-6" />
+                <h3 className="text-2xl font-bold mb-4">Personalization</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <p><strong className="text-primary">72 Key Topics</strong> for deep specialization</p>
+                  <p><strong className="text-primary">AI Personalized</strong> Content Topic Discovery</p>
+                </div>
+              </Card>
+
+              <Card className="p-8 bg-gradient-card border-primary/20">
+                <Headphones className="w-12 h-12 text-primary mb-6" />
+                <h3 className="text-2xl font-bold mb-4">Podcast Offering</h3>
+                <div className="space-y-3 text-muted-foreground">
+                  <p>Minimum of <strong className="text-primary">2 short podcasts</strong> and <strong className="text-primary">1 in-depth 15-minute podcast</strong> of research papers</p>
+                  <p>Audio summaries for on-the-go consumption</p>
+                </div>
+              </Card>
+            </div>
           </div>
         </div>
       </section>
 
+      {/* Our Journey Section */}
+      <section className="py-24 bg-muted/10">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Our Journey: <span className="text-gradient">From Concept to Product</span>
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                Our dedicated team rapidly built a robust Minimum Viable Product (MVP) to bring our vision to life.
+              </p>
+            </div>
 
+            {/* Progress Bar */}
+            <div className="mb-16">
+              <div className="flex justify-between items-center mb-4">
+                <span className="text-sm text-muted-foreground">10%</span>
+                <Badge className="bg-muted text-muted-foreground">MVP Stage</Badge>
+                <span className="text-sm text-muted-foreground">75%</span>
+              </div>
+              <div className="relative h-2 bg-muted rounded-full overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-r from-primary via-accent to-secondary rounded-full" style={{ width: '75%' }}></div>
+                <div className="absolute left-[10%] top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary rounded-full"></div>
+                <div className="absolute left-[25%] top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary rounded-full"></div>
+                <div className="absolute left-[45%] top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary rounded-full"></div>
+                <div className="absolute left-[75%] top-1/2 transform -translate-y-1/2 w-4 h-4 bg-primary rounded-full"></div>
+              </div>
+            </div>
 
-      {/* Call to Action */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* March 2025 */}
+              <Card className="p-8 bg-gradient-card border-primary/20">
+                <Badge className="mb-4 bg-primary/10 text-primary">March 2025</Badge>
+                <h3 className="text-2xl font-bold mb-4">Team Assembly & Vision</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  We began with a clear vision to redefine information consumption. Our team of expert developers, 
+                  designers, and content strategists was assembled to build the core product.
+                </p>
+                <div className="text-sm font-semibold text-primary">10% Project Completion</div>
+              </Card>
+
+              {/* April 2025 */}
+              <Card className="p-8 bg-gradient-card border-primary/20">
+                <Badge className="mb-4 bg-primary/10 text-primary">April 2025</Badge>
+                <h3 className="text-2xl font-bold mb-4">Dual Platform Development</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  We began simultaneous development for both Android and iOS, ensuring a consistent user experience. 
+                  Our team also completed the foundational UI/UX design, which focuses on a simple and intuitive 60-word format.
+                </p>
+                <div className="text-sm font-semibold text-primary">45% Project Completion</div>
+              </Card>
+
+              {/* May 2025 */}
+              <Card className="p-8 bg-gradient-card border-primary/20">
+                <Badge className="mb-4 bg-primary/10 text-primary">May 2025</Badge>
+                <h3 className="text-2xl font-bold mb-4">Backend & API Development</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  We built the core backend and APIs, then validated our technology with a functional prototype.
+                </p>
+                <div className="text-sm font-semibold text-primary">25% Milestone Achieved</div>
+              </Card>
+
+              {/* June 2025 */}
+              <Card className="p-8 bg-gradient-card border-primary/20">
+                <Badge className="mb-4 bg-primary/10 text-primary">June 2025</Badge>
+                <h3 className="text-2xl font-bold mb-4">AI Integration & Partnerships</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  We integrated machine learning for content curation and secured partnerships to build our launch content pipeline.
+                </p>
+                <div className="text-sm font-semibold text-primary">ML Integration Complete</div>
+              </Card>
+
+              {/* July 2025 */}
+              <Card className="p-8 bg-gradient-card border-primary/20">
+                <Badge className="mb-4 bg-primary/10 text-primary">July 2025</Badge>
+                <h3 className="text-2xl font-bold mb-4">Major Milestone Achievement</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  After an internal alpha test, we hit a major milestone with 75% of our core product features complete.
+                </p>
+                <div className="text-sm font-semibold text-primary">75% Features Complete</div>
+              </Card>
+
+              {/* August 2025 */}
+              <Card className="p-8 bg-gradient-card border-primary/20">
+                <Badge className="mb-4 bg-muted text-muted-foreground">August 2025</Badge>
+                <h3 className="text-2xl font-bold mb-4">Testing Phase</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">
+                  Internal testing, bug, and feature testing commenced.
+                </p>
+                <div className="text-sm font-semibold text-muted-foreground">Internal Testing Phase</div>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Business Model Section */}
       <section className="py-24">
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl md:text-6xl font-bold mb-8">Ready to Transform Research?</h2>
-          <p className="text-xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
-            Be among the first to experience the future of knowledge consumption. 
-            Join our waitlist and be part of the research revolution.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <WaitlistForm 
-              trigger={
-                <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4">
-                  Start Your Journey
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
-              }
-            />
-            <Button size="lg" variant="outline" className="border-primary/20 px-8 py-4" asChild>
-              <a href="/team">Meet Our Team</a>
-            </Button>
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl md:text-5xl font-bold mb-6">
+                Our Business Model: <span className="text-gradient">Sustainable Growth</span>
+              </h2>
+              <p className="text-xl text-muted-foreground">
+                In60z operates via a Dual Revenue Model designed for seamless monetization that enhances, rather than disrupts, the user experience.
+              </p>
+            </div>
+
+            <div className="grid lg:grid-cols-2 gap-8">
+              <Card className="p-8 bg-gradient-card border-primary/20">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold mb-4">In-App Advertising & Sponsored Content</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">Seamless Monetisation</h4>
+                      <p className="text-muted-foreground text-sm">
+                        Native ads merge into the news feed, ensuring visibility without interrupting the user experience.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">Brand Safety</h4>
+                      <p className="text-muted-foreground text-sm">
+                        Content goes live after internal checks, avoiding clickbait. We only support useful information.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              <Card className="p-8 bg-gradient-card border-primary/20">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-bold mb-4">Sponsored Events & Notification Stories</h3>
+                  <div className="space-y-4">
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">Brand Integration</h4>
+                      <p className="text-muted-foreground text-sm">
+                        Customized, brand-centric images/videos integrate directly into the news feed, offering passive brand building and data-driven engagement.
+                      </p>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-primary mb-2">Transparency</h4>
+                      <p className="text-muted-foreground text-sm">
+                        We use 3rd party SDKs for transparency. Every ad slot is 100% viewable; we don't charge for what isn't displayed.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Promise Section */}
+      <section className="py-24 bg-gradient-hero relative overflow-hidden">
+        <div className="absolute inset-0 bg-geometric opacity-10"></div>
+        <div className="container mx-auto px-6 relative">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-4xl md:text-5xl font-bold mb-8 leading-tight">
+              Our <span className="text-gradient">Promise to You</span>
+            </h2>
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              We are committed to helping you stay ahead of the curve in Innovation, Science, Medical, and Technology. 
+              With In60z, you get a quick and comprehensive experience, ensuring you are informed efficiently in a time-sensitive world.
+            </p>
+            <div className="text-center">
+              <Badge className="text-2xl py-3 px-6 bg-primary/20 text-primary border-primary/30">
+                Swipe Intelligence. Stay informed in 60 words.
+              </Badge>
+            </div>
+            <div className="mt-12">
+              <WaitlistForm 
+                trigger={
+                  <Button size="lg" className="group bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4">
+                    Join the Revolution
+                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                  </Button>
+                }
+              />
+            </div>
           </div>
         </div>
       </section>
