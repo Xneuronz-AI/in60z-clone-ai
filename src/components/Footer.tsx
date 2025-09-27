@@ -15,7 +15,6 @@ const Footer = () => {
     ],
     Resources: [
       { name: 'Blog', href: '/blog' },
-      { name: 'Capabilities', href: '/capabilities' },
       { name: 'AI Explainer', href: '/ai-explainer' }
     ],
     Legal: [
@@ -68,9 +67,8 @@ const Footer = () => {
               </div>
               <div className="pt-2">
                 <strong className="text-foreground">Email:</strong><br />
-                <a href="mailto:contact@in60z.com" className="hover:text-primary transition-smooth">contact@in60z.com</a><br />
                 <a href="mailto:niyaz@in60z.com" className="hover:text-primary transition-smooth">niyaz@in60z.com</a><br />
-                <a href="mailto:siddhnath@in60z.com" className="hover:text-primary transition-smooth">siddhnath@in60z.com</a>
+                <a href="mailto:siddhanth@in60z.com" className="hover:text-primary transition-smooth">siddhanth@in60z.com</a>
               </div>
             </div>
 
