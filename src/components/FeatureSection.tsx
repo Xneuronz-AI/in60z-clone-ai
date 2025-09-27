@@ -89,8 +89,8 @@ const FeatureSection = () => {
     {
       icon: <Calendar className="w-8 h-8 text-primary" />,
       title: "Webinars, Events",
-      subtitle: "& Hackathons",
-      description: "Stay updated with the latest conferences, webinars, and hackathons in your field. Never miss an important event again with our curated event listings.",
+      subtitle: "Exhibitions & Hackathons",
+      description: "Stay updated with the latest conferences, webinars, exhibitions, and hackathons in your field. Never miss an important event again with our curated event listings.",
       image: eventPhone,
       reverse: true,
     },
