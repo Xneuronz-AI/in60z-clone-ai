@@ -1,9 +1,11 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import { Play } from 'lucide-react';
 import heroPhone from '@/assets/podcasts-phone.png';
 import appStore from '@/assets/app-store.png';
 import googlePlay from '@/assets/google-play.png';
 import WaitlistForm from '@/components/WaitlistForm';
+import AudioPlayer from '@/components/AudioPlayer';
 
 const HeroSection = () => {
   return (
@@ -50,7 +52,7 @@ const HeroSection = () => {
           </div>
 
           {/* Right Content - Phone Mockup */}
-          <div className="flex justify-center animate-slide-in-right order-1 lg:order-2">
+          <div className="flex flex-col items-center animate-slide-in-right order-1 lg:order-2 space-y-6">
             <div className="relative">
               <div className="phone-mockup w-64 md:w-80 h-[520px] md:h-[650px] p-2">
                 <img 
@@ -60,9 +62,24 @@ const HeroSection = () => {
                 />
               </div>
               
+              {/* Podcast Play Button Overlay */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="bg-primary/90 backdrop-blur-sm rounded-full p-4 shadow-2xl glow-primary hover:bg-primary transition-all duration-300 cursor-pointer group">
+                  <Play className="w-8 h-8 md:w-12 md:h-12 text-primary-foreground group-hover:scale-110 transition-transform" />
+                </div>
+              </div>
+              
               {/* Floating elements around phone */}
               <div className="absolute -top-2 md:-top-4 -left-2 md:-left-4 w-6 md:w-8 h-6 md:h-8 bg-primary rounded-full glow-primary animate-glow-pulse"></div>
               <div className="absolute -bottom-2 md:-bottom-4 -right-2 md:-right-4 w-4 md:w-6 h-4 md:h-6 bg-accent rounded-full glow-accent animate-glow-pulse" style={{ animationDelay: '0.5s' }}></div>
+            </div>
+
+            {/* Audio Player */}
+            <div className="w-full max-w-md">
+              <AudioPlayer 
+                audioSrc="/transformer-hero.mp3" 
+                title="Transformer: Attention Is All You Need"
+              />
             </div>
           </div>
         </div>
