@@ -151,6 +151,9 @@ const DomainsSection = () => {
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Discover All <span className="text-gradient">72 Topics</span>
           </h2>
+          <p className="text-lg text-muted-foreground max-w-full mx-auto text-center px-4 mb-2">
+            Maximum Insight. Minimum Time. The 60-Word Research, Events & News Digest.
+          </p>
           <p className="text-lg text-muted-foreground max-w-full mx-auto text-center px-4 md:whitespace-nowrap">
             We cover 72 topics across 4 key domains: Innovation, Science, Medical, and Technology.
           </p>
