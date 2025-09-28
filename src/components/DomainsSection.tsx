@@ -1,48 +1,11 @@
 import React from 'react';
 import { Card } from '@/components/ui/card';
-import { 
-  Carousel, 
-  CarouselContent, 
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious 
-} from '@/components/ui/carousel';
-import Autoplay from 'embla-carousel-autoplay';
+import { ShuffleHero } from '@/components/ui/shuffle-grid';
 import { 
   Stethoscope, 
   Atom, 
   Lightbulb, 
-  Monitor,
-  TrendingUp,
-  Users,
-  DollarSign,
-  Palette,
-  Heart,
-  Leaf,
-  Briefcase,
-  Shield,
-  Telescope,
-  Zap,
-  Brain,
-  Globe,
-  TestTube,
-  Dna,
-  Activity,
-  Pill,
-  HeartHandshake,
-  Database,
-  Smartphone,
-  Cloud,
-  Bot,
-  Lock,
-  Cpu,
-  Network,
-  Code,
-  Gamepad2,
-  Wifi,
-  ShoppingCart,
-  Megaphone,
-  Recycle
+  Monitor
 } from 'lucide-react';
 
 // Import domain images
@@ -50,6 +13,24 @@ import medicalImage from '@/assets/domain-medical.jpg';
 import scienceImage from '@/assets/domain-science.jpg';
 import innovationImage from '@/assets/domain-innovation.jpg';
 import technologyImage from '@/assets/domain-technology.jpg';
+
+// Import topic images
+import aiImage from '@/assets/topics/ai.jpg';
+import quantumImage from '@/assets/topics/quantum.jpg';
+import genomicsImage from '@/assets/topics/genomics.jpg';
+import astrophysicsImage from '@/assets/topics/astrophysics.jpg';
+import blockchainImage from '@/assets/topics/blockchain.jpg';
+import roboticsImage from '@/assets/topics/robotics.jpg';
+import biotechImage from '@/assets/topics/biotech.jpg';
+import nanotechImage from '@/assets/topics/nanotech.jpg';
+import sustainableEnergyImage from '@/assets/topics/sustainable-energy.jpg';
+import cybersecurityImage from '@/assets/topics/cybersecurity.jpg';
+import climateImage from '@/assets/topics/climate.jpg';
+import mentalHealthImage from '@/assets/topics/mental-health.jpg';
+import iotImage from '@/assets/topics/iot.jpg';
+import fintechImage from '@/assets/topics/fintech.jpg';
+import machineLearningImage from '@/assets/topics/machine-learning.jpg';
+import materialsImage from '@/assets/topics/materials.jpg';
 
 const DomainsSection = () => {
   const domains = [
@@ -75,73 +56,25 @@ const DomainsSection = () => {
     }
   ];
 
-  const topics = [
-    // Innovation topics
-    { name: 'Innovation', icon: <Lightbulb className="w-4 h-4" /> },
-    { name: 'Disruptive Trends', icon: <TrendingUp className="w-4 h-4" /> },
-    { name: 'Startups & Entrepreneurship', icon: <Users className="w-4 h-4" /> },
-    { name: 'Venture Capital', icon: <DollarSign className="w-4 h-4" /> },
-    { name: 'Design Thinking', icon: <Palette className="w-4 h-4" /> },
-    { name: 'Social Innovation', icon: <Heart className="w-4 h-4" /> },
-    { name: 'Sustainable Innovation', icon: <Leaf className="w-4 h-4" /> },
-    { name: 'Future of Work', icon: <Briefcase className="w-4 h-4" /> },
-    { name: 'Intellectual Property', icon: <Shield className="w-4 h-4" /> },
-    { name: 'R&D Breakthroughs', icon: <TestTube className="w-4 h-4" /> },
-    { name: 'Fintech', icon: <DollarSign className="w-4 h-4" /> },
-    
-    // Science topics
-    { name: 'Astrophysics', icon: <Telescope className="w-4 h-4" /> },
-    { name: 'Quantum Mechanics', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Neuroscience', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Environmental Science', icon: <Globe className="w-4 h-4" /> },
-    { name: 'Chemistry', icon: <TestTube className="w-4 h-4" /> },
-    { name: 'Biology', icon: <Dna className="w-4 h-4" /> },
-    { name: 'Paleontology', icon: <TestTube className="w-4 h-4" /> },
-    { name: 'Geology', icon: <Globe className="w-4 h-4" /> },
-    { name: 'Material Science', icon: <Atom className="w-4 h-4" /> },
-    { name: 'Nanotechnology', icon: <Zap className="w-4 h-4" /> },
-    { name: 'Marine Biology', icon: <Globe className="w-4 h-4" /> },
-    { name: 'Climatology', icon: <Globe className="w-4 h-4" /> },
-    
-    // Medical topics
-    { name: 'Genomics', icon: <Dna className="w-4 h-4" /> },
-    { name: 'Biotechnology', icon: <TestTube className="w-4 h-4" /> },
-    { name: 'Public Health', icon: <Activity className="w-4 h-4" /> },
-    { name: 'Medical Devices', icon: <Activity className="w-4 h-4" /> },
-    { name: 'Digital Therapeutics', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'Clinical Trials', icon: <TestTube className="w-4 h-4" /> },
-    { name: 'Pharmaceuticals', icon: <Pill className="w-4 h-4" /> },
-    { name: 'Mental Health', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Surgery & Procedures', icon: <Activity className="w-4 h-4" /> },
-    { name: 'Wearable Health Tech', icon: <Activity className="w-4 h-4" /> },
-    { name: 'Disease Research', icon: <TestTube className="w-4 h-4" /> },
-    { name: 'Bioethics', icon: <HeartHandshake className="w-4 h-4" /> },
-    { name: 'Personalized Medicine', icon: <Dna className="w-4 h-4" /> },
-    
-    // Technology topics
-    { name: 'Artificial Intelligence', icon: <Bot className="w-4 h-4" /> },
-    { name: 'Machine Learning', icon: <Brain className="w-4 h-4" /> },
-    { name: 'Cybersecurity', icon: <Lock className="w-4 h-4" /> },
-    { name: 'Cloud Computing', icon: <Cloud className="w-4 h-4" /> },
-    { name: 'Automation', icon: <Bot className="w-4 h-4" /> },
-    { name: 'Robotics', icon: <Bot className="w-4 h-4" /> },
-    { name: 'Data Science', icon: <Database className="w-4 h-4" /> },
-    { name: 'Internet of Things (IoT)', icon: <Network className="w-4 h-4" /> },
-    { name: 'Blockchain & Web3', icon: <Network className="w-4 h-4" /> },
-    { name: 'Software Development', icon: <Code className="w-4 h-4" /> },
-    { name: 'UX/UI Design', icon: <Palette className="w-4 h-4" /> },
-    { name: 'Mobile Technology', icon: <Smartphone className="w-4 h-4" /> },
-    { name: 'AR/VR', icon: <Gamepad2 className="w-4 h-4" /> },
-    { name: 'Quantum Computing', icon: <Cpu className="w-4 h-4" /> },
-    { name: 'Telecommunications', icon: <Wifi className="w-4 h-4" /> },
-    { name: 'E-commerce', icon: <ShoppingCart className="w-4 h-4" /> },
-    { name: 'Ad Tech', icon: <Megaphone className="w-4 h-4" /> },
-    { name: 'Green Tech', icon: <Recycle className="w-4 h-4" /> }
+  // Topic data for shuffle grid
+  const topicImages = [
+    { id: 1, src: aiImage, title: 'Artificial Intelligence' },
+    { id: 2, src: quantumImage, title: 'Quantum Computing' },
+    { id: 3, src: genomicsImage, title: 'Genomics' },
+    { id: 4, src: astrophysicsImage, title: 'Astrophysics' },
+    { id: 5, src: blockchainImage, title: 'Blockchain' },
+    { id: 6, src: roboticsImage, title: 'Robotics' },
+    { id: 7, src: biotechImage, title: 'Biotechnology' },
+    { id: 8, src: nanotechImage, title: 'Nanotechnology' },
+    { id: 9, src: sustainableEnergyImage, title: 'Sustainable Energy' },
+    { id: 10, src: cybersecurityImage, title: 'Cybersecurity' },
+    { id: 11, src: climateImage, title: 'Climate Science' },
+    { id: 12, src: mentalHealthImage, title: 'Mental Health' },
+    { id: 13, src: iotImage, title: 'Internet of Things' },
+    { id: 14, src: fintechImage, title: 'Fintech' },
+    { id: 15, src: machineLearningImage, title: 'Machine Learning' },
+    { id: 16, src: materialsImage, title: 'Material Science' },
   ];
-
-  const plugin = React.useRef(
-    Autoplay({ delay: 2000, stopOnInteraction: false })
-  );
 
   return (
     <section className="py-32 bg-background relative overflow-hidden">
@@ -184,33 +117,15 @@ const DomainsSection = () => {
           ))}
         </div>
 
-        {/* Topics Slider */}
+        {/* Interactive Topics Grid */}
         <div className="relative">
-          <p className="text-center text-muted-foreground mb-8 text-lg max-w-4xl mx-auto">
-            Explore diverse topics across all domains
-          </p>
-          
-            <Carousel
-              plugins={[plugin.current]}
-              className="w-full max-w-6xl mx-auto"
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-            >
-            <CarouselContent className="-ml-4">
-              {topics.map((topic, index) => (
-                <CarouselItem key={index} className="pl-4 basis-auto">
-                  <div className="bg-primary text-primary-foreground px-6 py-3 rounded-full flex items-center gap-2 whitespace-nowrap font-medium hover:bg-primary/90 transition-colors cursor-pointer">
-                    {topic.icon}
-                    <span>{topic.name}</span>
-                  </div>
-                </CarouselItem>
-              ))}
-            </CarouselContent>
-            <CarouselPrevious className="hidden lg:flex -left-12" />
-            <CarouselNext className="hidden lg:flex -right-12" />
-          </Carousel>
+          <ShuffleHero
+            title="Explore Our 72 Topics"
+            subtitle="Interactive Discovery"
+            description="Watch our diverse topics shuffle and discover the breadth of knowledge across Innovation, Science, Medical, and Technology domains. Each topic is carefully curated to provide maximum insight in minimum time."
+            buttonText="Start Exploring"
+            squareData={topicImages}
+          />
         </div>
       </div>
     </section>
