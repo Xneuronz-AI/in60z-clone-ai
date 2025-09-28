@@ -34,12 +34,12 @@ const VideoSection = () => {
             </div>
             
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4">
-              See how In60z{' '}
-              <span className="text-gradient block">works</span>
+              How Our{' '}
+              <span className="text-gradient block">Swipe Intelligence Works</span>
             </h2>
             
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-              Watch our comprehensive product demo to see how In60z transforms the way you consume research content. Discover all features and capabilities in action.
+              Swipe Intelligence is your quick access to highly curated, 60-word summaries of the world's most critical research, events, and news, delivered instantly by simply swiping your screen.
             </p>
           </div>
 

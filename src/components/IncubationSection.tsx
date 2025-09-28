@@ -14,7 +14,7 @@ const IncubationSection = () => {
             Our <span className="text-gradient">Incubators</span>
           </h2>
           <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Backed by the expertise of Atal Incubation JKLU and the Wadhwani Foundation, we have been able to accelerate our mission. Their strategic guidance and resources have been instrumental in building a world-class platform for you.
+            Backed by the expertise of Atal Incubation JKLU, Inflection Point Ventures, and the Wadhwani Foundation, we have been able to accelerate our mission. Their strategic guidance and resources have been instrumental in building a world-class platform for you.
           </p>
         </div>
 
