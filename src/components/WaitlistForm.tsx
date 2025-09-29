@@ -54,9 +54,9 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ trigger, className = "" }) 
 
   // Clone the trigger element and add onClick handler
   const triggerElement = trigger ? (
-    React.cloneElement(trigger as React.ReactElement, {
-      onClick: handleOpenDialog
-    })
+    <div onClick={handleOpenDialog} style={{ display: 'inline-block', cursor: 'pointer' }}>
+      {trigger}
+    </div>
   ) : (
     <Button 
       className={`bg-accent hover:bg-accent/90 text-accent-foreground ${className}`}
