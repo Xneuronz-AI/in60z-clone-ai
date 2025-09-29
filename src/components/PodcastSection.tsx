@@ -4,12 +4,11 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import scienceImageOriginal from '@/assets/podcast-science.jpg';
 import techImageOriginal from '@/assets/podcast-tech.jpg';
-import scienceImageNew from '@/assets/podcast-science-new.jpg';
-import techImageNew from '@/assets/podcast-tech-new.jpg';
 import aiTechImage from '@/assets/podcast-ai-tech.jpg';
 import biotechImage from '@/assets/podcast-biotech.jpg';
 
 const PodcastSection = () => {
+  // Fixed podcast images - force refresh
   const [currentPlaying, setCurrentPlaying] = useState<number | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
