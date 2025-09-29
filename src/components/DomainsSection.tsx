@@ -14,23 +14,17 @@ import scienceImage from '@/assets/domain-science.jpg';
 import innovationImage from '@/assets/domain-innovation.jpg';
 import technologyImage from '@/assets/domain-technology.jpg';
 
-// Import topic images
-import aiImage from '@/assets/topics/ai.jpg';
-import quantumImage from '@/assets/topics/quantum.jpg';
-import genomicsImage from '@/assets/topics/genomics.jpg';
-import astrophysicsImage from '@/assets/topics/astrophysics.jpg';
-import blockchainImage from '@/assets/topics/blockchain.jpg';
-import roboticsImage from '@/assets/topics/robotics.jpg';
-import biotechImage from '@/assets/topics/biotech.jpg';
-import nanotechImage from '@/assets/topics/nanotech.jpg';
-import sustainableEnergyImage from '@/assets/topics/sustainable-energy.jpg';
-import cybersecurityImage from '@/assets/topics/cybersecurity.jpg';
-import climateImage from '@/assets/topics/climate.jpg';
-import mentalHealthImage from '@/assets/topics/mental-health.jpg';
-import iotImage from '@/assets/topics/iot.jpg';
-import fintechImage from '@/assets/topics/fintech.jpg';
-import machineLearningImage from '@/assets/topics/machine-learning.jpg';
-import materialsImage from '@/assets/topics/materials.jpg';
+// Import topic images - Innovation section
+import aiImage from '@/assets/topics/ai.png';
+import quantumImage from '@/assets/topics/quantum.png';
+import renewableEnergyImage from '@/assets/topics/renewable-energy.png';
+import augmentedRealityImage from '@/assets/topics/augmented-reality.png';
+import spaceExplorationImage from '@/assets/topics/space-exploration.png';
+import virtualRealityImage from '@/assets/topics/virtual-reality.png';
+import autonomousVehiclesImage from '@/assets/topics/autonomous-vehicles.png';
+import smartCitiesImage from '@/assets/topics/smart-cities.png';
+import machineLearningImage from '@/assets/topics/machine-learning.png';
+import cryptocurrencyImage from '@/assets/topics/cryptocurrency.png';
 
 const DomainsSection = () => {
   const domains = [
@@ -56,24 +50,25 @@ const DomainsSection = () => {
     }
   ];
 
-  // Topic data for shuffle grid
+  // Topic data for shuffle grid - Innovation section topics
   const topicImages = [
     { id: 1, src: aiImage, title: 'Artificial Intelligence' },
     { id: 2, src: quantumImage, title: 'Quantum Computing' },
-    { id: 3, src: genomicsImage, title: 'Genomics' },
-    { id: 4, src: astrophysicsImage, title: 'Astrophysics' },
-    { id: 5, src: blockchainImage, title: 'Blockchain' },
-    { id: 6, src: roboticsImage, title: 'Robotics' },
-    { id: 7, src: biotechImage, title: 'Biotechnology' },
-    { id: 8, src: nanotechImage, title: 'Nanotechnology' },
-    { id: 9, src: sustainableEnergyImage, title: 'Sustainable Energy' },
-    { id: 10, src: cybersecurityImage, title: 'Cybersecurity' },
-    { id: 11, src: climateImage, title: 'Climate Science' },
-    { id: 12, src: mentalHealthImage, title: 'Mental Health' },
-    { id: 13, src: iotImage, title: 'Internet of Things' },
-    { id: 14, src: fintechImage, title: 'Fintech' },
-    { id: 15, src: machineLearningImage, title: 'Machine Learning' },
-    { id: 16, src: materialsImage, title: 'Material Science' },
+    { id: 3, src: renewableEnergyImage, title: 'Renewable Energy' },
+    { id: 4, src: augmentedRealityImage, title: 'Augmented Reality' },
+    { id: 5, src: spaceExplorationImage, title: 'Space Exploration' },
+    { id: 6, src: virtualRealityImage, title: 'Virtual Reality' },
+    { id: 7, src: autonomousVehiclesImage, title: 'Autonomous Vehicles' },
+    { id: 8, src: smartCitiesImage, title: 'Smart Cities' },
+    { id: 9, src: machineLearningImage, title: 'Machine Learning' },
+    { id: 10, src: cryptocurrencyImage, title: 'Cryptocurrency' },
+    // Repeat some images to fill the grid
+    { id: 11, src: aiImage, title: 'Artificial Intelligence' },
+    { id: 12, src: quantumImage, title: 'Quantum Computing' },
+    { id: 13, src: renewableEnergyImage, title: 'Renewable Energy' },
+    { id: 14, src: augmentedRealityImage, title: 'Augmented Reality' },
+    { id: 15, src: spaceExplorationImage, title: 'Space Exploration' },
+    { id: 16, src: virtualRealityImage, title: 'Virtual Reality' },
   ];
 
   return (
