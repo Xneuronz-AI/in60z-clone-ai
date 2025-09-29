@@ -2,8 +2,12 @@ import React, { useState, useRef } from 'react';
 import { Play, Download, MoreHorizontal, User, Pause, Clock, Headphones } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import scienceImage from '@/assets/podcast-science-new.jpg';
-import techImage from '@/assets/podcast-tech-new.jpg';
+import scienceImageOriginal from '@/assets/podcast-science.jpg';
+import techImageOriginal from '@/assets/podcast-tech.jpg';
+import scienceImageNew from '@/assets/podcast-science-new.jpg';
+import techImageNew from '@/assets/podcast-tech-new.jpg';
+import aiTechImage from '@/assets/podcast-ai-tech.jpg';
+import biotechImage from '@/assets/podcast-biotech.jpg';
 
 const PodcastSection = () => {
   const [currentPlaying, setCurrentPlaying] = useState<number | null>(null);
@@ -49,7 +53,7 @@ const PodcastSection = () => {
       source: "IN60Z Research Podcast",
       duration: "45M",
       category: "Tech",
-      image: techImage,
+      image: techImageOriginal,
       gradient: "from-orange-500 to-red-600"
     },
     {
@@ -59,7 +63,7 @@ const PodcastSection = () => {
       source: "IN60Z Research Podcast",
       duration: "42M",
       category: "Science",
-      image: scienceImage,
+      image: scienceImageOriginal,
       gradient: "from-cyan-500 to-blue-600"
     },
     {
@@ -69,7 +73,7 @@ const PodcastSection = () => {
       source: "IN60Z Research Podcast",
       duration: "38M",
       category: "Tech",
-      image: techImage,
+      image: aiTechImage,
       gradient: "from-orange-500 to-red-600"
     },
     {
@@ -79,7 +83,7 @@ const PodcastSection = () => {
       source: "IN60Z Research Podcast",
       duration: "43M",
       category: "Science",
-      image: scienceImage,
+      image: biotechImage,
       gradient: "from-green-500 to-emerald-600"
     }
   ];
