@@ -25,6 +25,12 @@ import autonomousVehiclesImage from '@/assets/topics/autonomous-vehicles.png';
 import smartCitiesImage from '@/assets/topics/smart-cities.png';
 import machineLearningImage from '@/assets/topics/machine-learning.png';
 import cryptocurrencyImage from '@/assets/topics/cryptocurrency.png';
+import iotInnovationsImage from '@/assets/topics/iot-innovations.png';
+import threeDPrintingImage from '@/assets/topics/3d-printing.png';
+import additiveManufacturingImage from '@/assets/topics/additive-manufacturing.png';
+import blockchainImage from '@/assets/topics/blockchain.png';
+import greenEnergyImage from '@/assets/topics/green-energy.png';
+import sustainabilityImage from '@/assets/topics/sustainability.png';
 
 const DomainsSection = () => {
   const domains = [
@@ -62,13 +68,12 @@ const DomainsSection = () => {
     { id: 8, src: smartCitiesImage, title: 'Smart Cities' },
     { id: 9, src: machineLearningImage, title: 'Machine Learning' },
     { id: 10, src: cryptocurrencyImage, title: 'Cryptocurrency' },
-    // Repeat some images to fill the grid
-    { id: 11, src: aiImage, title: 'Artificial Intelligence' },
-    { id: 12, src: quantumImage, title: 'Quantum Computing' },
-    { id: 13, src: renewableEnergyImage, title: 'Renewable Energy' },
-    { id: 14, src: augmentedRealityImage, title: 'Augmented Reality' },
-    { id: 15, src: spaceExplorationImage, title: 'Space Exploration' },
-    { id: 16, src: virtualRealityImage, title: 'Virtual Reality' },
+    { id: 11, src: iotInnovationsImage, title: 'IoT Innovations' },
+    { id: 12, src: threeDPrintingImage, title: '3D Printing' },
+    { id: 13, src: additiveManufacturingImage, title: 'Additive Manufacturing' },
+    { id: 14, src: blockchainImage, title: 'Blockchain' },
+    { id: 15, src: greenEnergyImage, title: 'Green Energy' },
+    { id: 16, src: sustainabilityImage, title: 'Sustainability' },
   ];
 
   return (
@@ -95,7 +100,7 @@ const DomainsSection = () => {
                 <img 
                   src={domain.image} 
                   alt={domain.name}
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/20 to-transparent" />
               </div>

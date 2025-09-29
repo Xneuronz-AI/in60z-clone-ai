@@ -2,8 +2,8 @@ import React, { useState, useRef } from 'react';
 import { Play, Download, MoreHorizontal, User, Pause, Clock, Headphones } from 'lucide-react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import scienceImage from '@/assets/podcast-science.jpg';
-import techImage from '@/assets/podcast-tech.jpg';
+import scienceImage from '@/assets/podcast-science-new.jpg';
+import techImage from '@/assets/podcast-tech-new.jpg';
 
 const PodcastSection = () => {
   const [currentPlaying, setCurrentPlaying] = useState<number | null>(null);
