@@ -142,11 +142,13 @@ const generateSquares = (data: Array<{ id: number; src: string; title?: string; 
         backgroundImage: `url(${sq.src})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
+        imageRendering: "auto",
+        filter: "contrast(1.1) saturate(1.2) brightness(1.05)",
       }}
     >
       {sq.title && (
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
-          <span className="text-white text-xs font-medium">{sq.title}</span>
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 opacity-80 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-2">
+          <span className="text-white text-xs font-medium drop-shadow-md">{sq.title}</span>
         </div>
       )}
     </motion.div>

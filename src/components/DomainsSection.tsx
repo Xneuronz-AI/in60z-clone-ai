@@ -82,7 +82,7 @@ const DomainsSection = () => {
         {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Discover All <span className="text-gradient">72 Topics</span>
+            Discover All <span className="text-gradient">Topics</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-full mx-auto text-center px-4 mb-2">
             Maximum Insight. Minimum Time. The 60-Word Research, Events & News Digest.
@@ -120,7 +120,7 @@ const DomainsSection = () => {
         {/* Interactive Topics Grid */}
         <div className="relative">
           <ShuffleHero
-            title="Explore Our 72 Topics"
+            title="Explore Our Topics"
             subtitle="Interactive Discovery"
             description="Watch our diverse topics shuffle and discover the breadth of knowledge across Innovation, Science, Medical, and Technology domains. Each topic is carefully curated to provide maximum insight in minimum time."
             buttonText="Start Exploring"
