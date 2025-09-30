@@ -30,46 +30,23 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ trigger, className = "" }) 
     setIsOpen(false);
   };
 
-  // src/components/WaitlistForm.tsx
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
 
-// src/components/WaitlistForm.tsx
-
-const handleSubmit = async (e: React.FormEvent) => {
-  e.preventDefault();
-  setIsSubmitting(true);
-
-  const googleFormUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSfO7kuNurAMu5PVNhof4AqgWYvlW_Ta940fW-_PRbxK5rBJIw/formResponse';
-  const formDataToSubmit = new FormData();
-
-  formDataToSubmit.append('entry.793333668', formData.name);      // Full Name ID
-  formDataToSubmit.append('entry.827048938', formData.email);    //  Email Address ID
-  formDataToSubmit.append('entry.448236374', formData.phone);    // Phone Number ID
-
-  try {
-    await fetch(googleFormUrl, {
-      method: 'POST',
-      body: formDataToSubmit,
-      mode: 'no-cors', 
-    });
-
-    toast({
-      title: "Successfully joined!",
-      description: "Welcome to the In60z waitlist. We'll notify you when we launch!",
-    });
-
-    setFormData({ name: '', email: '', phone: '' });
-    setIsOpen(false);
-
-  } catch (error) {
-    toast({
-      title: "Uh oh! Something went wrong.",
-      description: "There was a problem with your request.",
-      variant: "destructive",
-    });
-  } finally {
-    setIsSubmitting(false);
-  }
-};
+    // Simulate form submission
+    setTimeout(() => {
+      toast({
+        title: "Successfully joined!",
+        description: "Welcome to the In60z waitlist. We'll notify you when we launch!",
+      });
+      
+      // Reset form
+      setFormData({ name: '', email: '', phone: '' });
+      setIsSubmitting(false);
+      setIsOpen(false);
+    }, 1000);
+  };
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value }));
