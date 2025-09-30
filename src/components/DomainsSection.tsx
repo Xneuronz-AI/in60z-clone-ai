@@ -20,7 +20,7 @@ import quantumImage from '@/assets/topics/quantum-new.jpg';
 import renewableEnergyImage from '@/assets/topics/renewable-energy.png';
 import augmentedRealityImage from '@/assets/topics/augmented-reality-new.jpg';
 import spaceExplorationImage from '@/assets/topics/space-exploration-new.jpg';
-import virtualRealityImage from '@/assets/topics/virtual-reality.png';
+import virtualRealityImage from '@/assets/topics/virtual-reality-new.jpg';
 import autonomousVehiclesImage from '@/assets/topics/autonomous-vehicles-new.jpg';
 import smartCitiesImage from '@/assets/topics/smart-cities-new.jpg';
 import machineLearningImage from '@/assets/topics/machine-learning-new.jpg';
