@@ -18,19 +18,20 @@ import technologyImage from '@/assets/domain-technology.jpg';
 import aiImage from '@/assets/topics/ai-new.jpg';
 import quantumImage from '@/assets/topics/quantum-new.jpg';
 import renewableEnergyImage from '@/assets/topics/renewable-energy.png';
-import augmentedRealityImage from '@/assets/topics/augmented-reality.png';
-import spaceExplorationImage from '@/assets/topics/space-exploration.png';
+import augmentedRealityImage from '@/assets/topics/augmented-reality-new.jpg';
+import spaceExplorationImage from '@/assets/topics/space-exploration-new.jpg';
 import virtualRealityImage from '@/assets/topics/virtual-reality.png';
 import autonomousVehiclesImage from '@/assets/topics/autonomous-vehicles-new.jpg';
 import smartCitiesImage from '@/assets/topics/smart-cities-new.jpg';
 import machineLearningImage from '@/assets/topics/machine-learning-new.jpg';
 import cryptocurrencyImage from '@/assets/topics/cryptocurrency-new.jpg';
-import iotInnovationsImage from '@/assets/topics/iot-innovations.png';
-import threeDPrintingImage from '@/assets/topics/3d-printing.png';
+import iotInnovationsImage from '@/assets/topics/iot-innovations-new.jpg';
+import threeDPrintingImage from '@/assets/topics/3d-printing-new.jpg';
 import additiveManufacturingImage from '@/assets/topics/additive-manufacturing.png';
 import blockchainImage from '@/assets/topics/blockchain-new.jpg';
 import greenEnergyImage from '@/assets/topics/green-energy-new.jpg';
 import sustainabilityImage from '@/assets/topics/sustainability-new.jpg';
+import roboticsImage from '@/assets/topics/robotics-new.jpg';
 
 const DomainsSection = () => {
   const domains = [
@@ -74,6 +75,7 @@ const DomainsSection = () => {
     { id: 14, src: blockchainImage, title: 'Blockchain' },
     { id: 15, src: greenEnergyImage, title: 'Green Energy' },
     { id: 16, src: sustainabilityImage, title: 'Sustainability' },
+    { id: 17, src: roboticsImage, title: 'Robotics' },
   ];
 
   return (
