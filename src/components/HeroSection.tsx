@@ -39,14 +39,15 @@ const HeroSection = () => {
               <div className="cursor-pointer">
                 <img src={googlePlay} alt="Get it on Google Play" className="h-12 md:h-14 w-auto" />
               </div>
-              <Button 
-                onClick={() => {
-                  document.querySelector('[data-waitlist-trigger]')?.dispatchEvent(new Event('click', { bubbles: true }));
-                }}
-                className="h-12 md:h-14 px-6 text-sm font-medium border border-primary text-primary bg-transparent hover:bg-primary/10 transition-smooth"
-              >
-                Join Our Waitlist
-              </Button>
+              <WaitlistForm 
+                trigger={
+                  <Button 
+                    className="h-12 md:h-14 px-6 text-sm font-medium border border-primary text-primary bg-transparent hover:bg-primary/10 transition-smooth"
+                  >
+                    Join Our Waitlist
+                  </Button>
+                }
+              />
             </div>
           </div>
 

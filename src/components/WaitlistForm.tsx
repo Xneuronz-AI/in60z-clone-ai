@@ -22,14 +22,6 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ trigger, className = "" }) 
   const [isOpen, setIsOpen] = useState(false);
   const { toast } = useToast();
 
-  const handleOpenDialog = () => {
-    setIsOpen(true);
-  };
-
-  const handleCloseDialog = () => {
-    setIsOpen(false);
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
@@ -54,7 +46,7 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ trigger, className = "" }) 
 
   return (
     <>
-      <div data-waitlist-trigger onClick={handleOpenDialog} style={{ display: 'none' }} />
+      {trigger && <div onClick={() => setIsOpen(true)}>{trigger}</div>}
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
