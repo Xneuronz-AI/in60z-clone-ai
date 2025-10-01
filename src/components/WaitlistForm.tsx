@@ -52,27 +52,9 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ trigger, className = "" }) 
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 
-  // Clone the trigger element and add onClick handler
-  const triggerElement = trigger ? (
-    React.cloneElement(trigger as React.ReactElement, {
-      onClick: (e: React.MouseEvent) => {
-        e.preventDefault();
-        e.stopPropagation();
-        handleOpenDialog();
-      }
-    })
-  ) : (
-    <Button 
-      className={`bg-accent hover:bg-accent/90 text-accent-foreground ${className}`}
-      onClick={handleOpenDialog}
-    >
-      Join Our Waitlist
-    </Button>
-  );
-
   return (
     <>
-      {triggerElement}
+      <div data-waitlist-trigger onClick={handleOpenDialog} style={{ display: 'none' }} />
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
         <DialogContent className="sm:max-w-md">
           <DialogHeader>
