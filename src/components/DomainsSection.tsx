@@ -15,22 +15,22 @@ import innovationImage from '@/assets/domain-innovation.jpg';
 import technologyImage from '@/assets/domain-technology.jpg';
 
 // Import topic images - Innovation section
-import aiImage from '@/assets/topics/ai.png';
-import quantumImage from '@/assets/topics/quantum.png';
-import renewableEnergyImage from '@/assets/topics/renewable-energy.png';
-import augmentedRealityImage from '@/assets/topics/augmented-reality.png';
-import spaceExplorationImage from '@/assets/topics/space-exploration.png';
-import virtualRealityImage from '@/assets/topics/virtual-reality.png';
-import autonomousVehiclesImage from '@/assets/topics/autonomous-vehicles.png';
-import smartCitiesImage from '@/assets/topics/smart-cities.png';
-import machineLearningImage from '@/assets/topics/machine-learning.png';
-import cryptocurrencyImage from '@/assets/topics/cryptocurrency.png';
-import iotInnovationsImage from '@/assets/topics/iot-innovations.png';
-import threeDPrintingImage from '@/assets/topics/3d-printing.png';
-import additiveManufacturingImage from '@/assets/topics/additive-manufacturing.png';
-import blockchainImage from '@/assets/topics/blockchain.png';
-import greenEnergyImage from '@/assets/topics/green-energy.png';
-import sustainabilityImage from '@/assets/topics/sustainability.png';
+import aiImage from '@/assets/topics/ai-new.jpg';
+import quantumImage from '@/assets/topics/quantum-new.jpg';
+import renewableEnergyImage from '@/assets/topics/renewable-energy-new.png';
+import augmentedRealityImage from '@/assets/topics/augmented-reality-new.png';
+import spaceExplorationImage from '@/assets/topics/space-exploration-new.png';
+import virtualRealityImage from '@/assets/topics/virtual-reality-new.png';
+import autonomousVehiclesImage from '@/assets/topics/autonomous-vehicles-new.png';
+import smartCitiesImage from '@/assets/topics/smart-cities-new.png';
+import machineLearningImage from '@/assets/topics/machine-learning-new.png';
+import cryptocurrencyImage from '@/assets/topics/cryptocurrency-new.png';
+import iotInnovationsImage from '@/assets/topics/iot-innovations-new.png';
+import threeDPrintingImage from '@/assets/topics/3d-printing-new.png';
+import additiveManufacturingImage from '@/assets/topics/additive-manufacturing-new.png';
+import blockchainImage from '@/assets/topics/blockchain-new.png';
+import greenEnergyImage from '@/assets/topics/green-energy-new.png';
+import sustainabilityImage from '@/assets/topics/sustainability-new.png';
 
 const DomainsSection = () => {
   const domains = [
