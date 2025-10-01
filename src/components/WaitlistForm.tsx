@@ -22,11 +22,11 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ trigger, className = "" }) 
   const [isOpen, setIsOpen] = useState(false);
   const { toast } = useToast();
 
-<<<<<<< HEAD
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-=======
+
   const handleOpenDialog = () => {
     setIsOpen(true);
   };
@@ -36,7 +36,6 @@ const WaitlistForm: React.FC<WaitlistFormProps> = ({ trigger, className = "" }) 
   };
 
   // src/components/WaitlistForm.tsx
->>>>>>> parent of 587f4fe (Reverted to commit 237cadbc504b0caddc3f37cd4f33125a85ff41da)
 
 // src/components/WaitlistForm.tsx
 
