@@ -1,23 +1,21 @@
-# Use an official Node runtime as a parent image
-FROM node:18-alpine
+# 1. Use a more stable and full-featured Node.js image
+FROM node:18
 
-# Set the working directory in the container
+# 2. Set the working directory
 WORKDIR /app
 
-# Copy package.json and package-lock.json
+# 3. Copy package files and install dependencies
 COPY package.json package-lock.json ./
-
-# Install all dependencies
 RUN npm install
 
-# Copy the rest of your app's source code
+# 4. Copy the rest of the application code
 COPY . .
 
-# Build your app
+# 5. Build the application
 RUN npm run build
 
-# Make port 8080 available to the world outside this container
+# 6. Expose the port Cloud Run will use
 EXPOSE 8080
 
-# Define the command to run your app
+# 7. Define the command to start the server
 CMD ["npm", "start"]
