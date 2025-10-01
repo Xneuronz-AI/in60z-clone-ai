@@ -10,14 +10,14 @@ All colors MUST be HSL.
   :root {
     /* Dark theme primary colors */
     --background: 0 0% 0%;
-    --foreground: 210 40% 98%;
+    --foreground: 210 20% 85%;
 
     /* Card and surface colors */
     --card: 220 20% 9%;
-    --card-foreground: 210 40% 98%;
+    --card-foreground: 210 20% 85%;
 
     --popover: 220 20% 9%;
-    --popover-foreground: 210 40% 98%;
+    --popover-foreground: 210 20% 85%;
 
     /* Brand colors - Vivid Blue #0075ff */
     --primary: 213 100% 50%;
@@ -27,17 +27,17 @@ All colors MUST be HSL.
 
     /* Secondary and muted colors */
     --secondary: 220 15% 15%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: 210 20% 85%;
 
     --muted: 220 15% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted-foreground: 215 20% 70%;
 
     /* Accent colors */
     --accent: 190 100% 55%;
     --accent-foreground: 220 23% 7%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 210 20% 85%;
 
     /* Borders and inputs */
     --border: 220 15% 20%;
