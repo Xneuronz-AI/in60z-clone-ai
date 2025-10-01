@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import nvidiaLogo from '@/assets/nvidia-logo.svg';
-import elevenLabsLogo from '@/assets/eleven-labs-logo.png';
+import elevenLabsLogo from '@/assets/eleven-labs-logo-white.png';
 import googleCloudLogo from '@/assets/google-cloud-logo.svg';
 import microsoftLogo from '@/assets/microsoft-logo.svg';
 import awsLogo from '@/assets/aws-logo.svg';
