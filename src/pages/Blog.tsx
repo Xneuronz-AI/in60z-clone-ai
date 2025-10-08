@@ -7,6 +7,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const Blog = () => {
   const articles = [
     {
+      id: 'podcast-strategy-dominance',
+      title: 'How In60z\'s Podcast Strategy is Poised to Dominate the Knowledge Audio Market',
+      description: 'Explore how In60z is strategically leveraging the explosive $131 billion podcast market boom with a tiered audio content strategy designed to capture premium audiences.',
+      publishedAt: '2025-10-01',
+      readTime: '12 min read'
+    },
+    {
       id: 'events-industry-opportunity',
       title: 'The $1.1 Trillion Unseen Opportunity: How In60z Will Dominate the Global Events Industry',
       description: 'Discover how In60z is positioned to fundamentally redefine the $1.1 trillion global events industry through AI-powered event discovery and personalized marketplace solutions.',
