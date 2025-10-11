@@ -44,6 +44,41 @@ const About = () => {
         </div>
       </section>
 
+      {/* Vision & Mission Section */}
+      <section className="py-24">
+        <div className="container mx-auto px-6">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Vision Statement */}
+              <Card className="p-8 bg-gradient-card border-primary/20 hover:glow-primary transition-all duration-500">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+                    <Target className="w-7 h-7 text-primary" />
+                  </div>
+                  <h3 className="text-3xl font-bold">Vision Statement</h3>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  To be the world's leading platform for concise, impactful knowledge consumption, empowering every user to stay informed on Research, Events, and News in just 60 words.
+                </p>
+              </Card>
+
+              {/* Mission Statement */}
+              <Card className="p-8 bg-gradient-card border-primary/20 hover:glow-accent transition-all duration-500">
+                <div className="flex items-start gap-4 mb-6">
+                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center flex-shrink-0">
+                    <Zap className="w-7 h-7 text-accent" />
+                  </div>
+                  <h3 className="text-3xl font-bold">Mission Statement</h3>
+                </div>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Our mission is to curate, summarize, and deliver the most relevant Research papers, Events, and news from global sources in a crisp, 60-word format via a seamless mobile experience. We aim to efficiently bridge the gap between information overload and user's time constraints while providing a valuable platform for advertisers through non-disruptive native integration.
+                </p>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Problem Statement */}
       <section className="py-24 bg-muted/10">
         <div className="container mx-auto px-6">
