@@ -96,91 +96,135 @@ const About = () => {
             </p>
           </motion.div>
 
-          <div className="max-w-5xl mx-auto">
-            {/* Golden Circle Visual */}
-            <div className="relative aspect-square max-w-3xl mx-auto mb-16">
-              {/* Outer Circle - WHAT */}
-              <motion.div
-                initial={{ scale: 0, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 border-4 border-accent/40 flex items-center justify-center"
-              >
-                <div className="absolute top-8 left-1/2 -translate-x-1/2 text-center px-4">
-                  <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 1 }}
-                    className="inline-block"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-2">
+          <div className="max-w-6xl mx-auto">
+            {/* Golden Circle Visual with Side Labels */}
+            <div className="relative mb-20">
+              <div className="relative aspect-square max-w-2xl mx-auto">
+                {/* Outer Circle - WHAT */}
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.2 }}
+                  className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/10 to-accent/5 border-[3px] border-accent/60"
+                />
+
+                {/* Middle Circle - HOW */}
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  className="absolute inset-[15%] rounded-full bg-gradient-to-br from-primary/15 to-primary/5 border-[3px] border-primary/70"
+                />
+
+                {/* Inner Circle - WHY */}
+                <motion.div
+                  initial={{ scale: 0, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8, delay: 0.6 }}
+                  className="absolute inset-[35%] rounded-full bg-gradient-to-br from-primary/30 to-primary/20 border-[3px] border-primary shadow-glow"
+                />
+
+                {/* WHAT Label - Top Right */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 1 }}
+                  className="absolute top-[8%] right-[-15%] hidden lg:block"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="text-right">
+                      <h3 className="text-2xl font-bold text-accent mb-1">WHAT</h3>
+                      <p className="text-sm text-muted-foreground max-w-[200px]">
+                        A mobile app that delivers summarized content
+                      </p>
+                    </div>
+                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
                       <Package className="w-6 h-6 text-accent" />
                     </div>
-                    <h3 className="text-2xl font-bold text-accent mb-2">WHAT</h3>
-                    <p className="text-sm text-foreground/80 max-w-xs">
-                      A mobile app that delivers summarized Research papers, Events, and news stories
-                    </p>
-                  </motion.div>
-                </div>
-              </motion.div>
+                  </div>
+                </motion.div>
 
-              {/* Middle Circle - HOW */}
-              <motion.div
-                initial={{ scale: 0, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="absolute inset-[15%] rounded-full bg-gradient-to-br from-primary/30 to-accent/30 border-4 border-primary/60 flex items-center justify-center"
-              >
-                <div className="absolute top-12 left-1/2 -translate-x-1/2 text-center px-4">
-                  <motion.div
-                    initial={{ opacity: 0, y: -20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 1.2 }}
-                    className="inline-block"
-                  >
-                    <div className="w-12 h-12 rounded-full bg-primary/30 flex items-center justify-center mx-auto mb-2">
+                {/* HOW Label - Middle Right */}
+                <motion.div
+                  initial={{ opacity: 0, x: -20 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 1.2 }}
+                  className="absolute top-1/2 -translate-y-1/2 right-[-15%] hidden lg:block"
+                >
+                  <div className="flex items-center gap-4">
+                    <div className="text-right">
+                      <h3 className="text-2xl font-bold text-primary mb-1">HOW</h3>
+                      <p className="text-sm text-muted-foreground max-w-[200px]">
+                        Human curation & AI powered summarization
+                      </p>
+                    </div>
+                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
                       <Cog className="w-6 h-6 text-primary" />
                     </div>
-                    <h3 className="text-2xl font-bold text-primary mb-2">HOW</h3>
-                    <p className="text-sm text-foreground/90 max-w-xs">
-                      Using human curation and AI to summarize complex content into crisp 60-word snippets
-                    </p>
-                  </motion.div>
-                </div>
-              </motion.div>
+                  </div>
+                </motion.div>
 
-              {/* Inner Circle - WHY */}
-              <motion.div
-                initial={{ scale: 0, opacity: 0 }}
-                whileInView={{ scale: 1, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="absolute inset-[35%] rounded-full bg-gradient-to-br from-primary/50 to-accent/50 border-4 border-primary flex items-center justify-center shadow-glow"
-              >
+                {/* WHY Label - Center */}
                 <motion.div
                   initial={{ opacity: 0, scale: 0.8 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: 1.4 }}
-                  className="text-center px-6"
+                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center"
                 >
-                  <div className="w-16 h-16 rounded-full bg-primary/40 flex items-center justify-center mx-auto mb-3">
+                  <div className="w-16 h-16 rounded-full bg-primary/30 flex items-center justify-center mx-auto mb-3">
                     <Heart className="w-8 h-8 text-primary" />
                   </div>
-                  <h3 className="text-3xl font-bold text-primary mb-3">WHY</h3>
-                  <p className="text-sm font-medium text-foreground">
-                    To efficiently and comprehensively keep users informed in a time-crunched world
+                  <h3 className="text-3xl font-bold text-primary mb-2">WHY</h3>
+                  <p className="text-sm font-medium text-foreground max-w-[180px] mx-auto">
+                    Keep users informed efficiently
                   </p>
                 </motion.div>
-              </motion.div>
+
+                {/* Mobile Labels */}
+                <div className="lg:hidden absolute -bottom-32 left-0 right-0 space-y-3">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 1 }}
+                    className="flex items-center gap-3 justify-center"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
+                      <Package className="w-5 h-5 text-accent" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-accent">WHAT</h3>
+                      <p className="text-xs text-muted-foreground">A mobile app for summarized content</p>
+                    </div>
+                  </motion.div>
+                  
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 1.2 }}
+                    className="flex items-center gap-3 justify-center"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                      <Cog className="w-5 h-5 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-bold text-primary">HOW</h3>
+                      <p className="text-xs text-muted-foreground">Human curation & AI summarization</p>
+                    </div>
+                  </motion.div>
+                </div>
+              </div>
             </div>
 
             {/* Detailed Cards */}
-            <div className="grid md:grid-cols-3 gap-6">
+            <div className="grid md:grid-cols-3 gap-6 mt-32 lg:mt-0">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -193,7 +237,7 @@ const About = () => {
                   </div>
                   <h4 className="text-xl font-bold mb-3 text-primary">WHY - Purpose</h4>
                   <p className="text-muted-foreground">
-                    We believe everyone deserves access to quality information without drowning in content overload. Time is precious, and staying informed shouldn't be exhausting.
+                    To efficiently and comprehensively keep users informed in a time-crunched world. We believe everyone deserves access to quality information without drowning in content overload.
                   </p>
                 </Card>
               </motion.div>
@@ -210,7 +254,7 @@ const About = () => {
                   </div>
                   <h4 className="text-xl font-bold mb-3 text-primary">HOW - Process</h4>
                   <p className="text-muted-foreground">
-                    We combine expert human curation with cutting-edge AI technology to distill complex research, events, and news into perfectly crafted 60-word summaries.
+                    By using human curation and AI to summarize complex content into crisp 60-word or less snippets. We combine expert human curation with cutting-edge AI technology.
                   </p>
                 </Card>
               </motion.div>
@@ -227,7 +271,7 @@ const About = () => {
                   </div>
                   <h4 className="text-xl font-bold mb-3 text-accent">WHAT - Product</h4>
                   <p className="text-muted-foreground">
-                    A beautifully designed mobile app that delivers the world's most important knowledge directly to your pocket, anywhere, anytime.
+                    A mobile app that delivers summarized Research papers, Events, and news stories. A beautifully designed app that delivers the world's most important knowledge directly to your pocket.
                   </p>
                 </Card>
               </motion.div>
