@@ -97,7 +97,7 @@ const About = () => {
           </motion.div>
 
           <div className="max-w-6xl mx-auto">
-            {/* Golden Circle Visual with Side Labels */}
+            {/* Golden Circle Visual with Labels Inside */}
             <div className="relative mb-20">
               <div className="relative aspect-square max-w-2xl mx-auto">
                 {/* Outer Circle - WHAT */}
@@ -106,8 +106,13 @@ const About = () => {
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/10 to-accent/5 border-[3px] border-accent/60"
-                />
+                  className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/10 to-accent/5 border-[3px] border-accent/60 flex flex-col items-center pt-8"
+                >
+                  <h3 className="text-2xl md:text-3xl font-bold text-accent mb-2">WHAT</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground max-w-[280px] text-center px-6">
+                    A mobile app that delivers summarized Research papers, Events, and news stories.
+                  </p>
+                </motion.div>
 
                 {/* Middle Circle - HOW */}
                 <motion.div
@@ -115,8 +120,13 @@ const About = () => {
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.4 }}
-                  className="absolute inset-[15%] rounded-full bg-gradient-to-br from-primary/15 to-primary/5 border-[3px] border-primary/70"
-                />
+                  className="absolute inset-[15%] rounded-full bg-gradient-to-br from-primary/15 to-primary/5 border-[3px] border-primary/70 flex flex-col items-center pt-6 md:pt-8"
+                >
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">HOW</h3>
+                  <p className="text-xs md:text-sm text-muted-foreground max-w-[220px] text-center px-6">
+                    By using human curation and AI to summarize complex content into crisp 60-word or less snippets.
+                  </p>
+                </motion.div>
 
                 {/* Inner Circle - WHY */}
                 <motion.div
@@ -124,102 +134,16 @@ const About = () => {
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="absolute inset-[35%] rounded-full bg-gradient-to-br from-primary/30 to-primary/20 border-[3px] border-primary shadow-glow"
-                />
-
-                {/* WHAT Label - Top Right */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 1 }}
-                  className="absolute top-[8%] right-[-15%] hidden lg:block"
+                  className="absolute inset-[35%] rounded-full bg-gradient-to-br from-primary/30 to-primary/20 border-[3px] border-primary shadow-glow flex flex-col items-center justify-center px-4"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="text-right">
-                      <h3 className="text-2xl font-bold text-accent mb-1">WHAT</h3>
-                      <p className="text-sm text-muted-foreground max-w-[200px]">
-                        A mobile app that delivers summarized content
-                      </p>
-                    </div>
-                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                      <Package className="w-6 h-6 text-accent" />
-                    </div>
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/30 flex items-center justify-center mx-auto mb-2">
+                    <Heart className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                   </div>
-                </motion.div>
-
-                {/* HOW Label - Middle Right */}
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 1.2 }}
-                  className="absolute top-1/2 -translate-y-1/2 right-[-15%] hidden lg:block"
-                >
-                  <div className="flex items-center gap-4">
-                    <div className="text-right">
-                      <h3 className="text-2xl font-bold text-primary mb-1">HOW</h3>
-                      <p className="text-sm text-muted-foreground max-w-[200px]">
-                        Human curation & AI powered summarization
-                      </p>
-                    </div>
-                    <div className="w-12 h-12 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Cog className="w-6 h-6 text-primary" />
-                    </div>
-                  </div>
-                </motion.div>
-
-                {/* WHY Label - Center */}
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: 1.4 }}
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center"
-                >
-                  <div className="w-16 h-16 rounded-full bg-primary/30 flex items-center justify-center mx-auto mb-3">
-                    <Heart className="w-8 h-8 text-primary" />
-                  </div>
-                  <h3 className="text-3xl font-bold text-primary mb-2">WHY</h3>
-                  <p className="text-sm font-medium text-foreground max-w-[180px] mx-auto">
-                    Keep users informed efficiently
+                  <h3 className="text-2xl md:text-3xl font-bold text-primary mb-2">WHY</h3>
+                  <p className="text-xs md:text-sm text-foreground max-w-[180px] text-center font-medium">
+                    To efficiently and comprehensively keep users informed in a time-crunched world.
                   </p>
                 </motion.div>
-
-                {/* Mobile Labels */}
-                <div className="lg:hidden absolute -bottom-32 left-0 right-0 space-y-3">
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 1 }}
-                    className="flex items-center gap-3 justify-center"
-                  >
-                    <div className="w-10 h-10 rounded-full bg-accent/20 flex items-center justify-center flex-shrink-0">
-                      <Package className="w-5 h-5 text-accent" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-accent">WHAT</h3>
-                      <p className="text-xs text-muted-foreground">A mobile app for summarized content</p>
-                    </div>
-                  </motion.div>
-                  
-                  <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.6, delay: 1.2 }}
-                    className="flex items-center gap-3 justify-center"
-                  >
-                    <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                      <Cog className="w-5 h-5 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-lg font-bold text-primary">HOW</h3>
-                      <p className="text-xs text-muted-foreground">Human curation & AI summarization</p>
-                    </div>
-                  </motion.div>
-                </div>
               </div>
             </div>
 

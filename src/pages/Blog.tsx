@@ -7,6 +7,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 const Blog = () => {
   const articles = [
     {
+      id: 'swipe-based-news-aggregation',
+      title: 'How Swipe-Based News Aggregation is Redefining Content Consumption',
+      description: 'Discover how the swipe-based approach is revolutionizing news consumption in the attention economy, making information instantly digestible for time-crunched users.',
+      publishedAt: '2025-10-14',
+      readTime: '10 min read'
+    },
+    {
       id: 'podcast-strategy-dominance',
       title: 'How In60z\'s Podcast Strategy is Poised to Dominate the Knowledge Audio Market',
       description: 'Explore how In60z is strategically leveraging the explosive $131 billion podcast market boom with a tiered audio content strategy designed to capture premium audiences.',

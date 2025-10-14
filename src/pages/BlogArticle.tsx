@@ -8,11 +8,12 @@ import connectingDotsImage from '@/assets/connecting-dots.jpg';
 import amazonAiConclaveImage from '@/assets/amazon-ai-conclave-2023.jpg';
 import corporateBusinessmanImage from '@/assets/corporate-businessman-presentation.jpg';
 import podcastStrategyImage from '@/assets/podcast-strategy-article.jpg';
+import swipeNewsImage from '@/assets/swipe-news-aggregation.jpg';
 
 const BlogArticle = () => {
   const { id } = useParams();
 
-  if (id !== 'tired-of-information-overload' && id !== 'future-of-event-discovery' && id !== 'events-industry-opportunity' && id !== 'podcast-strategy-dominance') {
+  if (id !== 'tired-of-information-overload' && id !== 'future-of-event-discovery' && id !== 'events-industry-opportunity' && id !== 'podcast-strategy-dominance' && id !== 'swipe-based-news-aggregation') {
     return (
       <div className="min-h-screen bg-background text-foreground">
         <Navigation />
@@ -49,13 +50,15 @@ const BlogArticle = () => {
             {/* Article Header */}
             <header className="mb-12">
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                {id === 'podcast-strategy-dominance'
-                  ? "How In60z's Podcast Strategy is Poised to Dominate the Knowledge Audio Market"
-                  : id === 'events-industry-opportunity' 
-                    ? "The $1.1 Trillion Unseen Opportunity: How In60z Will Dominate the Global Events Industry"
-                    : id === 'tired-of-information-overload' 
-                      ? "Tired of the Information Overload? You're Not Alone."
-                      : "The Future of Event Discovery Isn't About Finding More; It's About Finding the Right Ones."
+                {id === 'swipe-based-news-aggregation'
+                  ? "How Swipe-Based News Aggregation is Redefining Content Consumption"
+                  : id === 'podcast-strategy-dominance'
+                    ? "How In60z's Podcast Strategy is Poised to Dominate the Knowledge Audio Market"
+                    : id === 'events-industry-opportunity' 
+                      ? "The $1.1 Trillion Unseen Opportunity: How In60z Will Dominate the Global Events Industry"
+                      : id === 'tired-of-information-overload' 
+                        ? "Tired of the Information Overload? You're Not Alone."
+                        : "The Future of Event Discovery Isn't About Finding More; It's About Finding the Right Ones."
                 }
               </h1>
               
@@ -63,26 +66,30 @@ const BlogArticle = () => {
                 <div className="flex items-center gap-2">
                   <Calendar className="w-4 h-4" />
                   <span>
-                    {id === 'podcast-strategy-dominance'
-                      ? 'October 1, 2025'
-                      : id === 'events-industry-opportunity' 
-                        ? 'September 26, 2025'
-                        : id === 'tired-of-information-overload' 
-                          ? 'September 15, 2025' 
-                          : 'September 20, 2025'
+                    {id === 'swipe-based-news-aggregation'
+                      ? 'October 14, 2025'
+                      : id === 'podcast-strategy-dominance'
+                        ? 'October 1, 2025'
+                        : id === 'events-industry-opportunity' 
+                          ? 'September 26, 2025'
+                          : id === 'tired-of-information-overload' 
+                            ? 'September 15, 2025' 
+                            : 'September 20, 2025'
                     }
                   </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Clock className="w-4 h-4" />
                   <span>
-                    {id === 'podcast-strategy-dominance'
-                      ? '12 min read'
-                      : id === 'events-industry-opportunity' 
-                        ? '8 min read'
-                        : id === 'tired-of-information-overload' 
-                          ? '5 min read' 
-                          : '4 min read'
+                    {id === 'swipe-based-news-aggregation'
+                      ? '10 min read'
+                      : id === 'podcast-strategy-dominance'
+                        ? '12 min read'
+                        : id === 'events-industry-opportunity' 
+                          ? '8 min read'
+                          : id === 'tired-of-information-overload' 
+                            ? '5 min read' 
+                            : '4 min read'
                     }
                   </span>
                 </div>
@@ -92,22 +99,26 @@ const BlogArticle = () => {
               <div className="mb-8 rounded-lg overflow-hidden">
                 <img 
                   src={
-                    id === 'podcast-strategy-dominance'
-                      ? podcastStrategyImage
-                      : id === 'events-industry-opportunity' 
-                        ? corporateBusinessmanImage
-                        : id === 'tired-of-information-overload' 
-                          ? informationOverloadImage 
-                          : amazonAiConclaveImage
+                    id === 'swipe-based-news-aggregation'
+                      ? swipeNewsImage
+                      : id === 'podcast-strategy-dominance'
+                        ? podcastStrategyImage
+                        : id === 'events-industry-opportunity' 
+                          ? corporateBusinessmanImage
+                          : id === 'tired-of-information-overload' 
+                            ? informationOverloadImage 
+                            : amazonAiConclaveImage
                   }
                   alt={
-                    id === 'podcast-strategy-dominance'
-                      ? "Professional podcast setup with smartphone displaying audio player, headphones, and coffee"
-                      : id === 'events-industry-opportunity' 
-                        ? "Corporate businessman presenting to large audience at business conference"
-                        : id === 'tired-of-information-overload' 
-                          ? "Person overwhelmed by information overload with multiple screens and displays"
-                          : "Amazon AI Conclave event with large audience"
+                    id === 'swipe-based-news-aggregation'
+                      ? "Modern smartphone with swipe-based news interface showing dynamic information flow"
+                      : id === 'podcast-strategy-dominance'
+                        ? "Professional podcast setup with smartphone displaying audio player, headphones, and coffee"
+                        : id === 'events-industry-opportunity' 
+                          ? "Corporate businessman presenting to large audience at business conference"
+                          : id === 'tired-of-information-overload' 
+                            ? "Person overwhelmed by information overload with multiple screens and displays"
+                            : "Amazon AI Conclave event with large audience"
                   }
                   className="w-full h-64 md:h-96 object-cover"
                 />
@@ -116,7 +127,111 @@ const BlogArticle = () => {
 
             {/* Article Content */}
             <article className="prose prose-lg max-w-none dark:prose-invert">
-              {id === 'podcast-strategy-dominance' ? (
+              {id === 'swipe-based-news-aggregation' ? (
+                <>
+                  <p className="text-lg leading-relaxed mb-6">
+                    The digital age has gifted humanity with boundless information, but at a severe cost: attention fragmentation. Consumers, now overwhelmed, seek information that is not just relevant but instantly digestible. This shift has created a massive global opportunity for short-format content, forcing traditional media to adapt or fade. At the forefront of this revolution are platforms like In60z, which have masterfully leveraged a simple, addictive mechanism—the swipe-based approach—to cater to the modern user's demand for speed and brevity in news, research, and events.
+                  </p>
+
+                  <h2 className="text-3xl font-bold mb-6">I. The Attention Economy's Crisis and the Rise of the 'Micro-Moment'</h2>
+
+                  <p className="mb-6">
+                    The average human attention span is shrinking, a widely debated but empirically observable fact in digital media consumption. Users are bombarded by notifications, emails, and infinite feeds, training their brains to value speed over depth. This environment gave rise to the "micro-moment"—the few seconds a user has while waiting for a bus, standing in line, or between tasks. Content that fails to deliver value in this micro-moment is immediately discarded.
+                  </p>
+
+                  <p className="mb-6">
+                    Traditional news, with its lengthy editorials and verbose reporting, simply cannot capture this audience. The user isn't rejecting news; they are rejecting the time commitment.
+                  </p>
+
+                  <p className="mb-6">
+                    Platforms built around the swipe-based approach provide the perfect remedy. The swipe is a simple, intuitive, and low-friction action. It capitalizes on the human desire for a continuous flow of novelty without forcing a deep commitment to any single item. By reducing a complex action (reading a full article) to a simple binary choice (swipe next or dwell briefly), these platforms become essential tools for the time-poor, information-hungry modern professional.
+                  </p>
+
+                  <h2 className="text-3xl font-bold mb-6">II. The In60z Solution: Brevity as a Core Value Proposition</h2>
+
+                  <p className="mb-6">
+                    In60z recognized that true value in this new landscape is not about the quantity of words, but the density of information. Its central, non-negotiable value proposition—to provide Research papers, Events, and News in a summarized format of 60 words or fewer—is a stroke of genius in the attention economy.
+                  </p>
+
+                  <p className="mb-4">This strict limitation forces a high standard of editorial discipline:</p>
+
+                  <ul className="mb-6">
+                    <li><strong>Essentialism:</strong> Only the core facts and impact statements survive the edit.</li>
+                    <li><strong>Time Efficiency:</strong> A user can consume ten times more information in a fixed period compared to traditional media, fulfilling the user's desire to stay informed without feeling overwhelmed.</li>
+                    <li><strong>Focus on ISM&T:</strong> By specializing in Innovation, Science, Medical, and Technology, In60z ensures its concise content is high-value, catering directly to a discerning audience seeking knowledge in fast-moving, high-impact sectors. This focus elevates the platform beyond general news and into the sphere of expert summarization and aggregation.</li>
+                  </ul>
+
+                  <p className="mb-6">
+                    The 60-word limit is not a constraint; it is a powerful competitive advantage that redefines what it means to be a news aggregator.
+                  </p>
+
+                  <h2 className="text-3xl font-bold mb-6">III. The Psychological Appeal of the Swipe-Based Model</h2>
+
+                  <p className="mb-4">The swipe mechanic is deeply rooted in modern mobile usage, popularized by social platforms, and psychologically powerful:</p>
+
+                  <ul className="mb-6">
+                    <li><strong>Instant Gratification & Dopamine Loop:</strong> Each swipe is a low-effort action that immediately delivers a new, unknown reward (a new snippet of news). This continuous reward cycle keeps the user engaged, turning content consumption into a satisfying, near-gamified experience.</li>
+                    <li><strong>No Choice Paralysis:</strong> Unlike a traditional news page presenting ten headlines at once, the swipe interface presents a single choice: read this or move to the next. This simplicity avoids "choice paralysis" and keeps the user in the flow state, driving high session viewability and retention.</li>
+                    <li><strong>Haptic & Visual Feedback:</strong> The visual transition of the swipe, combined with the feeling of holding the phone, provides satisfying haptic and visual feedback, reinforcing the behavior. This makes the content platform an addictive utility.</li>
+                  </ul>
+
+                  <h2 className="text-3xl font-bold mb-6">IV. Global Market Opportunity and Mobile-First Behavior</h2>
+
+                  <p className="mb-4">The opportunity for a platform like In60z is truly global, underpinned by two major trends:</p>
+
+                  <p className="mb-6">
+                    <strong>Mobile-First Dominance:</strong> In many emerging markets, the smartphone is the only computer. The In60z model—optimized for mobile-first behavior—is ideally positioned to capture these audiences. A short, text-heavy format is also efficient regarding data usage, making it economical for users with limited bandwidth.
+                  </p>
+
+                  <p className="mb-6">
+                    <strong>Demand for Curated Research:</strong> The academic and professional world faces a deluge of research papers and industry events. The In60z promise to summarize complex research papers and key events in a matter of seconds is invaluable to professionals, students, and researchers globally who need to track developments across disciplines quickly. This niche is a powerful differentiator from general news aggregators.
+                  </p>
+
+                  <h2 className="text-3xl font-bold mb-6">V. Maintaining Quality: The Role of Curation and Technology</h2>
+
+                  <p className="mb-4">In a high-speed, swipe-based environment, content quality and trust are paramount. In60z addresses this through a dual mechanism:</p>
+
+                  <p className="mb-6">
+                    <strong>Human Curation:</strong> Despite the speed, the content must be accurate. The model relies on a unique combination of human curation and journalistic expertise to ensure that the 60-word summaries capture the essence of the story accurately and responsibly.
+                  </p>
+
+                  <p className="mb-6">
+                    <strong>Machine Learning Aggregation:</strong> Algorithms are essential for handling the sheer volume of global news, identifying trending topics, and providing personalized feeds. In60z's use of algorithms to aggregate and surface the most relevant Innovation, Science, Medical, and Technology content is critical to maintaining a dynamic and fresh feed.
+                  </p>
+
+                  <p className="mb-6">
+                    <strong>Brand Safety and Editorial Integrity:</strong> As per In60z's commitment, the rigorous internal checks and the policy of "no clickbait headlines" directly build user trust. This integrity is the foundation that keeps users returning to a platform designed for utility over sensation.
+                  </p>
+
+                  <h2 className="text-3xl font-bold mb-6">VI. The Monetization Advantage: Seamless Native Advertising</h2>
+
+                  <p className="mb-4">
+                    The swipe-based, short-format model creates a superior environment for advertising, which is a core revenue stream for In60z, alongside sponsored events and content:
+                  </p>
+
+                  <p className="mb-6">
+                    <strong>Native Integration:</strong> The advertising options, specifically the Notification Story and Native integration of branded content, are key. Unlike disruptive banner ads, these native ads seamlessly merge into the user's flow. They are perceived as another, albeit branded, piece of information, not an interruption.
+                  </p>
+
+                  <p className="mb-6">
+                    <strong>100% Viewability:</strong> The core business promise of "Every ad slot on In60z, is 100% viewable" is a massive selling point for advertisers. In a swipe interface, an ad takes up the full screen, ensuring the user engages with the content, a guarantee traditional online advertising struggles to meet. This eliminates waste for the advertiser and directly links to higher ROI.
+                  </p>
+
+                  <p className="mb-6">
+                    <strong>Passive Brand Building:</strong> The non-intrusive, succinct nature of the native ad allows for passive brand building. The brand becomes part of the daily, high-speed, high-value information ritual without provoking ad fatigue or negative user sentiment.
+                  </p>
+
+                  <h2 className="text-3xl font-bold mb-6">VII. Conclusion: The Future is Fast, Focused, and Frictionless</h2>
+
+                  <p className="mb-6">
+                    The global opportunity for short-format content is not a passing trend; it is the new baseline for digital consumption. User behavior has fundamentally changed, valuing instant, highly curated information delivered with minimal friction.
+                  </p>
+
+                  <p className="mb-8 text-lg font-medium">
+                    In60z is positioned as a market leader by not just adapting to this change but by defining it. By perfecting the 60-word format and integrating the addictive swipe-based approach, it has solved the twin problems of information overload and attention deficit. It has built a scalable, global model that is indispensable for the modern knowledge-seeker and highly attractive for advertisers seeking guaranteed, quality engagement. The future of news, research, and event consumption is fast, focused, and frictionless, and In60z is perfectly engineered to lead the charge.
+                  </p>
+                </>
+              ) : id === 'podcast-strategy-dominance' ? (
                 <>
                   <p className="text-lg leading-relaxed mb-6">
                     The global podcast market stands at an inflection point. With projections soaring toward <strong>$131 billion by 2030</strong> and an estimated Compound Annual Growth Rate (CAGR) of around 27%, the opportunity is not just significant—it is transformative. This explosive growth is driven by the trifecta of increasing global smartphone penetration, the pervasive demand for convenient, on-demand audio content, and the accelerating use of podcasts for both marketing and education.
