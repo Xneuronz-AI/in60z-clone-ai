@@ -1,10 +1,11 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { ArrowRight, Clock, Globe, BookOpen, Target, Brain, Smartphone, TrendingUp, Users, Zap, CheckCircle, Play, ChevronUp, ChevronDown, ChevronLeft, ChevronRight, Headphones, FileText, Calendar, Mic2 } from 'lucide-react';
+import { ArrowRight, Clock, Globe, BookOpen, Target, Brain, Smartphone, TrendingUp, Users, Zap, CheckCircle, Play, ChevronUp, ChevronDown, ChevronLeft, ChevronRight, Headphones, FileText, Calendar, Mic2, Heart, Cog, Package } from 'lucide-react';
 import WaitlistForm from '@/components/WaitlistForm';
 
 const About = () => {
@@ -74,6 +75,162 @@ const About = () => {
                   Our mission is to curate, summarize, and deliver the most relevant Research papers, Events, and news from global sources in a crisp, 60-word format via a seamless mobile experience. We aim to efficiently bridge the gap between information overload and user's time constraints while providing a valuable platform for advertisers through non-disruptive native integration.
                 </p>
               </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Simon Sinek's Golden Circle */}
+      <section className="py-24 bg-muted/5 relative overflow-hidden">
+        <div className="container mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">The Golden Circle</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Understanding our purpose, process, and product
+            </p>
+          </motion.div>
+
+          <div className="max-w-5xl mx-auto">
+            {/* Golden Circle Visual */}
+            <div className="relative aspect-square max-w-3xl mx-auto mb-16">
+              {/* Outer Circle - WHAT */}
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/20 to-primary/20 border-4 border-accent/40 flex items-center justify-center"
+              >
+                <div className="absolute top-8 left-1/2 -translate-x-1/2 text-center px-4">
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 1 }}
+                    className="inline-block"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-2">
+                      <Package className="w-6 h-6 text-accent" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-accent mb-2">WHAT</h3>
+                    <p className="text-sm text-foreground/80 max-w-xs">
+                      A mobile app that delivers summarized Research papers, Events, and news stories
+                    </p>
+                  </motion.div>
+                </div>
+              </motion.div>
+
+              {/* Middle Circle - HOW */}
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="absolute inset-[15%] rounded-full bg-gradient-to-br from-primary/30 to-accent/30 border-4 border-primary/60 flex items-center justify-center"
+              >
+                <div className="absolute top-12 left-1/2 -translate-x-1/2 text-center px-4">
+                  <motion.div
+                    initial={{ opacity: 0, y: -20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 1.2 }}
+                    className="inline-block"
+                  >
+                    <div className="w-12 h-12 rounded-full bg-primary/30 flex items-center justify-center mx-auto mb-2">
+                      <Cog className="w-6 h-6 text-primary" />
+                    </div>
+                    <h3 className="text-2xl font-bold text-primary mb-2">HOW</h3>
+                    <p className="text-sm text-foreground/90 max-w-xs">
+                      Using human curation and AI to summarize complex content into crisp 60-word snippets
+                    </p>
+                  </motion.div>
+                </div>
+              </motion.div>
+
+              {/* Inner Circle - WHY */}
+              <motion.div
+                initial={{ scale: 0, opacity: 0 }}
+                whileInView={{ scale: 1, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="absolute inset-[35%] rounded-full bg-gradient-to-br from-primary/50 to-accent/50 border-4 border-primary flex items-center justify-center shadow-glow"
+              >
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 1.4 }}
+                  className="text-center px-6"
+                >
+                  <div className="w-16 h-16 rounded-full bg-primary/40 flex items-center justify-center mx-auto mb-3">
+                    <Heart className="w-8 h-8 text-primary" />
+                  </div>
+                  <h3 className="text-3xl font-bold text-primary mb-3">WHY</h3>
+                  <p className="text-sm font-medium text-foreground">
+                    To efficiently and comprehensively keep users informed in a time-crunched world
+                  </p>
+                </motion.div>
+              </motion.div>
+            </div>
+
+            {/* Detailed Cards */}
+            <div className="grid md:grid-cols-3 gap-6">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.8 }}
+              >
+                <Card className="p-6 bg-gradient-card border-primary/20 hover:glow-primary transition-all duration-500 h-full">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Heart className="w-6 h-6 text-primary" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 text-primary">WHY - Purpose</h4>
+                  <p className="text-muted-foreground">
+                    We believe everyone deserves access to quality information without drowning in content overload. Time is precious, and staying informed shouldn't be exhausting.
+                  </p>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 1 }}
+              >
+                <Card className="p-6 bg-gradient-card border-primary/20 hover:glow-primary transition-all duration-500 h-full">
+                  <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
+                    <Cog className="w-6 h-6 text-primary" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 text-primary">HOW - Process</h4>
+                  <p className="text-muted-foreground">
+                    We combine expert human curation with cutting-edge AI technology to distill complex research, events, and news into perfectly crafted 60-word summaries.
+                  </p>
+                </Card>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 1.2 }}
+              >
+                <Card className="p-6 bg-gradient-card border-accent/20 hover:glow-accent transition-all duration-500 h-full">
+                  <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center mb-4">
+                    <Package className="w-6 h-6 text-accent" />
+                  </div>
+                  <h4 className="text-xl font-bold mb-3 text-accent">WHAT - Product</h4>
+                  <p className="text-muted-foreground">
+                    A beautifully designed mobile app that delivers the world's most important knowledge directly to your pocket, anywhere, anytime.
+                  </p>
+                </Card>
+              </motion.div>
             </div>
           </div>
         </div>
