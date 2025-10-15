@@ -97,18 +97,21 @@ const About = () => {
           </motion.div>
 
           <div className="max-w-6xl mx-auto">
-            {/* Golden Circle Visual with Labels Inside */}
+            {/* Golden Circle Visual - Inverted Order */}
             <div className="relative mb-20">
               <div className="relative aspect-square max-w-2xl mx-auto">
-                {/* Outer Circle - WHAT */}
+                {/* Outer Circle - WHY */}
                 <motion.div
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.2 }}
-                  className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/10 to-accent/5 border-[3px] border-accent/60 flex flex-col items-center justify-start pt-12 md:pt-16"
+                  className="absolute inset-0 rounded-full bg-gradient-to-br from-primary/30 to-primary/20 border-[3px] border-primary shadow-glow flex flex-col items-center justify-start pt-12 md:pt-16"
                 >
-                  <h3 className="text-3xl md:text-4xl font-bold text-accent">WHAT</h3>
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/30 flex items-center justify-center mx-auto mb-4">
+                    <Heart className="w-6 h-6 md:w-8 md:h-8 text-primary" />
+                  </div>
+                  <h3 className="text-3xl md:text-4xl font-bold text-primary">WHY</h3>
                 </motion.div>
 
                 {/* Middle Circle - HOW */}
@@ -122,18 +125,15 @@ const About = () => {
                   <h3 className="text-3xl md:text-4xl font-bold text-primary">HOW</h3>
                 </motion.div>
 
-                {/* Inner Circle - WHY */}
+                {/* Inner Circle - WHAT */}
                 <motion.div
                   initial={{ scale: 0, opacity: 0 }}
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="absolute inset-[35%] rounded-full bg-gradient-to-br from-primary/30 to-primary/20 border-[3px] border-primary shadow-glow flex flex-col items-center justify-center"
+                  className="absolute inset-[35%] rounded-full bg-gradient-to-br from-accent/10 to-accent/5 border-[3px] border-accent/60 flex flex-col items-center justify-center"
                 >
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/30 flex items-center justify-center mx-auto mb-4">
-                    <Heart className="w-6 h-6 md:w-8 md:h-8 text-primary" />
-                  </div>
-                  <h3 className="text-3xl md:text-4xl font-bold text-primary">WHY</h3>
+                  <h3 className="text-3xl md:text-4xl font-bold text-accent">WHAT</h3>
                 </motion.div>
               </div>
             </div>
