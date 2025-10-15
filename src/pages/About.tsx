@@ -108,10 +108,7 @@ const About = () => {
                   transition={{ duration: 0.8, delay: 0.2 }}
                   className="absolute inset-0 rounded-full bg-gradient-to-br from-accent/10 to-accent/5 border-[3px] border-accent/60 flex flex-col items-center justify-start pt-12 md:pt-16"
                 >
-                  <h3 className="text-2xl md:text-3xl font-bold text-accent mb-3">WHAT</h3>
-                  <p className="text-xs md:text-sm text-foreground/90 max-w-[280px] text-center px-6 leading-relaxed">
-                    A mobile app that delivers summarized Research papers, Events, and news stories.
-                  </p>
+                  <h3 className="text-3xl md:text-4xl font-bold text-accent">WHAT</h3>
                 </motion.div>
 
                 {/* Middle Circle - HOW */}
@@ -122,10 +119,7 @@ const About = () => {
                   transition={{ duration: 0.8, delay: 0.4 }}
                   className="absolute inset-[15%] rounded-full bg-gradient-to-br from-primary/15 to-primary/5 border-[3px] border-primary/70 flex flex-col items-center justify-start pt-10 md:pt-14"
                 >
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary mb-3">HOW</h3>
-                  <p className="text-xs md:text-sm text-foreground/90 max-w-[240px] text-center px-6 leading-relaxed">
-                    By using human curation and AI to summarize complex content into crisp 60-word or less snippets.
-                  </p>
+                  <h3 className="text-3xl md:text-4xl font-bold text-primary">HOW</h3>
                 </motion.div>
 
                 {/* Inner Circle - WHY */}
@@ -134,15 +128,12 @@ const About = () => {
                   whileInView={{ scale: 1, opacity: 1 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.8, delay: 0.6 }}
-                  className="absolute inset-[35%] rounded-full bg-gradient-to-br from-primary/30 to-primary/20 border-[3px] border-primary shadow-glow flex flex-col items-center justify-center px-6 py-4"
+                  className="absolute inset-[35%] rounded-full bg-gradient-to-br from-primary/30 to-primary/20 border-[3px] border-primary shadow-glow flex flex-col items-center justify-center"
                 >
-                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/30 flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-primary/30 flex items-center justify-center mx-auto mb-4">
                     <Heart className="w-6 h-6 md:w-8 md:h-8 text-primary" />
                   </div>
-                  <h3 className="text-2xl md:text-3xl font-bold text-primary mb-3">WHY</h3>
-                  <p className="text-xs md:text-sm text-foreground max-w-[190px] text-center font-medium leading-relaxed">
-                    To efficiently and comprehensively keep users informed in a time-crunched world.
-                  </p>
+                  <h3 className="text-3xl md:text-4xl font-bold text-primary">WHY</h3>
                 </motion.div>
               </div>
             </div>
