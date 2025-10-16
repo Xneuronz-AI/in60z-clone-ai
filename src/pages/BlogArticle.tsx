@@ -8,7 +8,7 @@ import connectingDotsImage from '@/assets/connecting-dots.jpg';
 import amazonAiConclaveImage from '@/assets/amazon-ai-conclave-2023.jpg';
 import corporateBusinessmanImage from '@/assets/corporate-businessman-presentation.jpg';
 import podcastStrategyImage from '@/assets/podcast-strategy-article.jpg';
-import swipeNewsImage from '@/assets/swipe-news-aggregation.jpg';
+import swipeNewsImage from '@/assets/swipe-news-aggregation-new.jpg';
 
 const BlogArticle = () => {
   const { id } = useParams();
